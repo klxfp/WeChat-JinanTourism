@@ -1,66 +1,93 @@
-// pages/map/map.js
+//index.js
+//获取应用实例
+let app = getApp();
+let wechat = require("../../utils/wechat");
+let amap = require("../../utils/amap");
+let markersData = [];
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    markers: [],
+    latitude: '',
+    longitude: '',
+    textData: {},
+    city: '',
+    markerId: 0,
+    controls: [
+      {
+        id: 0,
+        position: {
+          left: 10,
+          top: 200,
+          width: 40,
+          height: 40
+        },
+        iconPath: "../map/images/local.png",
+        clickable: true
+      }
+    ]
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onLoad(e) {
+    amap.getRegeo()
+      .then(d => {
+        console.log(d);
+        let { name, desc, latitude, longitude } = d[0];
+        let { city } = d[0].regeocodeData.addressComponent;
+        this.setData({
+          city,
+          latitude,
+          longitude,
+          textData: { name, desc }
+        })
+      })
+      .catch(e => {
+        console.log(e);
+      })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  bindInput() {
+    let { latitude, longitude, city } = this.data;
+    let url = `/pages/inputtip/inputtip?city=${city}&lonlat=${longitude},${latitude}`;
+    wx.navigateTo({ url });
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  makertap(e) {
+    // console.log(e);
+    let { markerId } = e;
+    let { markers } = this.data;
+    let marker = markers[markerId];
+    // console.log(marker);
+    this.showMarkerInfo(marker);
+    this.changeMarkerColor(markerId);
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  showMarkerInfo(data) {
+    let { name, address: desc } = data;
+    this.setData({
+      textData: { name, desc }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  changeMarkerColor(markerId) {
+    let { markers } = this.data;
+    markers.forEach((item, index) => {
+      item.iconPath = "../map/images/marker.png";
+      if (index == markerId) item.iconPath = "/images/marker_checked.png";
+    })
+    this.setData({ markers, markerId });
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  getRoute() {
+    // 起点
+    let { latitude, longitude, markers, markerId, city, textData } = this.data;
+    let { name, desc } = textData;
+    if (!markers.length) return;
+    // 终点
+    let { latitude: latitude2, longitude: longitude2 } = markers[markerId];
+    let url = `/pages/routes/routes?longitude=${longitude}&latitude=${latitude}&longitude2=${longitude2}&latitude2=${latitude2}&city=${city}&name=${name}&desc=${desc}`;
+    wx.navigateTo({ url });
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+  clickcontrol(e) {
+    console.log("回到用户当前定位点");
+    let { controlId } = e;
+    let mpCtx = wx.createMapContext("map");
+    mpCtx.moveToLocation();
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  mapchange() {
+    // console.log("改变视野");
   }
 })
