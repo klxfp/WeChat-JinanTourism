@@ -18,8 +18,24 @@
             <text class="mine_nav_item">点评 0</text>
             <text class="mine_nav_item no_border">收藏 0</text>
         </view>
+
+        <view>
+        <swiper indicator-dots="true"autoplay="true" interval="5000" 
+        duration="500">
+          <view wx:for="{{swiperImg}}"wx:key="swiper{{index}}">
+            <swiper-item>
+              <image src="{{item.src}}"></image>
+            </swiper-item>
+          </view>
+        </swiper>
+        
+        </view>
+
+
+
     </view>
 
     <template is="menuList" data="{{menuList}}" />
-    
+
+
 </view>
