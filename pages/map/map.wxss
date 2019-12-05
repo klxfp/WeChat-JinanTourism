@@ -10,25 +10,35 @@
   border-radius: 3px;
   padding: 0 5px;
 }
-.map_container{
+/* .map_container{
   position: absolute;
   top: 42px;
   bottom: 80px;
   left: 0;
   right: 0;
-}
+} */
+.map_container{ 
+    height: 350px; 
+    border: 2rpx solid #2a579a;
+    border-radius: 10px;
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+    padding: 10rpx 10rpx;
+} 
 .map{
   width: 100%;
   height: 100%;
 }
 .map_text{
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   bottom: 0px;
   height: 80px;
   background: #fff;
-  padding: 0 15px;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  padding: 10rpx 10rpx;
 }
 text{
   margin: 5px 0;
@@ -58,8 +68,37 @@ text{
   top:0rpx;
   right: 40rpx;
 }
-
+.icon-image{
+  width:100rpx;
+  height:100rpx;
+  margin: 20rpx 70rpx 0;
+}
+.tabText{
+  margin:0 0 0 90rpx;
+}
+.mapTab{
+  margin: 0 0 10rpx 10rpx;
+  color:  #666;
+  font-size:15px;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+}
 .map-1 image{
   width: 60rpx;
   height: 80rpx;
+}
+.mapSelected{
+  border: 1px #2a579a solid;
+  border-radius: 20%;
+}
+.place_info{
+  height: 100%;
+  display:flex;
+  flex-direction:column;
+  box-sizing:border-box;
+  margin: 25rpx 20rpx ;
+  color:  #666;
+  font-size:14px;
+  background-color:#f5f5f5;
 }
