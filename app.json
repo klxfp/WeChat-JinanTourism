@@ -3,7 +3,6 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/map/map",
-
     "pages/index/audio/audio",
     "pages/index/city-list/city-list",
     "pages/index/local-product/index",
@@ -49,6 +48,13 @@
         "text": "我的",
         "iconPath": "images/btn_personal.png",
         "selectedIconPath": "images/btn_personal_selector.png"
-      }]
-  }
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "小程序请求调用您的位置信息来暗杀李依谦。"
+    }
+  },
+  "sitemapLocation": "sitemap55.json"
 }
