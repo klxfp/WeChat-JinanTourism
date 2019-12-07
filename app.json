@@ -18,9 +18,8 @@
     "pages/mine/my-order/my-order",
     "pages/mine/my-voucher/my-voucher",
     "pages/mine/shopping-car/shopping-car",
-
-
     "pages/tickets/tickets"
+ 
   ],
   "window": {
     "backgroundTextStyle": "light",

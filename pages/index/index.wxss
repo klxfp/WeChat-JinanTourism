@@ -80,6 +80,7 @@
 .swiper {
   width: 96%;
   margin-left: 15rpx;
+  position: relative;
 }
 
 .swiper image {
@@ -87,7 +88,19 @@
   height: auto;
   align-items: center;
 }
+.txt {
+  width: auto;
+  height: 24px;  
+  justify-content:right;
+  position:absolute;
+  right: 10rpx;
+  bottom: 20rpx;
+  margin: auto;
+  text-align: right;
+  font-family: "幼圆";
+  color:aliceblue;
 
+}
 .sub_nav {
   background: white;
   width: 100%;

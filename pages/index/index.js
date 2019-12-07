@@ -38,21 +38,23 @@ Page({
       }
     ],
     imgList: [
-      'https://s2.ax1x.com/2019/12/07/QteoKP.png',
-      'https://s2.ax1x.com/2019/12/07/QteTDf.png',
-      'https://s2.ax1x.com/2019/12/07/QteqUg.png',
-      'https://s2.ax1x.com/2019/12/07/QteL5Q.png',
-      'https://s2.ax1x.com/2019/12/07/QteXCj.png', 
-      'https://s2.ax1x.com/2019/12/07/Qtej8s.png',
-      'https://s2.ax1x.com/2019/12/07/Qtev2n.png',
-      'https://s2.ax1x.com/2019/12/07/Qtexvq.png',
-      'https://s2.ax1x.com/2019/12/07/QtmprV.png',
-      'https://s2.ax1x.com/2019/12/07/Qtm9bT.png',
-      'https://s2.ax1x.com/2019/12/07/QtmPVU.png',
-      'https://s2.ax1x.com/2019/12/07/QtmiaF.png',
-      'https://s2.ax1x.com/2019/12/07/QtmZx1.png',
-      'https://s2.ax1x.com/2019/12/07/QtmuqK.png'
+      { src: 'https://s2.ax1x.com/2019/12/07/QteoKP.png', text: "趵突泉" },
+      { src: 'https://s2.ax1x.com/2019/12/07/QteTDf.png', text: "五龙潭" },
+      { src: 'https://s2.ax1x.com/2019/12/07/QteqUg.png', text: "环城公园" },
+      { src: 'https://s2.ax1x.com/2019/12/07/QteL5Q.png', text: "大明湖" },
+      { src: 'https://s2.ax1x.com/2019/12/07/QteXCj.png', text: "黑虎泉" },
+      { src: 'https://s2.ax1x.com/2019/12/07/Qtej8s.png', text: "济南国际园博园" },
+      { src: 'https://s2.ax1x.com/2019/12/07/Qtev2n.png', text: "泉城欧乐堡梦幻世界" },
+      { src: 'https://s2.ax1x.com/2019/12/07/Qtexvq.png', text: "泉城海洋极地世界" },
+      { src: 'https://s2.ax1x.com/2019/12/07/QtmprV.png', text: "金象山乐园" },
+      { src: 'https://s2.ax1x.com/2019/12/07/Qtm9bT.png', text: "红叶谷生态文化旅游区" },
+      { src: 'https://s2.ax1x.com/2019/12/07/QtmPVU.png', text: "跑马岭野生动物世界" },
+      { src: 'https://s2.ax1x.com/2019/12/07/QtmiaF.png', text: "九顶塔中华民俗乐园" },
+      { src: 'https://s2.ax1x.com/2019/12/07/QtmZx1.png', text: "灵岩寺旅游区" },
+      { src: 'https://s2.ax1x.com/2019/12/07/QtmuqK.png', text: "九如山瀑布风景区" }
     ],
+
+
     circular: true,
     //是否显示画板指示点  
     indicatorDots: false,
