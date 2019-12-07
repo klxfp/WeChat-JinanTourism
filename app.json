@@ -23,8 +23,8 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#43a5f6",
-    "navigationBarTitleText": "小导导",
+    "navigationBarBackgroundColor": "#339ADE",
+    "navigationBarTitleText": "小导导：济南旅游导航系统",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
