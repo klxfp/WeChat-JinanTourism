@@ -29,18 +29,29 @@ Page({
       {
         name: "目的地",
         icon: "icon_2.png",
-        page: ""
+        page: "../map/map"
       },
       {
         name: "景点门票",
         icon: "btn_ticket.png",
-        page: ""
+        page: "../test/test"
       }
     ],
     imgList: [
-      'https://s2.ax1x.com/2019/12/06/QJlMq0.jpg',
-      'https://s2.ax1x.com/2019/12/06/QJlJG4.jpg',
-      'https://s2.ax1x.com/2019/12/06/QJlqQs.jpg',
+      'https://s2.ax1x.com/2019/12/07/QteoKP.png',
+      'https://s2.ax1x.com/2019/12/07/QteTDf.png',
+      'https://s2.ax1x.com/2019/12/07/QteqUg.png',
+      'https://s2.ax1x.com/2019/12/07/QteL5Q.png',
+      'https://s2.ax1x.com/2019/12/07/QteXCj.png', 
+      'https://s2.ax1x.com/2019/12/07/Qtej8s.png',
+      'https://s2.ax1x.com/2019/12/07/Qtev2n.png',
+      'https://s2.ax1x.com/2019/12/07/Qtexvq.png',
+      'https://s2.ax1x.com/2019/12/07/QtmprV.png',
+      'https://s2.ax1x.com/2019/12/07/Qtm9bT.png',
+      'https://s2.ax1x.com/2019/12/07/QtmPVU.png',
+      'https://s2.ax1x.com/2019/12/07/QtmiaF.png',
+      'https://s2.ax1x.com/2019/12/07/QtmZx1.png',
+      'https://s2.ax1x.com/2019/12/07/QtmuqK.png'
     ],
     circular: true,
     //是否显示画板指示点  

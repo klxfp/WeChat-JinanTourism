@@ -1,11 +1,20 @@
-var _url = 'https://www.yuanweilh.com.cn/vtg/v3/api.do';
-var _data = "cityName=北京&method=snackRecommended&page=1";
+var _url = 'http://gw.api.taobao.com/router/rest';
+//var _data = "cityName=北京&method=snackRecommended&page=1";
 
 var ajax = require('../../../utils/util.ajax.js');
 var app = getApp();
 
 Page({
     data:{
+      method: "alitrip.travel.gereralitem.update",
+      app_key:" ",
+      sign_method:"md5",
+      sign:"",
+      timestamp:"",
+      v:"2.0",
+       "rule_type": "fee_excluded", 
+       "rule_desc": "费用包含描述" ,
+
         localSnack:null,
         scrollHeight: 0,
         hasMore:false,

@@ -1,53 +1,47 @@
 <!--index.wxml-->
 <view class="page">
-  <view class="container">
-    <!-- index title start-->
-    <view class="page_title">
-      <navigator url="city-list/city-list?city={{cityName}}" redirect>
-        <view class="loc_btn">{{cityName}}
-          <image class="loc_more_img" src="../../images/icon_arrow_down_white.png" />
-        </view>
-      </navigator>
-
-      <view class="search_btn">
-        <image class="seach_img" src="../../images/icon_search.png" />搜索景点</view>
-      <view class="msg_btn">
-        <image class="msg_img" src="../../images/icon_message.png" />
+  <!-- index title start-->
+  <view class="page_title">
+    <navigator url="city-list/city-list?city={{cityName}}" redirect>
+      <view class="loc_btn">{{cityName}}
+        <image class="loc_more_img" src="../../images/icon_arrow_down_white.png" />
       </view>
+    </navigator>
+    <view class="search_btn">
+      <image class="seach_img" src="../../images/icon_search.png" />
+      <text>搜索景点</text>
     </view>
-    <!-- index title end-->
-    <!-- index hot module start-->
-    <div class="page_hot">
-      <view class="hot_title">
-        <text>附近景点</text>
-      </view>
-    </div>
-    <!-- hot list start -->
-<view class='swiper'>
-    <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" duration="{{duration}}" interval='{{interval}}' bindchange="bindchange"  circular="{{circular}}" style="height:{{imgheights[current]}}rpx;">
-    <block wx:for='{{imgList}}' wx:key="{{index}}">
-      <swiper-item>
-        <image src="{{item}}" data-id='{{index}}' class="slide-image" mode="widthFix" bindload="imageLoad"/>
-      </swiper-item>
+    <view class="msg_btn">
+      <image class="msg_img" src="../../images/icon_message.png" />
+    </view>
+  </view>
+  <!-- index title end-->
+  <!-- index hot module start-->
+
+  <view class="near_bg">
+    <image class='icon_near' src="../../images/near.png" mode='widthFix' />
+  </view>
+
+  <!-- hot list start -->
+  <view class='swiper'>
+    <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" duration="{{duration}}" interval='{{interval}}' bindchange="bindchange" circular="{{circular}}" style="height:{{imgheights[current]}}rpx;">
+      <block wx:for='{{imgList}}' wx:key="{{index}}">
+        <swiper-item>
+          <image src="{{item}}" data-id='{{index}}' class="slide-image" mode="widthFix" bindload="imageLoad" />
+        </swiper-item>
       </block>
     </swiper>
   </view>
 
-    <!-- hot list end-->
+  <!-- hot list end-->
 
-    <!-- index hot mudule end-->
-    <!-- index map end -->
-    <view class="sub_nav">
-      <navigator wx:for="{{navList}}" wx:key="{{index}}" url="{{item.page}}" class="nav_item">
-        <image src="../../images/{{item.icon}}" />
-        <text>{{item.name}}</text>
-      </navigator>
-    </view>
-    <!-- index map start -->
-    <view bindtap="myLocation" class="index_map">
-      <image src="../../images/btn_explain.png" />
-    </view>
+  <!-- index hot mudule end-->
+  <!-- index map end -->
+  <view class="sub_nav">
+    <navigator wx:for="{{navList}}" wx:key="{{index}}" url="{{item.page}}" class="nav_item">
+      <image src="../../images/{{item.icon}}" />
+      <text>{{item.name}}</text>
+    </navigator>
   </view>
-
-
+  <!-- index map start -->
 </view>

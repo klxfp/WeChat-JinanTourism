@@ -1,7 +1,7 @@
 /**index.wxss**/
 
 .page {
-  background: rgb(192, 191, 191);
+  background: white;
 }
 
 .page_title {
@@ -11,6 +11,7 @@
   background: url("https://s2.ax1x.com/2019/12/06/QGxtvn.png");
   background-size: 100% 100%;
   padding-top: 22rpx;
+  
 }
 
 .page_title .loc_btn {
@@ -36,6 +37,10 @@
   border-radius: 10rpx;
   line-height: 80rpx;
   color: #708da6;
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .page_title .search_btn .seach_img {
@@ -43,41 +48,50 @@
   height: 20px;
   margin-left: 10px;
   margin-right: 10px;
+
 }
 
 .page_title .msg_btn {
   width: 100rpx;
   height: 80rpx;
   text-align: center;
+
+  flex-direction: row;
+  align-items: center;
 }
 
 .page_title .msg_btn .msg_img {
-  margin-top: 10rpx;
   width: 30px;
   height: 30px;
 }
 
-.page_hot .hot_title {
-  /*title*/
-  box-sizing: border-box;
+.near_bg {
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
   background: white;
-  height: 80rpx;
-  width: 100%;
-  align-items: center;
-  font-family: SimHei;
-  font-size: 40rpx;
+}
+
+.icon_near {
+  display: block;
+  width: 250rpx;
+  height: 400rpx;
+}
+
+.swiper {
+  width: 96%;
+  margin-left: 15rpx;
 }
 
 .swiper image {
   width: 100%;
   height: auto;
+  align-items: center;
 }
 
 .sub_nav {
-  margin-top: 10rpx;
   background: white;
   width: 100%;
-  height: 250rpx;
+  height: 180rpx;
   display: flex;
 }
 
@@ -99,22 +113,4 @@
 .sub_nav .nav_item text {
   background: white;
   font-size: 30rpx;
-}
-
-.index_map {
-  /*地图图片*/
-  width: 100%;
-  height: 300rpx;
-  background: url('https://s2.ax1x.com/2019/12/06/QGx2K1.png');
-  background-size: 100% 100%;
-  text-align: center;
-  margin-bottom: 15rpx;
-}
-
-.index_map image {
-  /*小人图片*/
-  width: 40%;
-  height: 100rpx;
-  margin-top: 150rpx;
-  margin-left: 220rpx;
 }
