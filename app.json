@@ -2,7 +2,6 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/map/map",
     "pages/index/audio/audio",
     "pages/index/city-list/city-list",
     "pages/index/local-product/index",
@@ -18,8 +17,12 @@
     "pages/mine/my-order/my-order",
     "pages/mine/my-voucher/my-voucher",
     "pages/mine/shopping-car/shopping-car",
-    "pages/tickets/tickets"
- 
+    "pages/tickets/tickets",
+    "pages/map/index/index",
+    "pages/map/inputtip/inputtip",
+    "pages/map/info/info",
+    "pages/map/routes/routes"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -40,7 +43,7 @@
         "selectedIconPath": "images/btn_home_selector.png"
       },
       {
-        "pagePath": "pages/map/map",
+        "pagePath": "pages/map/index/index",
         "text": "景区导航",
         "iconPath": "images/btn_tour_pal.png",
         "selectedIconPath": "images/btn_tour_pal_selector.png"
