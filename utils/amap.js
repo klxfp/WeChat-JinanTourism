@@ -11,7 +11,6 @@ class Amap {
   static getPoiAround(querykeywords = '') {
     return new Promise((resolve, reject) => myAmapFun.getPoiAround({ querykeywords, success: resolve, fail: reject }));
   }
-
   /**
    * 获取地理描述数据
    */
