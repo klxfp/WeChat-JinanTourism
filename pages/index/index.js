@@ -1,159 +1,328 @@
 //index.js
-//获取应用实例
-var app = getApp();
-//获取封装好的ajax
-var ajax = require('../../utils/util.ajax.js');
+var common = require('../../utils/common.js')
+var Bmob = require("../../utils/bmob.js");
+var util = require('../../utils/util.js');
+import { $wuxButton } from '../../components/wux'
+const app = getApp()
+var curIndex = 0;
+var that;
 
-var _url = app.globalData.url;
+const MENU_WIDTH_SCALE = 0.82;
+const FAST_SPEED_SECOND = 300;
+const FAST_SPEED_DISTANCE = 5;
+const FAST_SPEED_EFF_Y = 50;
 
-var amapFile = require('../../utils/amap-wx.js');
-// 实例化地图API，获取当前定位信息
-var myAmapFun = new amapFile.AMapWX({
-  key: 'fa5b1bf50930615d2303c0072aa33691'
-});
-
+var my_nick = wx.getStorageSync('my_nick')
+var my_sex = wx.getStorageSync('my_sex')
+var my_avatar = wx.getStorageSync('my_avatar')
 Page({
   data: {
-    cityName: '',
-    hotList: null,
-    navList: [{
-        name: "名店特产",
-        icon: "icon_4.png",
-        page: "local-product/index"
-      },
-      {
-        name: "景区讲解",
-        icon: "icon_1.png",
-        page: "local-snack/local-snack"
-      },
-      {
-        name: "目的地",
-        icon: "icon_2.png",
-        page: "../map/inputtip/inputtip"
-      },
-      {
-        name: "景点门票",
-        icon: "btn_ticket.png",
-        page: "../test/test"
-      }
-    ],
-    imgList: [
-      { src: 'https://s2.ax1x.com/2019/12/07/QteoKP.png', text: "趵突泉" },
-      { src: 'https://s2.ax1x.com/2019/12/07/QteTDf.png', text: "五龙潭" },
-      { src: 'https://s2.ax1x.com/2019/12/07/QteqUg.png', text: "环城公园" },
-      { src: 'https://s2.ax1x.com/2019/12/07/QteL5Q.png', text: "大明湖" },
-      { src: 'https://s2.ax1x.com/2019/12/07/QteXCj.png', text: "黑虎泉" },
-      { src: 'https://s2.ax1x.com/2019/12/07/Qtej8s.png', text: "济南国际园博园" },
-      { src: 'https://s2.ax1x.com/2019/12/07/Qtev2n.png', text: "泉城欧乐堡梦幻世界" },
-      { src: 'https://s2.ax1x.com/2019/12/07/Qtexvq.png', text: "泉城海洋极地世界" },
-      { src: 'https://s2.ax1x.com/2019/12/07/QtmprV.png', text: "金象山乐园" },
-      { src: 'https://s2.ax1x.com/2019/12/07/Qtm9bT.png', text: "红叶谷生态文化旅游区" },
-      { src: 'https://s2.ax1x.com/2019/12/07/QtmPVU.png', text: "跑马岭野生动物世界" },
-      { src: 'https://s2.ax1x.com/2019/12/07/QtmiaF.png', text: "九顶塔中华民俗乐园" },
-      { src: 'https://s2.ax1x.com/2019/12/07/QtmZx1.png', text: "灵岩寺旅游区" },
-      { src: 'https://s2.ax1x.com/2019/12/07/QtmuqK.png', text: "九如山瀑布风景区" }
-    ],
-
-
-    circular: true,
-    //是否显示画板指示点  
-    indicatorDots: false,
-    //选中点的颜色  
-    indicatorcolor: "#000",
-    //是否竖直  
-    vertical: false,
-    //是否自动切换  
-    autoplay: true,
-    //自动切换的间隔
-    interval: 2500,
-    //滑动动画时长毫秒  
-    duration: 100,
-    //所有图片的高度  
-    imgheights: [],
-    //图片宽度 
-    imgwidth: 750,
-    //默认  
-    current: 0
-
+    my_nick: my_nick,
+    my_sex: my_sex,
+    my_avatar: my_avatar,
+    userInfo: [],
+    dialog: false,
+    autoplay: false,
+    ui: {
+      windowWidth: 0,
+      menuWidth: 0,
+      offsetLeft: 0,
+      tStart: true
+    },
+    postsList: [], //总的活动
+    postsShowSwiperList: [], //轮播图显示的活动
+    currentPage: 0, //要跳过查询的页数
+    limitPage: 3,//首先显示3条数据（之后加载时都增加3条数据，直到再次加载不够3条）
+    isEmpty: false, //当前查询出来的数据是否为空
+    totalCount: 0, //总活动数量
+    endPage: 0, //最后一页加载多少条
+    totalPage: 0, //总页数
+    curIndex: 0,
+    windowHeight1: 0,
+    windowWidth1: 0,
+    //----------------------------------
+    index: 2,
+    opened: !1,
   },
-  onReady: function() {
-    var that = this;
-    // 调用高德地图接口，获取城市信息
-    if (app.globalData.curCity) {
-      this.setData({
-        cityName: app.globalData.curCity
-      });
-      this.getHot();
-    } else {
-      myAmapFun.getRegeo({
-        success: function(data) {
-          //获取当前城市信息
 
-          console.log(data[0].regeocodeData.addressComponent);
-          var _msg = data[0].regeocodeData.addressComponent;
-          var _city = _msg.city[0] ? _msg.city[0] : _msg.province;
-          app.globalData.curCity = _city;
-          that.setData({
-            cityName: _city
-          });
-
-          // console.log(app.globalData.curCity);
-
-          // 获取当前城市热门景点列表
-          that.getHot();
-        },
-        fail: function(info) {
-          //失败回调
-          console.log(info)
-        }
-      });
-    }
-
+  //首页切换图片
+  onSwiperChange: function (event) {
+    curIndex = event.detail.current
+    this.changeCurIndex()
   },
-  myLocation: function() {
-    var that = this;
-    wx.getLocation({
-      // 返回可以用于wx.openLocation的经纬度
-      type: 'gcj02',
-      success: function(res) {
-        var latitude = res.latitude;
-        var longitude = res.longitude;
-        wx.openLocation({
-          latitude: latitude,
-          longitude: longitude,
-          scale: 1
-        })
-      }
-    });
-  },
-  getHot: function() {
-    var that = this;
-    ajax.post(_url,
-      'cityName=' + that.data.cityName + '&lanKey=zh-cn&provinceName=&method=scenicsOfCityNew&',
-      function(res) {
-        that.setData({
-          hotList: res.data.data.scenics
-        });
-      })
-  },
-  imageLoad: function (e) {//获取图片真实宽度  
-    var imgwidth = e.detail.width,
-      imgheight = e.detail.height,
-      //宽高比  
-      ratio = imgwidth / imgheight;
-    console.log(imgwidth, imgheight)
-    //计算的高度值  
-    var viewHeight = 750 / ratio;
-    var imgheight = viewHeight;
-    var imgheights = this.data.imgheights;
-    //把每一张图片的对应的高度记录到数组里  
-    imgheights[e.target.dataset.id] = imgheight;
+  changeCurIndex: function () {
     this.setData({
-      imgheights: imgheights
+      curIndex: curIndex
     })
   },
-  bindchange: function (e) {
-    // console.log(e.detail.current)
-    this.setData({ current: e.detail.current })
+  onHide: function () {
+    this.setData({
+      autoplay: false
+    })
+  },
+
+  //到地图模式
+  gotoMap: function () {
+    wx.navigateTo({
+      url: '/pages/map/map',
+    });
+  },
+
+  onLoad(t) {
+    this.initButton();
+    var self = this;
+    try {
+      let res = wx.getSystemInfoSync()
+      this.windowWidth = res.windowWidth;
+      this.data.ui.menuWidth = this.windowWidth * MENU_WIDTH_SCALE;
+      this.data.ui.offsetLeft = 0;
+      this.data.ui.windowWidth = res.windowWidth;
+      this.setData({ ui: this.data.ui })
+    } catch (e) {
+    }
+  },
+
+  onShow: function (e) {
+    this.getAll();
+    this.fetchTopThreePosts(); //获取轮播图的3篇文章
+    this.fetchPostsData(); //加载首页信息
+    //this.onLoad();
+    console.log('加载头像')
+    var that = this
+
+    app.getUserInfo(function (userInfo) {
+      that.setData({
+        userInfo: userInfo
+      })
+    })
+    wx.getSystemInfo({
+      success: (res) => {
+        this.setData({
+          windowHeight1: res.windowHeight,
+          windowWidth1: res.windowWidth,
+          autoplay: true
+        })
+      }
+    })
+  },
+
+  //数据存储
+  onSetData: function (data) {
+    console.log(data.length);
+    let page = this.data.currentPage + 1;
+    //设置数据
+    data = data || [];
+    this.setData({
+      postsList: page === 1 || page === undefined ? data : this.data.postsList.concat(data),
+    });
+    console.log(this.data.postsList, page);
+  },
+
+  //获取总的活动数
+  getAll: function () {
+    self = this;
+    var Diary = Bmob.Object.extend("YuePai");
+    var query = new Bmob.Query(Diary);
+    query.count({
+      success: function (count) {
+        var totalPage = 0;
+        var endPage = 0;
+        if (count % self.data.limitPage == 0) {//如果总数的为偶数
+          totalPage = parseInt(count / self.data.limitPage);
+        } else {
+          var lowPage = parseInt(count / self.data.limitPage);
+          endPage = count - (lowPage * self.data.limitPage);
+          totalPage = lowPage + 1;
+        }
+        self.setData({
+          totalCount: count,
+          endPage: endPage,
+          totalPage: totalPage
+        })
+        console.log("共有" + count + " 条记录");
+        console.log("共有" + totalPage + "页");
+        console.log("最后一页加载" + endPage + "条");
+      },
+    });
+  },
+
+  //获取轮播图的文章,点赞数最多的前3个
+  fetchTopThreePosts: function () {
+    var self = this;
+    var molist = new Array();
+    var Diary = Bmob.Object.extend("YuePai");
+    var query = new Bmob.Query(Diary);
+    query.descending("mark");
+    query.include("user");
+    query.limit(3);
+    query.find({
+      success: function (results) {
+        for (var i = 0; i < results.length; i++) {
+          molist.push(results[i]);
+        }
+        self.setData({
+          postsShowSwiperList: molist
+        })
+        //self.fetchPostsData(self.data); //加载首页信息
+      },
+      error: function (error) {
+        console.log(error)
+      }
+    })
+  },
+
+  //获取首页列表文章
+  fetchPostsData: function (data) {
+    var self = this;
+    //获取详询活动信息
+    var molist = new Array();
+    var YuePai = Bmob.Object.extend("YuePai");
+    var query = new Bmob.Query(YuePai);
+    //query.equalTo("isShow", 1); //公开显示的
+    query.limit(self.data.limitPage);
+    console.log(self.data.limitPage);
+    query.skip(3 * self.data.currentPage);
+    query.descending("createdAt"); //按照时间降序
+    query.include("user");
+    query.find({
+      success: function (results) {
+        // console.log(results[0]._serverData)
+        // console.log(results[0].createdAt)
+        for (var i = 0; i < results.length; i++) {
+          molist.push(results[i]);
+        }
+        self.onSetData(molist);
+        setTimeout(function () {
+          wx.hideLoading();
+        }, 900);
+      },
+      error: function (error) {
+        console.log(error)
+      }
+    })
+  },
+
+  //加载下一页
+  loadMore: function () {
+    wx.showLoading({
+      title: '正在加载',
+      mask: true
+    });
+    //一秒后关闭加载提示框
+    setTimeout(function () {
+      wx.hideLoading()
+    }, 1000)
+    var self = this;
+    self.setData({
+      currentPage: self.data.currentPage + 1
+    });
+    console.log("当前页" + self.data.currentPage);
+    //先判断是不是最后一页
+    if (self.data.currentPage + 1 == self.data.totalPage) {
+      self.setData({
+        isEmpty: true
+      })
+      if (self.data.endPage != 0) { //如果最后一页的加载不等于0
+        self.setData({
+          limitPage: self.data.endPage,
+        })
+      }
+      this.fetchPostsData(self.data);
+    } else {
+      this.fetchPostsData(self.data);
+    }
+  },
+
+
+  //点击刷新
+  refresh: function () {
+    this.setData({
+      postsList: [], //总的活动
+      postsShowSwiperList: [], //轮播图显示的活动
+      currentPage: 0, //要跳过查询的页数
+      limitPage: 3,//首先显示3条数据（之后加载时都增加3条数据，直到再次加载不够3条）
+      isEmpty: false, //当前查询出来的数据是否为空
+      totalCount: 0, //总活动数量
+      endPage: 0, //最后一页加载多少条
+      totalPage: 0, //总页数
+      curIndex: 0,
+      windowHeight1: 0,
+      windowWidth1: 0,
+    })
+    this.onShow();
+  },
+
+  // 点击活动进入活动详情页面
+  click_activity: function (e) {
+    console.log(e)
+    let id = e.currentTarget.id;
+    var post = this.data.postsList[id];
+    wx.navigateTo({
+      url: '/pages/detail/detail?id=' + post.id + "&userid=" + post.attributes.user.objectId
+    });
+  },
+  click_activity1: function (e) {
+    console.log(e)
+    let id = e.currentTarget.id;
+    var post = this.data.postsShowSwiperList[id];
+    wx.navigateTo({
+      url: '/pages/detail/detail?id=' + post.id + "&userid=" + post.attributes.user.objectId
+    });
+  },
+  //点击搜索
+  click_search: function () {
+    wx.switchTab({
+      url: '/pages/search/search',
+    });
+  },
+  //点击头像
+  handlerAvatarTap:function(){
+    wx.switchTab({
+      url:'/pages/my/my'
+    })
+  },
+  //----------------------悬浮按钮操作--------------------------------------
+  initButton(position = 'bottomRight') {
+    this.setData({
+      opened: !1,
+    })
+
+    this.button = $wuxButton.init('br', {
+      position: position,
+      buttons: [
+        {
+          label: "添加作品",
+          icon: "/images/add_work.png",
+        },
+        {
+          label: "发布约拍",
+          icon: "/images/add_post.png",
+        },
+      ],
+      buttonClicked(index, item) {
+        if (index === 0) {
+          
+        }
+        else if (index === 1) {
+          wx.navigateTo({
+            url: '/pages/post/post',
+          })
+        }
+        return true
+      },
+      callback(vm, opened) {
+        vm.setData({
+          opened,
+        })
+      },
+    })
+  },
+  switchChange(e) {
+    e.detail.value ? this.button.open() : this.button.close()
+  },
+  pickerChange(e) {
+    const index = e.detail.value
+    const position = this.data.types[index]
+    this.initButton(position)
   },
 })

@@ -1,2 +1,0 @@
-// location.js
-Page({});

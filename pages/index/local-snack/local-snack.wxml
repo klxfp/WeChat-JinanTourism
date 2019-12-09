@@ -1,5 +1,0 @@
-<import src="../../../tpls/list_product.wxml" />
-
-<view>
-    <template is="list_product" data="{{productList:localSnack,scrollHeight:scrollHeight,hasMore:hasMore,loadMore:loadMore}}"/>
-</view>

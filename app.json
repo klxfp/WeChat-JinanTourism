@@ -1,65 +1,56 @@
 {
   "pages": [
+    "pages/start/start",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/index/audio/audio",
-    "pages/index/city-list/city-list",
-    "pages/index/local-product/index",
-    "pages/index/local-snack/local-snack",
-    "pages/index/location/location",
-    "pages/friends/friends",
-    "pages/friends/about_with/about_with",
-    "pages/friends/meet/meet",
-    "pages/friends/near_group/near_group",
-    "pages/friends/tour_track/tour_track",
-    "pages/mine/mine",
-    "pages/mine/down-center/down-center",
-    "pages/mine/my-order/my-order",
-    "pages/mine/my-voucher/my-voucher",
-    "pages/mine/shopping-car/shopping-car",
-    "pages/tickets/tickets",
-    "pages/map/index/index",
-    "pages/map/inputtip/inputtip",
-    "pages/map/info/info",
-    "pages/map/routes/routes",
-    "pages/test/test"
+    "pages/authorize/authorize",
+    "pages/map/map"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#339ADE",
-    "navigationBarTitleText": "小导导：济南旅游导航系统",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#118fff",
+    "navigationBarTitleText": "小导导",
+    "backgroundColor": "#fff"
   },
   "tabBar": {
-    "color": "#797979",
-    "selectedColor": "#3fc3f1",
+    "color": "#9BABBA",
+    "selectedColor": "#495056",
     "borderStyle": "white",
     "backgroundColor": "#ffffff",
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "images/btn_home.png",
-        "selectedIconPath": "images/btn_home_selector.png"
+        "iconPath": "images/tar-home.png",
+        "selectedIconPath": "images/tar-home-on.png"
       },
       {
-        "pagePath": "pages/map/index/index",
-        "text": "景区导航",
-        "iconPath": "images/btn_tour_pal.png",
-        "selectedIconPath": "images/btn_tour_pal_selector.png"
+        "pagePath": "pages/index/index",
+        "text": "分类",
+        "iconPath": "images/tar-sort.png",
+        "selectedIconPath": "images/tar-sort-on.png"
       },
       {
-        "pagePath": "pages/mine/mine",
+        "pagePath": "pages/index/index",
+        "text": "消息",
+        "iconPath": "images/tar-about.png",
+        "selectedIconPath": "images/tar-about-on.png"
+      },
+      {
+        "pagePath": "pages/index/index",
         "text": "我的",
-        "iconPath": "images/btn_personal.png",
-        "selectedIconPath": "images/btn_personal_selector.png"
+        "iconPath": "images/tar-topic.png",
+        "selectedIconPath": "images/tar-topic-on.png"
+      },
+      {
+        "pagePath": "pages/map/map",
+        "text": "景区导航"
       }
     ]
+    },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
   },
-  "permission": {
-    "scope.userLocation": {
-      "desc": "小程序请求调用您的位置信息来暗杀李依谦。"
-    }
-  },
-  "sitemapLocation": "sitemap55.json"
+  "sitemapLocation": "sitemap.json"
 }
