@@ -1,41 +1,35 @@
-<import src="../../tpls/menu.wxml" />
-<view class="container">
+<view class="minebu">
 
-    <view class="mine_title">
-        <view class="mine_msg">
-            <view class="mine_msg_left">
-                <image class="login_no" src="{{userInfo.avatarUrl}}" />
-                <text class="myname">{{userInfo.nickName}}</text>
-            </view>
-            <view class="mine_msg_right">
-                <image class="setting_icon" src="../../images/setting_smallicon_qr.png" />
-                <image class="menu_right" src="../../images/ic_arrow_right.png" />
-            </view>
-
-        </view>
-        <view class="mine_nav">
-            <text class="mine_nav_item">游迹 0</text>
-            <text class="mine_nav_item">点评 0</text>
-            <text class="mine_nav_item no_border">收藏 0</text>
+        <view class="myLogin">
+            <image src="{{src}}"></image>
+            <button  class="but" open-type='getUserInfo'bindgetuserinfo='getMyInfo'>
+                <text>{{nickName}}</text>
+            </button>
         </view>
 
         <view>
-        <swiper indicator-dots="true"autoplay="true" interval="5000" 
-        duration="500">
-          <view wx:for="{{swiperImg}}"wx:key="swiper{{index}}">
-            <swiper-item>
-              <image src="{{item.src}}"></image>
-            </swiper-item>
-          </view>
-        </swiper>
-        
-        </view>
+          <swiper class="swiperbu" indicator-dots="true"autoplay="true" interval="5000" 
+          duration="500">
+            <view wx:for="{{swiperImg}}"wx:key="swiper{{index}}">
+              <swiper-item>
+                <image class="swiperima"src="{{item.src}}"></image>
+              </swiper-item>
+            </view>
+          </swiper>
+      </view>
 
+      <view class="news">
+        <navigator class="mine_nav_item"  bindtap="trail">
+           <text>旅游心得体会</text>
+        </navigator>
 
+        <navigator class="mine_nav_item"  bindtap="commen">
+           <text>期望未来之旅</text>
+        </navigator>
 
-    </view>
+        <navigator class="mine_nav_item"  bindtap="collectio">
+           <text>完成期望之旅</text>
+        </navigator>
 
-    <template is="menuList" data="{{menuList}}" />
-
-
+      </view>
 </view>

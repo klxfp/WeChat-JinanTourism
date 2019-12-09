@@ -4,6 +4,8 @@ var app = getApp();
 Page({
     data:{
         userInfo:{},
+        nickName: "未登录",
+        src: "/pages/mine/images/index1.png",
         swiperImg: [
           { src: "https://dimg06.c-ctrip.com/images/100m11000000rhzcqD3D4_R_1600_10000_Mtg_7.jpg" },
           { src: "https://dimg08.c-ctrip.com/images/100l0y000000m1ilk9C71_R_1600_10000_Mtg_7.jpg" },
@@ -41,6 +43,29 @@ Page({
         ]
         
     },
+    getMyInfo: function (e) {
+      console.log(e.detail.userInfo)
+      let info = e.detail.userInfo;
+      this.setData({
+        nickName: info.nickName,//更新名称
+        src: info.avatarUrl//更新图片来源
+      })
+    },
+    trail:function(event){
+      wx.navigateTo({
+        url: '/pages/mine/detail/detail'
+      })
+    },
+   collectio:function (event) {
+      wx.navigateTo({
+        url: '/pages/mine/history/history'
+      })
+   },
+    commen:function (event) {
+     wx.navigateTo({
+       url: '/pages/mine/collection/collection'
+      })
+   },
     onLoad:function(){
         var that = this;
         // 调用应用实例的方法获取全局数据
