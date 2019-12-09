@@ -29,7 +29,7 @@ Page({
       {
         name: "目的地",
         icon: "icon_2.png",
-        page: "../map/map"
+        page: "../map/inputtip/inputtip"
       },
       {
         name: "景点门票",
