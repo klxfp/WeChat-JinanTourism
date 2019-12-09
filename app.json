@@ -44,7 +44,9 @@
       },
       {
         "pagePath": "pages/map/map",
-        "text": "景区导航"
+        "text": "景区导航",
+        "iconPath": "images/location2.png",
+        "selectedIconPath": "images/map5.png"
       }
     ]
     },
