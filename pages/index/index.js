@@ -24,7 +24,7 @@ Page({
     {
       name: "景区讲解",
       icon: "icon_1.png",
-      page: "local-snack/local-snack"
+      page: "audio/audio"
     },
     {
       name: "目的地",
