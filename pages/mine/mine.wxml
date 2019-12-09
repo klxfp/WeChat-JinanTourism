@@ -1,0 +1,35 @@
+<view class="minebu">
+
+        <view class="myLogin">
+            <image src="{{src}}"></image>
+            <button  class="but" open-type='getUserInfo'bindgetuserinfo='getMyInfo'>
+                <text>{{nickName}}</text>
+            </button>
+        </view>
+
+        <view>
+          <swiper class="swiperbu" indicator-dots="true"autoplay="true" interval="5000" 
+          duration="500">
+            <view wx:for="{{swiperImg}}"wx:key="swiper{{index}}">
+              <swiper-item>
+                <image class="swiperima"src="{{item.src}}"></image>
+              </swiper-item>
+            </view>
+          </swiper>
+      </view>
+
+      <view class="news">
+        <navigator class="mine_nav_item"  bindtap="trail">
+           <text>旅游心得体会</text>
+        </navigator>
+
+        <navigator class="mine_nav_item"  bindtap="commen">
+           <text>期望未来之旅</text>
+        </navigator>
+
+        <navigator class="mine_nav_item"  bindtap="collectio">
+           <text>完成期望之旅</text>
+        </navigator>
+
+      </view>
+</view>

@@ -1,55 +1,48 @@
-<!-- index.wxml -->
-<view class='post-container'>
-  <view class='post'>
-    <import src="../../components/button/button.wxml"/>
-    <template is="button" data="{{ ...$wux.button.br }}"/>
+<!--index.wxml-->
+<view class="page">
+  <!-- index title start-->
+  <view class="page_title">
+    <navigator url="city-list/city-list?city={{cityName}}" redirect>
+      <view class="loc_btn">{{cityName}}
+        <image class="loc_more_img" src="../../images/icon_arrow_down_white.png" />
+      </view>
+    </navigator>
+    <view class="search_btn">
+      <image class="seach_img" src="../../images/icon_search.png" />
+      <text>搜索景点</text>
+    </view>
+    <view class="msg_btn">
+      <image class="msg_img" src="../../images/icon_message.png" />
+    </view>
   </view>
-</view>
-<view class="mpage {{!ui.tStart? 'withAnimate': ''}}" style="left:{{ui.offsetLeft}}px;width: {{ui.windowWidth}}px;" bindtouchstart="handlerStart" catchtouchmove="handlerMove" bindtouchcancel="handlerCancel" bindtouchend="handlerEnd" bindtap="handlerPageTap">
-  <scroll-view bindscroll="" scroll-y style="height: 100%;">
-    <view class="search">
-      <view catchtap="handlerAvatarTap" class="avatar">
-        <image src="{{userInfo.avatarUrl}}"></image>
-      </view>
-      <view class="search-wrapper {{show_search_back?'search-wrapper-blue':''}}">
-        <view class="search-button" bindtap="click_search">
-          <view class="iconfont icon-sousuo"></view>
-          搜索
-        </view>
-      </view>
-      <view bindtap='gotoMap' class="avatar_r">
-        <image src="/images/map7.png"></image>
-      </view>
-    </view>
-    <!-- 活动详情界面 -->
-     <swiper duration="300" interval="5000" autoplay="{{autoplay}}" bindchange="onSwiperChange" current="{{ curIndex }}" style="overflow: visible;">
-      <swiper-item wx:for="{{ postsShowSwiperList }}" style="overflow: visible;" wx:key="key">
-        <image src="{{ item.images[0] }}" style="width: 100%; height: 300rpx; background: #fff; box-shadow: 0 10rpx 15rpx rgba(0, 0, 0, .1); -webkit-transform: scale({{ curIndex == index ? 0.9 : 0.65 }}) translate({{ (curIndex == index - 1 || curIndex == index + 1) ? (curIndex - index) * 30 : 0 }}%, 0); -webkit-transition: .3s; position: relative;" id="{{index}}" bindtap="click_activity1" mode="aspectFill" />
-        <view class="horizontal">
-          <view class="tag recommend">最热景点</view>
-          <text class="title">{{item.title}}</text>
-        </view>
-      </swiper-item>
-    </swiper> 
+  <!-- index title end-->
+  <!-- index hot module start-->
 
-    <view class="activities">
-      <view class="subtitle">
-        <image src="/images/ic_activity.png" mode="aspectFit" />
-        <text>小导导</text>
-        <space/>
-        <button bindtap="refresh">点击刷新</button>
-      </view>
+  <view class="near_bg">
+    <image class='icon_near' src="../../images/near.png" mode='widthFix' />
+  </view>
 
-      
-    
-    </view>
+  <!-- hot list start -->
+  <view class='swiper'>
+    <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" duration="{{duration}}" interval='{{interval}}' bindchange="bindchange" circular="{{circular}}" style="height:{{imgheights[current]}}rpx;">
+      <block wx:for='{{imgList}}' wx:key="{{index}}">
+        <swiper-item>
+          <image src="{{item.src}}" data-id='{{index}}' class="image" mode="widthFix" bindload="imageLoad" />
+          <view class="txt">{{item.text}}</view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
 
-    <view class="loadingmore">
-      <view wx:if="{{!isEmpty}}">
-        <button class="more-button" formType="submit" size="mini" bindtap="loadMore">加载更多...</button>
-      </view>
-      <view class="no-more" wx:if="{{isEmpty}}">---无更多活动---</view>
-    </view>
-    <tab-shadow/>
-  </scroll-view>
+  <!-- hot list end-->
+
+  <!-- index hot mudule end-->
+  <!-- index map end -->
+  <view class="sub_nav">
+    <navigator wx:for="{{navList}}" wx:key="{{index}}" url="{{item.page}}" class="nav_item">
+      <image src="../../images/{{item.icon}}" />
+      <text>{{item.name}}</text>
+    </navigator>
+  </view>
+  <!-- index map start -->
 </view>
