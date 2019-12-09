@@ -21,8 +21,8 @@
     "pages/map/index/index",
     "pages/map/inputtip/inputtip",
     "pages/map/info/info",
-    "pages/map/routes/routes"
-    
+    "pages/map/routes/routes",
+    "pages/test/test"
   ],
   "window": {
     "backgroundTextStyle": "light",
