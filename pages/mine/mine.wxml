@@ -1,5 +1,6 @@
 <view class="minebu">
 
+        
         <view class="myLogin">
             <image src="{{src}}"></image>
             <button  class="but" open-type='getUserInfo'bindgetuserinfo='getMyInfo'>
@@ -18,18 +19,50 @@
           </swiper>
       </view>
 
-      <view class="news">
-        <navigator class="mine_nav_item"  bindtap="trail">
-           <text>旅游心得体会</text>
-        </navigator>
+      <view class="detail">
+        
+        <view class="bar">
 
-        <navigator class="mine_nav_item"  bindtap="commen">
-           <text>期望未来之旅</text>
-        </navigator>
+          <navigator class="box"  bindtap="collectio">
+            <image class='dingima' src="/pages/mine/images/order.png"></image>
+            <text>全部订单</text>
+          </navigator>
 
-        <navigator class="mine_nav_item"  bindtap="collectio">
-           <text>完成期望之旅</text>
-        </navigator>
+          <navigator class="box"  bindtap="collectio">
+            <image class='dingima' src="/pages/mine/images/renew.png"></image>
+            <text>待付款</text>
+          </navigator>
+
+          <navigator class="box"  bindtap="commen">
+            <image class='dingima' src="/pages/mine/images/unread.png"></image>
+            <text>未出行</text>
+          </navigator>
+
+        </view>
+       
+
+        <view class="bar">
+
+          <navigator class="box"  bindtap="trail">
+            <image class='dingima' src="/pages/mine/images/balance.png"></image>
+            <text>优惠券</text>
+          </navigator>
+
+          <navigator class="box"  bindtap="collectio">
+            <image class='dingima' src="/pages/mine/images/international.png"></image>
+            <text>旅行足迹</text>
+          </navigator>
+
+          <navigator class="box"  bindtap="collectio">
+            <image class='dingima' src="/pages/mine/images/start.png"></image>
+            <text>我的收藏</text>
+          </navigator>
+
+          
+        
+        
+        </view>
+       
 
       </view>
 </view>
