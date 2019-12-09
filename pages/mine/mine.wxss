@@ -1,4 +1,4 @@
-.mine_nav_item {
+/* .mine_nav_item {
   font-size:35rpx;
   height: 70rpx;
   border-bottom:1rpx solid rgba(0, 0, 0, 0.356);
@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content:space-around;
   align-items: center;
-  }
+  } */
 
 .swiperbu{
   height: 270rpx;
@@ -28,6 +28,7 @@
 }
 .myname{
   font-size:70rpx;
+  font-family: "幼圆";
 }
 
 .news{
@@ -39,22 +40,25 @@
 }
 
 .but{
-  color:rgb(243, 101, 6);
+  /* color:rgb(243, 101, 6); */
   height: 70rpx;
   display:flex;
   flex-direction: column;
   justify-content:space-around;
   align-items: center;
+  background-color:inherit;
 }
 
 .myLogin{
   height: 300rpx;
-  background-color:white;
-  background:#339ADE;
+  /* background-color:white; */
+  /* background:#339ADE; */
   display:flex;
   flex-direction: column;
   align-items: center;
   justify-content:space-around;
+  background: url("https://s2.ax1x.com/2019/12/06/QGxtvn.png");
+  background-size: 150% 150%;
 }
 
 .myLogin image{
@@ -71,6 +75,7 @@
   box-sizing: border-box;
   font-family: "幼圆";
   background-color:white;
+
 }
 
 .ima{
