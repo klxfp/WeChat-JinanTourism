@@ -1,7 +1,11 @@
 {
   "pages": [
+    "pages/start/start",
     "pages/index/index",
+    "pages/authorize/authorize",
     "pages/logs/logs",
+    "pages/map/map",
+    "pages/map/index/index",
     "pages/index/audio/audio",
     "pages/index/city-list/city-list",
     "pages/index/local-product/index",
@@ -13,26 +17,23 @@
     "pages/friends/near_group/near_group",
     "pages/friends/tour_track/tour_track",
     "pages/mine/mine",
-    "pages/mine/down-center/down-center",
-    "pages/mine/my-order/my-order",
-    "pages/mine/my-voucher/my-voucher",
-    "pages/mine/shopping-car/shopping-car",
-    "pages/tickets/tickets",
-    "pages/map/index/index",
-    "pages/map/inputtip/inputtip",
-    "pages/map/info/info",
-    "pages/map/routes/routes"
-    
+    "pages/mine/orders/orders",
+    "pages/mine/payment/payment",
+    "pages/mine/totravel/totravel",
+    "pages/mine/Coupon/Coupon",
+    "pages/mine/footprint/footprint",
+    "pages/mine/Collection/Collection",
+    "pages/tickets/tickets"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#339ADE",
-    "navigationBarTitleText": "小导导：济南旅游导航系统",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#118fff",
+    "navigationBarTitleText": "小导导",
+    "backgroundColor": "#fff"
   },
   "tabBar": {
-    "color": "#797979",
-    "selectedColor": "#3fc3f1",
+    "color": "#9BABBA",
+    "selectedColor": "#495056",
     "borderStyle": "white",
     "backgroundColor": "#ffffff",
     "list": [
@@ -56,10 +57,14 @@
       }
     ]
   },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
   "permission": {
     "scope.userLocation": {
       "desc": "小程序请求调用您的位置信息来暗杀李依谦。"
     }
   },
-  "sitemapLocation": "sitemap55.json"
+  "sitemapLocation": "sitemap.json"
 }

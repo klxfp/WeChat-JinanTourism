@@ -9,39 +9,11 @@ Page({
         swiperImg: [
           { src: "https://dimg06.c-ctrip.com/images/100m11000000rhzcqD3D4_R_1600_10000_Mtg_7.jpg" },
           { src: "https://dimg08.c-ctrip.com/images/100l0y000000m1ilk9C71_R_1600_10000_Mtg_7.jpg" },
-          { src: "https://dimg04.c-ctrip.com/images/100w10000000ph6twC31B_R_1600_10000_Mtg_7.jpg" }
-        ],
-        menuList:[
-            {
-                list:[
-                    {
-                        name:'下载中心',
-                        page:'down-center/down-center',
-                        icon:'../../images/down_center_icon.png',
-                        arrow:'../../images/ic_arrow_right.png'
-                    },
-                    {
-                        name:'我的订单',
-                        page:'my-order/my-order',
-                        icon:'../../images/myorder_icon.png',
-                        arrow:'../../images/ic_arrow_right.png'
-                    },
-                    {
-                        name:'购物车',
-                        page:'shopping-car/shopping-car',
-                        icon:'../../images/icon_shoppingcart_blue.png',
-                        arrow:'../../images/ic_arrow_right.png'
-                    },
-                    {
-                        name:'我的钱包',
-                        page:'my-voucher/my-voucher',
-                        icon:'../../images/voucher_icon.png',
-                        arrow:'../../images/ic_arrow_right.png'
-                    }
-                ]
-            }
+          { src: "https://dimg04.c-ctrip.com/images/100w10000000ph6twC31B_R_1600_10000_Mtg_7.jpg" },
+          { src: "http://img.mp.itc.cn/upload/20160829/2d606e73cb41478bbc634df54581ab14_th.jpg" },
+          { src: "http://staticfile.tujia.com/upload/info/day_130531/201305310232448990_s.jpg" },
+          { src: "http://img.soufun.com/news/2008_04/29/1209446420219.jpg" }
         ]
-        
     },
     getMyInfo: function (e) {
       console.log(e.detail.userInfo)
@@ -51,21 +23,36 @@ Page({
         src: info.avatarUrl//更新图片来源
       })
     },
-    trail:function(event){
+    orders:function(event){
+        wx.navigateTo({
+          url: '/pages/mine/orders/orders'
+        })
+      },
+    payment:function (event) {
+        wx.navigateTo({
+          url: '/pages/mine/payment/payment'
+        })
+    },
+    totravel:function (event) {
       wx.navigateTo({
-        url: '/pages/mine/detail/detail'
+        url: '/pages/mine/totravel/totravel'
+        })
+    },
+    Coupon: function (event) {
+      wx.navigateTo({
+        url: '/pages/mine/Coupon/Coupon'
       })
     },
-   collectio:function (event) {
+    footprint: function (event) {
       wx.navigateTo({
-        url: '/pages/mine/history/history'
+        url: '/pages/mine/footprint/footprint'
       })
-   },
-    commen:function (event) {
-     wx.navigateTo({
-       url: '/pages/mine/collection/collection'
+    },
+    Collection: function (event) {
+      wx.navigateTo({
+        url: '/pages/mine/Collection/Collection'
       })
-   },
+    },
     onLoad:function(){
         var that = this;
         // 调用应用实例的方法获取全局数据

@@ -17,25 +17,25 @@ Page({
     cityName: '',
     hotList: null,
     navList: [{
-        name: "名店特产",
-        icon: "icon_4.png",
-        page: "local-product/index"
-      },
-      {
-        name: "景区讲解",
-        icon: "icon_1.png",
-        page: "local-snack/local-snack"
-      },
-      {
-        name: "目的地",
-        icon: "icon_2.png",
-        page: "../map/map"
-      },
-      {
-        name: "景点门票",
-        icon: "btn_ticket.png",
-        page: "../test/test"
-      }
+      name: "名店特产",
+      icon: "icon_4.png",
+      page: "local-product/index"
+    },
+    {
+      name: "景区讲解",
+      icon: "icon_1.png",
+      page: "audio/audio"
+    },
+    {
+      name: "目的地",
+      icon: "icon_2.png",
+      page: "../map/inputtip/inputtip"
+    },
+    {
+      name: "景点门票",
+      icon: "btn_ticket.png",
+      page: "../test/test"
+    }
     ],
     imgList: [
       { src: 'https://s2.ax1x.com/2019/12/07/QteoKP.png', text: "趵突泉" },
@@ -76,7 +76,7 @@ Page({
     current: 0
 
   },
-  onReady: function() {
+  onReady: function () {
     var that = this;
     // 调用高德地图接口，获取城市信息
     if (app.globalData.curCity) {
@@ -86,7 +86,7 @@ Page({
       this.getHot();
     } else {
       myAmapFun.getRegeo({
-        success: function(data) {
+        success: function (data) {
           //获取当前城市信息
 
           console.log(data[0].regeocodeData.addressComponent);
@@ -102,7 +102,7 @@ Page({
           // 获取当前城市热门景点列表
           that.getHot();
         },
-        fail: function(info) {
+        fail: function (info) {
           //失败回调
           console.log(info)
         }
@@ -110,12 +110,12 @@ Page({
     }
 
   },
-  myLocation: function() {
+  myLocation: function () {
     var that = this;
     wx.getLocation({
       // 返回可以用于wx.openLocation的经纬度
       type: 'gcj02',
-      success: function(res) {
+      success: function (res) {
         var latitude = res.latitude;
         var longitude = res.longitude;
         wx.openLocation({
@@ -126,11 +126,11 @@ Page({
       }
     });
   },
-  getHot: function() {
+  getHot: function () {
     var that = this;
     ajax.post(_url,
       'cityName=' + that.data.cityName + '&lanKey=zh-cn&provinceName=&method=scenicsOfCityNew&',
-      function(res) {
+      function (res) {
         that.setData({
           hotList: res.data.data.scenics
         });

@@ -1,6 +1,91 @@
-<view class="container">
-    <scroll-view scroll-y="true" scroll-x="true" style="width:100%; height:100%;" scroll-into-view="scImg">  
-        <image id="scImg" src="{{icon}}"  bindload = "imgload"  style="width:{{ scaleWidth }}px; height:{{ scaleHeight }}px" bindtouchend="endtap" bindtouchmove="movetap" />
-    </scroll-view> 
-    <audio src="{{audioSrc}}" id="myAudio" controls></audio>
+<!--pages/find/find.wxml-->
+<view class="view-box">
+  <view class="view">
+    <view class="img">
+      <text class="title"></text>
+      <image src="https://s2.ax1x.com/2019/12/07/QteoKP.png"></image>
+    </view>
+  </view>
+  <view class="view">
+    <view class="img">
+      <text class="title"></text>
+      <image src="https://s2.ax1x.com/2019/12/07/QteTDf.png"></image>
+    </view>
+  </view>
+
+  <view class="view">
+    <view class="img">
+      <text class="title"></text>
+      <image src="https://s2.ax1x.com/2019/12/07/QteqUg.png"></image>
+    </view>
+  </view>
+
+  <view class="view">
+    <view class="img">
+      <text class="title"></text>
+      <image src="https://s2.ax1x.com/2019/12/07/QteL5Q.png"></image>
+    </view>
+    <view class="view">
+      <view class="img">
+        <text class="title"></text>
+        <image src="https://s2.ax1x.com/2019/12/07/QteXCj.png"></image>
+      </view>
+    </view>
+    <view class="view">
+      <view class="img">
+        <text class="title"></text>
+        <image src="https://s2.ax1x.com/2019/12/07/Qtej8s.png"></image>
+      </view>
+    </view>
+    <view class="view">
+      <view class="img">
+        <text class="title"></text>
+        <image src="https://s2.ax1x.com/2019/12/07/Qtev2n.png"></image>
+      </view>
+    </view>
+    <view class="view">
+      <view class="img">
+        <text class="title"></text>
+        <image src="https://s2.ax1x.com/2019/12/07/Qtexvq.png"></image>
+      </view>
+    </view>
+    <view class="view">
+      <view class="img">
+        <text class="title"></text>
+        <image src="https://s2.ax1x.com/2019/12/07/QtmprV.png"></image>
+      </view>
+    </view>
+    <view class="view">
+      <view class="img">
+        <text class="title"></text>
+        <image src="https://s2.ax1x.com/2019/12/07/Qtm9bT.png"></image>
+      </view>
+    </view>
+    <view class="view">
+      <view class="img">
+        <text class="title"></text>
+        <image src="https://s2.ax1x.com/2019/12/07/QtmPVU.png"></image>
+      </view>
+    </view>
+    <view class="view">
+      <view class="img">
+        <text class="title"></text>
+        <image src="https://s2.ax1x.com/2019/12/07/QtmiaF.png"></image>
+      </view>
+    </view>
+
+    <view class="view">
+      <view class="img">
+        <text class="title"></text>
+        <image src="https://s2.ax1x.com/2019/12/07/QtmZx1.png"></image>
+      </view>
+    </view>
+
+    <view class="view">
+      <view class="img">
+        <text class="title"></text>
+        <image src="https://s2.ax1x.com/2019/12/07/QtmuqK.png"></image>
+      </view>
+    </view>
+  </view>
 </view>
