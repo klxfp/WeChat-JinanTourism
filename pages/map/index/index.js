@@ -85,6 +85,23 @@ Page({
     wx.navigateTo({ url });
   },
   clickcontrol(e) {
+    var that = this;
+    var myAmapFun = new amapFile.AMapWX({ key: '6205e3022b70167945e90fec43976555' });
+    amap.getRegeo()
+      .then(d => {
+        console.log(d);
+        let { name, desc, latitude, longitude } = d[0];
+        let { city } = d[0].regeocodeData.addressComponent;
+        this.setData({
+          city,
+          latitude,
+          longitude,
+          textData: { name, desc }
+        })
+      })
+      .catch(e => {
+        console.log(e);
+      })
     console.log("回到用户当前定位点");
     let { controlId } = e;
     let mpCtx = wx.createMapContext("map");
@@ -92,5 +109,30 @@ Page({
   },
   mapchange() {
     // console.log("改变视野");
+  },
+  clickHotel: function () {
+    var that = this;
+    var myAmapFun = new amapFile.AMapWX({ key: '6205e3022b70167945e90fec43976555' });
+    myAmapFun.getPoiAround({
+      iconPathSelected: '../images/Redmaker.png',
+      iconPath: '../images/Bluemaker.png',
+      querykeywords:'酒店',
+      success: function (data) {
+        markersData = data.markers;
+        that.setData({
+          markers: markersData
+        });
+        that.setData({
+          latitude: markersData[0].latitude
+        });
+        that.setData({
+          longitude: markersData[0].longitude
+        });
+        that.showMarkerInfo(markersData, 0);
+      },
+      fail: function (info) {
+        wx.showModal({ title: info.errMsg })
+      }
+    })
   }
 })
