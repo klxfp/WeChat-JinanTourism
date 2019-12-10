@@ -1,0 +1,7 @@
+
+<view class="order">
+
+  <image class="tixing" src="/pages/mine/images/xiao2.png"></image>
+  <text class="zhanshi">您还没有收藏哦！</text>
+
+</view>

@@ -5,7 +5,7 @@ Page({
     data:{
         userInfo:{},
         nickName: "未登录",
-        src: "/pages/mine/images/index1.png",
+        src: "/pages/mine/images/touxiang3.png",
         swiperImg: [
           { src: "https://dimg06.c-ctrip.com/images/100m11000000rhzcqD3D4_R_1600_10000_Mtg_7.jpg" },
           { src: "https://dimg08.c-ctrip.com/images/100l0y000000m1ilk9C71_R_1600_10000_Mtg_7.jpg" },

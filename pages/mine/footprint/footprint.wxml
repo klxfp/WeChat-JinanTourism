@@ -1,2 +1,7 @@
-<!--pages/mine/footprint/footprint.wxml-->
-<text>pages/mine/footprint/footprint.wxml</text>
+<!--pages/mine/Coupon/Coupon.wxml-->
+<view class="order">
+
+  <image class="tixing" src="/pages/mine/images/liuhan.png"></image>
+  <text class="zhanshi">您还没有旅行足迹哦！</text>
+
+</view>

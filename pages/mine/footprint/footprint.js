@@ -1,4 +1,4 @@
-// pages/mine/footprint/footprint.js
+
 Page({
 
   /**

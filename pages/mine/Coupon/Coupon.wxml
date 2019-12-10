@@ -1,2 +1,7 @@
 <!--pages/mine/Coupon/Coupon.wxml-->
-<text>pages/mine/Coupon/Coupon.wxml</text>
+<view class="order">
+
+  <image class="tixing" src="/pages/mine/images/xiao1.png"></image>
+  <text class="zhanshi">您还没有优惠券哦！</text>
+
+</view>

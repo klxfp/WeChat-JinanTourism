@@ -1,1 +1,26 @@
-/* pages/mine/payment/payment.wxss */
+.order{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-around; */
+   background-color:whitesmoke;
+   font-size:35rpx;
+}
+
+.tixing{
+    width: 300rpx;
+    height: 300rpx; 
+    align-items: center;
+    padding-top: 150rpx;
+}
+.zhanshi{
+   font-size:35rpx;
+   padding-top: 30rpx;
+   font-family: "幼圆";
+}
+.gengduo{
+   font-size:30rpx;
+   padding-top: 10rpx;
+   font-family: "幼圆";
+}

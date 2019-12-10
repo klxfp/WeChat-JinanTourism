@@ -1,2 +1,8 @@
 <!--pages/mine/totravel/totravel.wxml-->
-<text>pages/mine/totravel/totravel.wxml</text>
+<view class="order">
+
+  <image class="tixing" src="/pages/mine/images/gantanhao.png"></image>
+  <text class="zhanshi">暂时没有相关内容</text>
+  <text class="gengduo">更多订单请至小导导官网或客户端查询</text>
+
+</view>
