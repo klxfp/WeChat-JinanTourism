@@ -41,7 +41,7 @@ Page({
         .then(d => {
           let { markers } = d;
           markers.forEach(item => {
-            item.iconPath = "/images/Redmaker.png";
+            item.iconPath = "/images/Bluemaker.png";
           })
           prevPage.setData({ markers });
           prevPage.showMarkerInfo(markers[0]);

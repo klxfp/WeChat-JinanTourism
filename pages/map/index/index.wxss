@@ -76,6 +76,6 @@ text{
 }
 
 .map-1 image{
-  width: 60rpx;
-  height: 80rpx;
+  width: 50rpx;
+  height: 50rpx;
 }
