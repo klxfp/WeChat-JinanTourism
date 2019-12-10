@@ -27,11 +27,11 @@
   margin:0 0 0 90rpx;
 }
 .map_container{ 
-  position: fixed;
-  height: 500px;
-  left: 0;
-  right: 0;
- 
+    height: 350px; 
+    border-radius: 10px;
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+    padding: 10rpx 10rpx;
 } 
 .map{
   width: 100%;
