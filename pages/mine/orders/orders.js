@@ -5,14 +5,19 @@ Page({
    * 页面的初始数据
    */
   data: {
+    index:0,
+    array: ['全部', '酒店', '机票', '火车票','汽车票','门票','用车','度假','民宿','优品','向导','活动']
+    },
 
+  bindPickerChange:function(e){
+    this.setData({
+      index: e.detail.value
+    })
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
   },
 
   /**

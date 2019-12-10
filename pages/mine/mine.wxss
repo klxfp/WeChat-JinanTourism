@@ -1,6 +1,6 @@
 .minebu{
   width: 750rpx;
-  height: 1334rpx; 
+  height: 1336rpx; 
   box-sizing: border-box;
   font-family: "幼圆";
   background-color:whitesmoke;
