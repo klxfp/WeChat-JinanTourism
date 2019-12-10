@@ -1,66 +1,30 @@
-// pages/index/audio/audio.js
+// pages/find/find.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    active: 0
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-
+    // 页面初始化 options为页面跳转所带来的参数
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  hotClick() {
+    console.log(1)
+    this.setData({
+      active: 0
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  aroundClick() {
+    this.setData({
+      active: 1
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  hongkongClick() {
+    this.setData({
+      active: 2
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  aomenClick() {
+    this.setData({
+      active: 3
+    })
   }
 })
