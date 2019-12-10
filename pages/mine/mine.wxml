@@ -1,68 +1,59 @@
 <view class="minebu">
+              <view class="myLogin">
+                <button  class="but" open-type='getUserInfo'bindgetuserinfo='getMyInfo'>
+                    <image src="{{src}}"></image>
+                    <text>{{nickName}}</text>
+                </button>
+              </view>
 
+            <swiper class="swiperbu" indicator-dots="true"autoplay="true" interval="5000" 
+            duration="500">
+              <view wx:for="{{swiperImg}}"wx:key="swiper{{index}}">
+                <swiper-item>
+                  <image class="swiperima"src="{{item.src}}"></image>
+                </swiper-item>
+              </view>
+            </swiper>
+
+        <view class="detail">
+          <view class="bar">
+  
+            <navigator class="box"  bindtap="orders">
+              <image class='dingima' src="/pages/mine/images/order.png"></image>
+              <text>全部订单</text>
+            </navigator>
+
+            <navigator class="box"  bindtap="payment">
+              <image class='dingima' src="/pages/mine/images/renew.png"></image>
+              <text>待付款</text>
+            </navigator>
+
+            <navigator class="box"  bindtap="totravel">
+              <image class='dingima' src="/pages/mine/images/unread.png"></image>
+              <text>未出行</text>
+            </navigator>
+
+          </view>
         
-        <view class="myLogin">
-            <image src="{{src}}"></image>
-            <button  class="but" open-type='getUserInfo'bindgetuserinfo='getMyInfo'>
-                <text>{{nickName}}</text>
-            </button>
-        </view>
 
-        <view>
-          <swiper class="swiperbu" indicator-dots="true"autoplay="true" interval="5000" 
-          duration="500">
-            <view wx:for="{{swiperImg}}"wx:key="swiper{{index}}">
-              <swiper-item>
-                <image class="swiperima"src="{{item.src}}"></image>
-              </swiper-item>
-            </view>
-          </swiper>
-      </view>
+          <view class="bar">
 
-      <view class="detail">
-        
-        <view class="bar">
+            <navigator class="box"  bindtap="Coupon">
+              <image class='dingima' src="/pages/mine/images/balance.png"></image>
+              <text>优惠券</text>
+            </navigator>
 
-          <navigator class="box"  bindtap="collectio">
-            <image class='dingima' src="/pages/mine/images/order.png"></image>
-            <text>全部订单</text>
-          </navigator>
+            <navigator class="box"  bindtap="footprint">
+              <image class='dingima' src="/pages/mine/images/international.png"></image>
+              <text>旅行足迹</text>
+            </navigator>
 
-          <navigator class="box"  bindtap="collectio">
-            <image class='dingima' src="/pages/mine/images/renew.png"></image>
-            <text>待付款</text>
-          </navigator>
+            <navigator class="box"  bindtap="Collection">
+              <image class='dingima' src="/pages/mine/images/start.png"></image>
+              <text>我的收藏</text>
+            </navigator>
 
-          <navigator class="box"  bindtap="commen">
-            <image class='dingima' src="/pages/mine/images/unread.png"></image>
-            <text>未出行</text>
-          </navigator>
-
-        </view>
-       
-
-        <view class="bar">
-
-          <navigator class="box"  bindtap="trail">
-            <image class='dingima' src="/pages/mine/images/balance.png"></image>
-            <text>优惠券</text>
-          </navigator>
-
-          <navigator class="box"  bindtap="collectio">
-            <image class='dingima' src="/pages/mine/images/international.png"></image>
-            <text>旅行足迹</text>
-          </navigator>
-
-          <navigator class="box"  bindtap="collectio">
-            <image class='dingima' src="/pages/mine/images/start.png"></image>
-            <text>我的收藏</text>
-          </navigator>
-
-          
-        
+          </view>
         
         </view>
-       
-
-      </view>
 </view>
