@@ -8,7 +8,7 @@
     "pages/map/routes/routes",
     "pages/map/info/info",
     "pages/map/inputtip/inputtip",
-    "pages/index/audio/audio",
+    "pages/audio/audio",
     "pages/index/city-list/city-list",
     "pages/index/local-product/index",
     "pages/index/local-snack/local-snack",
