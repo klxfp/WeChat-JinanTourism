@@ -3,7 +3,7 @@
 var common = require('../../../utils/common.js')
 var Bmob = require("../../../utils/bmob.js");
 var util = require('../../../utils/util.js');
-var common = require('../../template/getCode.js')
+// var common = require('../../template/getCode.js')
 var app = getApp();
 var that;
 var username = wx.getStorageSync("my_nick");
