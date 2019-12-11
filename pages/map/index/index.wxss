@@ -27,7 +27,7 @@
   margin:0 0 0 90rpx;
 }
 .map_container{ 
-    height: 350px; 
+    height: 600px; 
     border-radius: 10px;
     margin-left: 10rpx;
     margin-right: 10rpx;

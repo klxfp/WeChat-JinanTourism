@@ -134,5 +134,30 @@ Page({
         wx.showModal({ title: info.errMsg })
       }
     })
+  },
+  clickFood: function () {
+    var that = this;
+    var myAmapFun = new amapFile.AMapWX({ key: '6205e3022b70167945e90fec43976555' });
+    myAmapFun.getPoiAround({
+      iconPathSelected: '../images/Redmaker.png',
+      iconPath: '../images/Bluemaker.png',
+      querykeywords: '美食',
+      success: function (data) {
+        markersData = data.markers;
+        that.setData({
+          markers: markersData
+        });
+        that.setData({
+          latitude: markersData[0].latitude
+        });
+        that.setData({
+          longitude: markersData[0].longitude
+        });
+        that.showMarkerInfo(markersData, 0);
+      },
+      fail: function (info) {
+        wx.showModal({ title: info.errMsg })
+      }
+    })
   }
 })
