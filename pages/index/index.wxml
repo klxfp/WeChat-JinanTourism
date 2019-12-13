@@ -7,10 +7,15 @@
         <image class="loc_more_img" src="../../images/icon_arrow_down_white.png" />
       </view>
     </navigator>
+
     <view class="search_btn">
       <image class="seach_img" src="../../images/icon_search.png" />
-      <text>搜索景点</text>
+     
+      <input class="search-input" placeholder="点我搜索景点" bindtap="bindFocus" auto-focus >
+                <icon type="search" size="20" color="purple" class="search-icon inside"/>
+            </input>
     </view>
+
     <view class="msg_btn">
       <image class="msg_img" src="../../images/icon_message.png" />
     </view>

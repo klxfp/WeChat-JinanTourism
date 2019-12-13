@@ -156,4 +156,10 @@ Page({
     // console.log(e.detail.current)
     this.setData({ current: e.detail.current })
   },
+
+  bindFocus: function () {
+    wx.navigateTo({
+      url: 'search/search'
+    })
+  }
 })

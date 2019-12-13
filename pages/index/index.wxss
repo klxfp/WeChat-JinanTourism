@@ -30,6 +30,10 @@
   width: 10px;
 }
 
+.page_title .search{
+  display: inline-block;
+  
+}
 .page_title .search_btn {
   background: #9eccf5;
   height: 80rpx;
