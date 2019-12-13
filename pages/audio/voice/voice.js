@@ -1,7 +1,7 @@
 // 引入文字转语音插件
-const plugin = requirePlugin("WechatSI")
+//const plugin = requirePlugin("WechatSI")
 
-const innerAudioContext = wx.createInnerAudioContext();
+//const innerAudioContext = wx.createInnerAudioContext();
 
 Page({
   onReady: function(e) {},
