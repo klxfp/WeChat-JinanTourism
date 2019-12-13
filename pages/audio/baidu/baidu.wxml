@@ -1,0 +1,13 @@
+<view>
+    <text style="align:center">百度TTS</text>
+    <button bindtap="getToken">获取Token</button>
+    <text>TOKEN:{{token}}</text>
+
+    <button bindtap="downloadAudio">下载音频</button>
+    <text>下载文件名:{{fileName}}</text>
+    <button bindtap="startVoice">播放</button>
+  <button bindtap="stopVoice">停止播放</button>
+  <button bindtap="pause">暂停</button>
+  <button bindtap="conti">继续</button>
+  <button bindtap="again">重头开始播放</button>
+</view>
