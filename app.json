@@ -25,7 +25,9 @@
     "pages/mine/Coupon/Coupon",
     "pages/mine/footprint/footprint",
     "pages/mine/Collection/Collection",
-    "pages/tickets/tickets"
+    "pages/tickets/tickets",
+    "pages/database/about/page1",
+    "pages/database/about/database"
   ],
   "window": {
     "navigationBarTextStyle": "white",
