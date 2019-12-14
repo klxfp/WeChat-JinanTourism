@@ -2,88 +2,88 @@
 <view class="view-box">
   <view class="view">
     <view class="img">
-      <text class="title"></text>
       <image src="https://s2.ax1x.com/2019/12/07/QteoKP.png"></image>
     </view>
+    <view class="text">11111</view>
   </view>
   <view class="view">
     <view class="img">
-      <text class="title"></text>
+      <text class="text"></text>
       <image src="https://s2.ax1x.com/2019/12/07/QteTDf.png"></image>
     </view>
   </view>
 
   <view class="view">
     <view class="img">
-      <text class="title"></text>
+      <text class="text"></text>
       <image src="https://s2.ax1x.com/2019/12/07/QteqUg.png"></image>
     </view>
   </view>
 
   <view class="view">
     <view class="img">
-      <text class="title"></text>
+      <text class="text"></text>
       <image src="https://s2.ax1x.com/2019/12/07/QteL5Q.png"></image>
     </view>
     <view class="view">
       <view class="img">
-        <text class="title"></text>
+        <text class="text"></text>
         <image src="https://s2.ax1x.com/2019/12/07/QteXCj.png"></image>
       </view>
     </view>
     <view class="view">
       <view class="img">
-        <text class="title"></text>
+        <text class="text"></text>
         <image src="https://s2.ax1x.com/2019/12/07/Qtej8s.png"></image>
       </view>
     </view>
     <view class="view">
       <view class="img">
-        <text class="title"></text>
+        <text class="text"></text>
         <image src="https://s2.ax1x.com/2019/12/07/Qtev2n.png"></image>
       </view>
     </view>
     <view class="view">
       <view class="img">
-        <text class="title"></text>
+        <text class="text"></text>
         <image src="https://s2.ax1x.com/2019/12/07/Qtexvq.png"></image>
       </view>
     </view>
     <view class="view">
       <view class="img">
-        <text class="title"></text>
+        <text class="text"></text>
         <image src="https://s2.ax1x.com/2019/12/07/QtmprV.png"></image>
       </view>
     </view>
     <view class="view">
       <view class="img">
-        <text class="title"></text>
+        <text class="text"></text>
         <image src="https://s2.ax1x.com/2019/12/07/Qtm9bT.png"></image>
       </view>
     </view>
     <view class="view">
       <view class="img">
-        <text class="title"></text>
+        <text class="text"></text>
         <image src="https://s2.ax1x.com/2019/12/07/QtmPVU.png"></image>
       </view>
     </view>
     <view class="view">
       <view class="img">
-        <text class="title"></text>
+        <text class="text"></text>
         <image src="https://s2.ax1x.com/2019/12/07/QtmiaF.png"></image>
       </view>
     </view>
 
     <view class="view">
       <view class="img">
-        <text class="title"></text>
+        <text class="text"></text>
         <image src="https://s2.ax1x.com/2019/12/07/QtmZx1.png"></image>
       </view>
     </view>
 
     <view class="view">
       <view class="img">
-        <text class="title"></text>
+        <text class="text"></text>
         <image src="https://s2.ax1x.com/2019/12/07/QtmuqK.png"></image>
       </view>
     </view>
