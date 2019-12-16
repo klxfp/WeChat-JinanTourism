@@ -19,7 +19,7 @@ Page({
     navList: [{
       name: "名店特产",
       icon: "icon_4.png",
-      page: "local-product/index"
+      page: "../audio/tencent/tencent"
     },
     {
       name: "景区讲解",
