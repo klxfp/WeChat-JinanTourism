@@ -51,7 +51,7 @@ Page({
       { src: 'https://s2.ax1x.com/2019/12/07/QtmPVU.png', text: "跑马岭野生动物世界" },
       { src: 'https://s2.ax1x.com/2019/12/07/QtmiaF.png', text: "九顶塔中华民俗乐园" },
       { src: 'https://s2.ax1x.com/2019/12/07/QtmZx1.png', text: "灵岩寺旅游区" },
-      { src: 'https://s2.ax1x.com/2019/12/07/QtmuqK.png', text: "水帘峡风景区" }
+      { src: 'https://s2.ax1x.com/2019/12/07/QtmuqK.png', text: "九如山瀑布风景区" }
     ],
 
 
@@ -159,7 +159,7 @@ Page({
 
   bindFocus: function () {
     wx.navigateTo({
-      url: './search/search'
+      url: 'search/search'
     })
   }
 })

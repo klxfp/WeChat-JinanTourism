@@ -1,6 +1,5 @@
 {
 	"description": "项目配置文件",
-	"cloudfunctionRoot": "cloudfunctions/",
 	"packOptions": {
 		"ignore": []
 	},
@@ -23,7 +22,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.9.2",
-	"appid": "wx30eb33e1737e1569",
+	"appid": "wx0e09c3320bfd7556",
 	"projectname": "xiaodaodao",
 	"debugOptions": {
 		"hidedInDevtools": []
