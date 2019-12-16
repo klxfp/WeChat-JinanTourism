@@ -3,7 +3,8 @@
 </view>
 <view class='mapTab'>
   <view class="" bindtap='clickHotel'>
-    <image class="icon-image" src="../images/hotel.png"/>
+    <image class="icon-image" catchtap="clickH" wx:if="{{click1}}" src="../images/select.png"/>
+    <image class="icon-image" wx:else="{{click1}}" src="../images/hotel.png"></image>
     <view class='tabText'>酒店</view>   
   </view>
   <view class="" bindtap='clickFood'>

@@ -13,6 +13,7 @@ Page({
     textData: {},
     city: '',
     markerId: 0,
+    click1:false,
     controls: [
       {
         id: 0,
@@ -110,9 +111,23 @@ Page({
   mapchange() {
     // console.log("改变视野");
   },
+  clickH:function() {
+    var click1 = this.data.click1;
+    var bol = !click1;
+    this.setData({
+      click1: bol
+    });
+    if(!click1){
+      wx.switchTab({
+        url: '/pages/map/index/index',
+      })
+    }  
+  },
   clickHotel: function () {
     var that = this;
     var myAmapFun = new amapFile.AMapWX({ key: '6205e3022b70167945e90fec43976555' });
+    var click1 = this.data.click1;
+    var bol = !click1;
     myAmapFun.getPoiAround({
       iconPathSelected: '../images/Redmaker.png',
       iconPath: '../images/Bluemaker.png',
@@ -127,6 +142,9 @@ Page({
         });
         that.setData({
           longitude: markersData[0].longitude
+        });
+        that.setData({
+          click1: bol
         });
         that.showMarkerInfo(markersData, 0);
       },
