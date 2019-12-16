@@ -19,7 +19,7 @@ Page({
     navList: [{
       name: "名店特产",
       icon: "icon_4.png",
-      page: "../audio/tencent/tencent"
+      page: "local-product/index"
     },
     {
       name: "景区讲解",
@@ -159,7 +159,7 @@ Page({
 
   bindFocus: function () {
     wx.navigateTo({
-      url: 'search/search'
+      url: './search/search'
     })
   }
 })

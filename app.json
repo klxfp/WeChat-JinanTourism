@@ -28,8 +28,7 @@
     "pages/tickets/tickets",
     "pages/database/about/page1",
     "pages/database/about/database",
-    "pages/audio/tencent/tencent",
-    "pages/audio/test/test"
+    "pages/search/search"
   ],
   "window": {
     "navigationBarTextStyle": "white",

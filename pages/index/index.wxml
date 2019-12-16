@@ -9,9 +9,11 @@
     </navigator>
 
     <view class="search_btn">
-      <image class="seach_img" src="../../images/icon_search.png" />
-     
-      <input class="search-input" placeholder="点我搜索景点" bindtap="bindFocus" auto-focus >
+    <navigator url="../search/search">
+      <image class="seach_img" src="../../images/icon_search.png"/>
+     </navigator>
+
+      <input class="search-input" placeholder="搜索景点" bindtap="bindFocus" auto-focus >
                 <icon type="search" size="20" color="purple" class="search-icon inside"/>
             </input>
     </view>
