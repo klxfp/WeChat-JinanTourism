@@ -159,7 +159,7 @@ Page({
 
   bindFocus: function () {
     wx.navigateTo({
-      url: 'search/search'
+      url: './search/search'
     })
   }
 })

@@ -14,6 +14,22 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+const getStorage = (key) => {
+  try {
+    var v = wx.getStorageSync(key);
+    return v;
+  } catch (e) {
+    return [];
+  }
+}
+const setStorage = (key, cont) => {
+  wx.setStorage({
+    key: key,
+    data: cont
+  })
+}
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  getStorage: getStorage,
+  setStorage: setStorage
 }

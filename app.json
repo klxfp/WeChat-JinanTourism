@@ -27,7 +27,8 @@
     "pages/mine/Collection/Collection",
     "pages/tickets/tickets",
     "pages/database/about/page1",
-    "pages/database/about/database"
+    "pages/database/about/database",
+    "pages/search/search"
   ],
   "window": {
     "navigationBarTextStyle": "white",
