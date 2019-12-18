@@ -30,3 +30,23 @@
   margin-left: 40px;
 
 }
+
+
+.btn1 {
+  height: 50px;
+  width: 50px;
+  /* background: url('https://s2.ax1x.com/2019/12/18/QHoVo9.png'); */
+  border-radius: 5rpx;
+
+}
+
+.btnImg {
+  margin-right: 8rpx;
+  width: 46rpx;
+  height: 46rpx;
+}
+
+.btn1::after {
+  border-radius: 98rpx;
+  border: 0; 
+}

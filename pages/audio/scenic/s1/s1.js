@@ -6,7 +6,9 @@ Page({
     windowHeight: '',
     windowWidth: '',
     imgurl: "../../../../images/icon_play.png",
-    isShow: true
+    isShow: true,
+    isMove: false,
+    isChange: false
   },
   onLoad: function(options) {
     var that = this;
@@ -35,9 +37,11 @@ Page({
   viewStart: function(e) {
     startPoint = e.touches[0]
     console.log("start")
+
   },
   viewMove: function(e) {
     console.log("move")
+  
     var endPoint = e.touches[e.touches.length - 1]
     var translateX = endPoint.clientX - startPoint.clientX
     var translateY = endPoint.clientY - startPoint.clientY
@@ -59,11 +63,37 @@ Page({
     }
     this.setData({
       viewTop: viewTop,
-      viewLeft: viewLeft
+      viewLeft: viewLeft,
+      isMove: true
     })
   },
   viewEnd: function(e) {
     console.log("end")
+    if (this.data.isMove==true){
+      console.log("动了")
+      this.setData({
+        isMove: false
+      })
+    }else{
+      console.log("没动")
+      if (this.data.isChange==false){
+        this.setData({
+          isChange: true,
+          imgurl: "../../../../images/icon_stop.png",
+        })
+        // 播放事件在此写
+        console.log("播放")
+      }else{
+        this.setData({
+          isChange: false,
+          imgurl: "../../../../images/icon_play.png",
+        })
+        // 停止事件在此写
+        console.log("停止")
+      }
+
+    }
+
   },
   close_tap: function() {
     this.setData({
