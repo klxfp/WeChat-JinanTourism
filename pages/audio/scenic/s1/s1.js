@@ -22,10 +22,21 @@ Page({
     isMove: false,
     isChange: false,
     content: '请先点击文字选择解说内容。', //内容
-    src: ''
+    src: '',
+    color0: "#666", 
+    color1: "#666", 
+    color2: "#666",
+    color3: "#666", 
+    color4: "#666",
+    color5: "#666", 
+    color6: "#666",
+    color7: "#666", 
+    color8: "#666",
+    color9: "#666"
 
   },
   onReady(e) {
+    console.log("ready")
     //创建内部 audio 上下文 InnerAudioContext 对象。
     this.innerAudioContext = wx.createInnerAudioContext();
     this.innerAudioContext.onError(function (res) {
@@ -55,6 +66,9 @@ Page({
         })
       }
     })
+
+
+
   },
 
   onShow: function () {
@@ -68,6 +82,10 @@ Page({
   },
   // 文字转语音
   wordYun: function (e) {
+    console.log(e.currentTarget.dataset.text)
+    this.setData({
+      content: e.currentTarget.dataset.text
+    })
     var that = this;
     var content = this.data.content;
     plugin.textToSpeech({
@@ -80,7 +98,7 @@ Page({
         that.setData({
           src: res.filename
         })
-        that.yuyinPlay();
+        // that.yuyinPlay();
 
       },
       fail: function (res) {
@@ -135,18 +153,47 @@ Page({
         this.setData({
           isChange: true,
           imgurl: "../../../../images/icon_stop.png",
-        });
+        })
         // 播放事件在此写
-        console.log("播放")
+        console.log("播放");
         if (this.data.src == '') {
-          console.log(暂无语音);
-          return;
+          console.log("暂无语音");
+          wx.showToast({
+            title: "请先点击文字",
+            image: "../../../../images/fail.png",//自定义图标的本地路径，image 的优先级高于 icon
+            duration: 2000,//提示的延迟时间，单位毫秒，默认：1500 
+            mask: false,//是否显示透明蒙层，防止触摸穿透，默认：false 
+            success: function () { },
+            fail: function () { },
+            complete: function () { }
+          })
+          this.setData({
+            isChange: false,
+            imgurl: "../../../../images/icon_play.png",
+          })
+
         }
-        console.log("??")
-        this.innerAudioContext.src = this.data.src //设置音频地址
-        this.innerAudioContext.play(); //播放音频
-        console.log("播放ok")
-      } 
+        else {
+          this.innerAudioContext.src = this.data.src //设置音频地址
+          this.innerAudioContext.play(); //播放音频
+          console.log("播放ok")
+
+          setTimeout(() => {
+            this.innerAudioContext.currentTime
+            this.innerAudioContext.onTimeUpdate(() => {
+              console.log(this.innerAudioContext.duration)   //总时长
+              console.log(this.innerAudioContext.currentTime)   //当前播放进度
+              if (this.innerAudioContext.currentTime >= this.innerAudioContext.duration * 0.85){
+                this.setData({
+                  isChange: false,
+                  imgurl: "../../../../images/icon_play.png",
+                  color0: "#666", 
+                })
+              }
+            })
+          }, 500)
+        }
+      }
       else {
         this.setData({
           isChange: false,
@@ -156,9 +203,7 @@ Page({
         this.innerAudioContext.pause(); //暂停音频
         console.log("停止")
       }
-
     }
-
   },
   close_tap: function () {
     this.setData({
@@ -183,7 +228,143 @@ Page({
     this.setData({
       url: url
     })
+  },
+  
+  change_clr1: function (e) {
+    console.log("change1")
+    this.setData({
+      color0: "#666",
+      color1: "#1287FF",
+      color2: "#666",
+      color3: "#666",
+      color4: "#666",
+      color5: "#666",
+      color6: "#666",
+      color7: "#666",
+      color8: "#666",
+      color9: "#666"
+    })
 
+
+  },
+  change_clr2: function (e) {
+    console.log("change2")
+    this.setData({
+      color0: "#666",
+      color1: "#666",
+      color2: "#1287FF",
+      color3: "#666",
+      color4: "#666",
+      color5: "#666",
+      color6: "#666",
+      color7: "#666",
+      color8: "#666",
+      color9: "#666"
+    })
+  },
+  change_clr3: function (e) {
+    console.log("change3")
+    this.setData({
+      color0: "#666",
+      color1: "#666",
+      color2: "#666",
+      color3: "#1287FF",
+      color4: "#666",
+      color5: "#666",
+      color6: "#666",
+      color7: "#666",
+      color8: "#666",
+      color9: "#666"
+    })
+  },
+  change_clr4: function (e) {
+    console.log("change4")
+    this.setData({
+      color0: "#666",
+      color1: "#666",
+      color2: "#666",
+      color3: "#666",
+      color4: "#1287FF",
+      color5: "#666",
+      color6: "#666",
+      color7: "#666",
+      color8: "#666",
+      color9: "#666"
+    })
+  },
+  change_clr5: function (e) {
+    console.log("change5")
+    this.setData({
+      color0: "#666",
+      color1: "#666",
+      color2: "#666",
+      color3: "#666",
+      color4: "#666",
+      color5: "#1287FF",
+      color6: "#666",
+      color7: "#666",
+      color8: "#666",
+      color9: "#666"
+    })
+  },
+  change_clr6: function (e) {
+    console.log("change6")
+    this.setData({
+      color0: "#666",
+      color1: "#666",
+      color2: "#666",
+      color3: "#666",
+      color4: "#666",
+      color5: "#666",
+      color6: "#1287FF",
+      color7: "#666",
+      color8: "#666",
+      color9: "#666"
+    })
+  },
+  change_clr7: function (e) {
+    console.log("change7")
+    this.setData({
+      color0: "#666",
+      color1: "#666",
+      color2: "#666",
+      color3: "#666",
+      color4: "#666",
+      color5: "#666",
+      color6: "#666",
+      color7: "#1287FF",
+      color8: "#666",
+      color9: "#666"
+    })
+  },
+  change_clr8: function (e) {
+    console.log("change8")
+    this.setData({
+      color0: "#666",
+      color1: "#666",
+      color2: "#666",
+      color3: "#666",
+      color4: "#666",
+      color5: "#666",
+      color6: "#666",
+      color7: "#666",
+      color8: "#1287FF",
+      color9: "#666"
+    })
+  }, 
+  change_clr9: function (e) {
+    console.log("change9")
+    this.setData({
+      color0: "#666",
+      color1: "#666",
+      color2: "#666",
+      color3: "#666",
+      color4: "#666",
+      color5: "#666",
+      color6: "#666",
+      color7: "#666",
+      color8: "#666",
+      color9: "#1287FF"
+    })
   }
-
 })

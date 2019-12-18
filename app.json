@@ -1,6 +1,6 @@
 {
   "pages": [
-      "pages/audio/scenic/s1/s1",
+    
     "pages/start/start",
     "pages/index/index",
     "pages/audio/audio",
@@ -30,7 +30,7 @@
     "pages/database/about/page1",
     "pages/database/about/database",
     "pages/search/search",
-  
+    "pages/audio/scenic/s1/s1",
     "pages/audio/scenic/s2/s2",
     "pages/audio/scenic/s3/s3",
     "pages/audio/scenic/s4/s4",
@@ -86,5 +86,11 @@
       "desc": "小程序请求调用您的位置信息来暗杀李依谦。"
     }
   },
+    "plugins": {
+      "WechatSI": {
+        "version": "0.3.3",
+        "provider": "wx069ba97219f66d99"
+      }
+    },
   "sitemapLocation": "sitemap.json"
 }
