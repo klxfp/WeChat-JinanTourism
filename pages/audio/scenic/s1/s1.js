@@ -1,4 +1,13 @@
 var startPoint;
+//引入本地json数据，这里引入的就是第一步定义的json数据
+var jsonData = require('../json.js');
+
+console.log(jsonData.dataList[0])
+console.log(jsonData.dataList[0].name)
+
+
+
+
 Page({
   data: {
     viewTop: 0,
@@ -11,6 +20,7 @@ Page({
     isChange: false
   },
   onLoad: function(options) {
+    
     var that = this;
     wx.getSystemInfo({
       success: function(res) {
@@ -20,6 +30,7 @@ Page({
         console.log('width=' + res.windowWidth);
         // 高度,宽度 单位为px
         that.setData({
+          dataList: jsonData.dataList[0],
           windowHeight: res.windowHeight,
           windowWidth: res.windowWidth,
           viewTop: res.windowHeight * 0.9 - 50,

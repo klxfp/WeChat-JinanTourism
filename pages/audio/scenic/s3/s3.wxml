@@ -1,2 +1,7 @@
-<!--pages/audio/scenic/s3/s3.wxml-->
-<text>pages/audio/scenic/s3/s3.wxml</text>
+<!--列表渲染  -->
+<block wx:for="{{dataList}}" wx:key="item">
+ <view class='item-container'>
+  <!--序列号  -->
+  <text>{{item.id}}</text>
+ </view>
+</block>

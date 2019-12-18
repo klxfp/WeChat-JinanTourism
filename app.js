@@ -4,11 +4,25 @@ var common = require("utils/common.js");
 const __utils = require('utils/util')
 Bmob.initialize("a22827601758f1d1cd174d8bdccdc0cd", "e3f22b28497e4886709670430bb7d90c");
 App({
-  onLaunch: function () {
-    //云开发环境初始化
-    wx.cloud.init({
-      env:"test-csiba"
-    })
+
+
+    "cloud": true,
+
+      onLaunch: function () {
+
+        if (!wx.cloud) {
+          console.error('请使用 2.2.3 或以上的基础库以使用云能力')
+        } else {
+         
+          wx.cloud.init({
+            traceUser: true,
+            env: 'test-csiba' 
+          })
+        }
+
+        this.globalData = {}
+      
+
     var that = this;
     //调用系统API获取设备的信息
     wx.getSystemInfo({
@@ -19,6 +33,7 @@ App({
         wx.setStorageSync('kScreenH', kScreenH)
       }
     })
+    
     // 登录
     wx.login({
       success: res => {

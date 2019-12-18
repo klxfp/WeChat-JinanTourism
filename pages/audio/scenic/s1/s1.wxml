@@ -1,7 +1,25 @@
 <!--pages/audio/scenic/s1/s1.wxml-->
-<text>pages/audio/scenic/s1/s1.wxml</text>
+<view class="content">
+  <view class="author-date">
+    <image src="../../../../images/smart.png" class="author"></image>
+    <text class="date">景区详细信息</text>
+  </view>
+
+  <!-- 标题内容 -->
+  <view class="title">{{dataList.name}}</view>
+
+  <view class="article-content">中文名称：{{dataList.name}}</view>
+  <view class="article-content">英文名称：{{dataList.name_en}}</view>
+  <view class="article-content">地理位置：{{dataList.addr}}</view>
+  <view class="article-content">气候类型：{{dataList.qihou}}</view>
+  <view class="article-content">占地面积：{{dataList.orea}}</view>
+  <view class="article-content">开放时间：{{dataList.open_time}}</view>
+  <view class="article-content">景点级别：{{dataList.level}}</view>
+  <view class="article-content">门票价格：{{dataList.price}}</view>
+  <view class="article-content">景区简介：{{dataList.intro}}</view>
 
 
+</view>
 
 
 
