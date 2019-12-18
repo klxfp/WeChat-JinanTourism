@@ -1,2 +1,13 @@
-<!--pages/audio/scenic/s2/s2.wxml-->
-<text>pages/audio/scenic/s2/s2.wxml</text>
+<view class="content">
+  <!-- 头像 -->
+  <view class="author-date">
+    <image src="../../../../images/smart.png" class="author"></image>
+    <text class="date">logo 2017年七月</text>
+  </view>
+  <!-- 标题内容 -->
+  <text class="title">那年夏天你在哪里</text>
+  <view>
+    <text class="article-content">天不言自高，地不言自厚，奇迹，是不会在容易的道路上绽放的。人生没有如果，只有后果和结果，过去的不再回来，回来的不再完美。</text>
+  </view>
+
+</view>
