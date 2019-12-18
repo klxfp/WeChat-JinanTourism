@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/audio/audio",
     "pages/start/start",
     "pages/index/index",
+    "pages/audio/audio",
     "pages/authorize/authorize",
     "pages/logs/logs",
     "pages/map/index/index",
