@@ -3,16 +3,18 @@
 </view>
 <view class='mapTab'>
   <view class="" bindtap='clickHotel'>
-    <image class="icon-image" catchtap="clickH" wx:if="{{click1}}" src="../images/select.png"/>
+    <image class="icon-image" wx:if="{{click1}}" src="../images/select.png"/>
     <image class="icon-image" wx:else="{{click1}}" src="../images/hotel.png"></image>
     <view class='tabText'>酒店</view>   
   </view>
   <view class="" bindtap='clickFood'>
-    <image class="icon-image" src="../images/food.png"/>
+    <image class="icon-image" wx:if="{{click2}}" src="../images/select.png"/>
+    <image class="icon-image" wx:else="{{click2}}" src="../images/food.png"></image>
     <view class='tabText'>美食</view>
   </view>
   <view class="" bindtap='clickService'>
-    <image class="icon-image" src="../images/service.png"/>
+    <image class="icon-image" wx:if="{{click3}}" src="../images/select.png"/>
+    <image class="icon-image" wx:else="{{click3}}" src="../images/service.png"></image>
     <view class='tabText'>服务</view>
   </view>
 </view>

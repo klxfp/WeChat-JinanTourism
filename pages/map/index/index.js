@@ -14,6 +14,8 @@ Page({
     city: '',
     markerId: 0,
     click1:false,
+    click2:false,
+    click3:false,
     controls: [
       {
         id: 0,
@@ -111,18 +113,6 @@ Page({
   mapchange() {
     // console.log("改变视野");
   },
-  clickH:function() {
-    var click1 = this.data.click1;
-    var bol = !click1;
-    this.setData({
-      click1: bol
-    });
-    if(!click1){
-      wx.switchTab({
-        url: '/pages/map/index/index',
-      })
-    }  
-  },
   clickHotel: function () {
     var that = this;
     var myAmapFun = new amapFile.AMapWX({ key: '6205e3022b70167945e90fec43976555' });
@@ -144,7 +134,9 @@ Page({
           longitude: markersData[0].longitude
         });
         that.setData({
-          click1: bol
+          click1: bol,
+          click2:false,
+          click3:false
         });
         that.showMarkerInfo(markersData, 0);
       },
@@ -156,6 +148,8 @@ Page({
   clickFood: function () {
     var that = this;
     var myAmapFun = new amapFile.AMapWX({ key: '6205e3022b70167945e90fec43976555' });
+    var click2 = this.data.click2;
+    var bol = !click2;
     myAmapFun.getPoiAround({
       iconPathSelected: '../images/Redmaker.png',
       iconPath: '../images/Bluemaker.png',
@@ -171,6 +165,11 @@ Page({
         that.setData({
           longitude: markersData[0].longitude
         });
+        that.setData({
+          click2:bol,
+          click1:false,
+          click3:false
+        });
         that.showMarkerInfo(markersData, 0);
       },
       fail: function (info) {
@@ -181,6 +180,8 @@ Page({
   clickService: function() {
     var that = this;
     var myAmapFun = new amapFile.AMapWX({ key: '6205e3022b70167945e90fec43976555' });
+    var click3 = this.data.click3;
+    var bol = !click3;
     myAmapFun.getPoiAround({
       iconPathSelected: '../images/Redmaker.png',
       iconPath: '../images/Bluemaker.png',
@@ -195,6 +196,11 @@ Page({
         });
         that.setData({
           longitude: markersData[0].longitude
+        });
+        that.setData({
+          click3:bol,
+          click1:false,
+          click2:false
         });
         that.showMarkerInfo(markersData, 0);
       },
