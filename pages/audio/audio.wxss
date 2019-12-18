@@ -1,5 +1,42 @@
 
+.hot-view {
+  margin-top: 20rpx;
+  background: #fff;
+}
 
+.hot-view .tab {
+  display: flex;
+  align-items: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  /* border-bottom: 1px solid #e0e3da; */
+}
+
+.hot-view .tab view {
+  flex: 1 1 auto;
+  text-align: center;
+  display: flex;
+  height: 100%;
+  justify-content: left;
+}
+
+.hot-view .tab text {
+  width: 172rpx;
+  height: 100%;
+  font-weight: bold;
+  color: #666;
+  font-size: 26rpx;
+  text-align: center;
+}
+
+.hot-view .tab .active {
+  font-size: 30rpx;
+  text-align: center;
+  font-weight: bold;
+  color: #1287FF;
+  border-bottom: 3px solid  #1287FF;
+}
+/* 
 .tab {
   display: flex;
   justify-content: space-between;
@@ -30,7 +67,7 @@
 .tab .active {
   background: #fff;
   color: #98d361;
-}
+} */
 
 .view-box {
   width: 100%;
@@ -112,4 +149,8 @@
   margin-left: 3%;
   margin-top: 12rpx;
 }
-
+.near_bg {
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+  background: white;
+}
