@@ -29,7 +29,7 @@
     <view class='hots_search' wx:if="{{!searchAllShow || searchList.length==0}}">
       <view class='title_hotsSearch colGray'>热门搜索</view>
       <view class="list_hotsSearch">
-        <text wx:for="{{hotsSearch}}" wx:key="{{index}}" catchtap="bindGoSchool" data-item="{{item}}">{{item}}</text>
+        <text wx:for="{{hotsSearch}}" wx:key="{{index}}" catchtap="bindGoScene" data-item="{{item}}">{{item.name}}</text>        
       </view>
     </view>
   </view>
