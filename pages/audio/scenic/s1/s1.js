@@ -1,66 +1,94 @@
-// pages/audio/scenic/s1/s1.js
+var startPoint;
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
+    viewTop: 0,
+    viewLeft: 0,
+    windowHeight: '',
+    windowWidth: '',
+    imgurl: "../../../../images/icon_play.png",
+    isShow: true
+  },
+  onLoad: function(options) {
+    var that = this;
+    wx.getSystemInfo({
+      success: function(res) {
+        console.log(res);
+        // 屏幕宽度、高度
+        console.log('height=' + res.windowHeight);
+        console.log('width=' + res.windowWidth);
+        // 高度,宽度 单位为px
+        that.setData({
+          windowHeight: res.windowHeight,
+          windowWidth: res.windowWidth,
+          viewTop: res.windowHeight * 0.9 - 50,
+          viewLeft: res.windowWidth * 0.05
+        })
+      }
+    })
+  },
+
+  onShow: function() {
 
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
 
+  viewStart: function(e) {
+    startPoint = e.touches[0]
+    console.log("start")
+  },
+  viewMove: function(e) {
+    console.log("move")
+    var endPoint = e.touches[e.touches.length - 1]
+    var translateX = endPoint.clientX - startPoint.clientX
+    var translateY = endPoint.clientY - startPoint.clientY
+    startPoint = endPoint
+    var viewTop = this.data.viewTop + translateY
+    var viewLeft = this.data.viewLeft + translateX
+    //判断是移动否超出屏幕
+    if (viewLeft + 50 >= this.data.windowWidth) {
+      viewLeft = this.data.windowWidth - 50;
+    }
+    if (viewLeft <= 0) {
+      viewLeft = 0;
+    }
+    if (viewTop <= 0) {
+      viewTop = 0
+    }
+    if (viewTop + 50 >= this.data.windowHeight) {
+      viewTop = this.data.windowHeight - 50;
+    }
+    this.setData({
+      viewTop: viewTop,
+      viewLeft: viewLeft
+    })
+  },
+  viewEnd: function(e) {
+    console.log("end")
+  },
+  close_tap: function() {
+    this.setData({
+      isShow: true
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  open_tap: function() {
+    this.setData({
+      isShow: false
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
+  open: function(res) {
+    console.log(res);
+    let url
+    if (res.currentTarget.dataset.msg == "../../../../images/icon_play.png") {
+      url = "../../../../images/icon_play.png"
+    } else {
+      url = "../../../../images/icon_stop.png"
+    }
+    this.setData({
+      url: url
+    })
 
   }
+
 })

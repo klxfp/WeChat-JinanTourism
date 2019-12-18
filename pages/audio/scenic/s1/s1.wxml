@@ -1,2 +1,24 @@
 <!--pages/audio/scenic/s1/s1.wxml-->
 <text>pages/audio/scenic/s1/s1.wxml</text>
+    <view >
+      <image catchtap='open_tap' wx:if="{{isShow}}" src="../../../../images/icon_play.png" class="icon"></image>
+      <image wx:else catchtap='close_tap' src="../../../../images/icon_stop.png" class="icon"></image>
+      <view>
+        <image catchtap='open' wx:if="{{iShow}}" src="{{url}}" data-msg="{{url}}" class="icon"></image>
+      </view>
+    </view>
+
+<view class="read" catchtouchmove="viewMove" catchtouchstart="viewStart" catchtouchend="viewEnd" style="top:{{viewTop}}px;left:{{viewLeft}}px;" bindtap="handleTap1">
+  <view class="view">
+    <image class="img" src="https://s2.ax1x.com/2019/12/07/QteoKP.png"></image>
+    <text class="txt">你奶奶个锤锤锤锤锤锤我日你滴吗耶</text>
+    <view >
+      <image catchtap='open_tap' wx:if="{{isShow}}" src="../../../../images/icon_play.png" class="icon"></image>
+      <image wx:else catchtap='close_tap' src="../../../../images/icon_stop.png" class="icon"></image>
+      <view>
+        <image catchtap='open' wx:if="{{iShow}}" src="{{url}}" data-msg="{{url}}" class="icon"></image>
+      </view>
+    </view>
+
+  </view>
+</view>

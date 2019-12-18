@@ -1,1 +1,32 @@
-/* pages/audio/scenic/s1/s1.wxss */
+.read {
+  width: 90%;
+  height: 50px;
+  border-radius: 8px;
+  position: fixed;
+  background: rgb(102, 102, 102);
+
+}
+.read .view{
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+.read .view .img {
+  height: 40px;
+  width: 40px;
+  margin: 5px;
+}
+.read .view .txt {
+  /* line-height: 50px; */
+  width: 150px;
+  font-size: 14pt;
+  color: #fff;
+}
+.read .view .icon {
+  height: 40px;
+  width: 40px;
+  margin: 5px;
+  margin-left: 40px;
+
+}
