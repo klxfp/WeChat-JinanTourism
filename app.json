@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/audio/audio",
     "pages/start/start",
     "pages/index/index",
     "pages/authorize/authorize",
@@ -8,7 +9,7 @@
     "pages/map/routes/routes",
     "pages/map/info/info",
     "pages/map/inputtip/inputtip",
-    "pages/audio/audio",
+    
     "pages/index/city-list/city-list",
     "pages/index/local-product/index",
     "pages/index/local-snack/local-snack",
@@ -28,7 +29,8 @@
     "pages/tickets/tickets",
     "pages/database/about/page1",
     "pages/database/about/database",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/audio/scenic/s1/s1"
   ],
   "window": {
     "navigationBarTextStyle": "white",

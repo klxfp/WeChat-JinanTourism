@@ -54,15 +54,12 @@
   height: 100%;
 }
 
-.view .img text {
-  position: absolute;
-  display: block;
+.text {
+ 
   width: 100%;
-  height: 100%;
-  text-align: center;
-  line-height: 356rpx;
-  font-size: 30rpx;
-  color: #eee;
-  font-weight: bold;
+  margin-left: 18rpx;
+  font-size: 36rpx;
+  color:black;
+
   
 }

@@ -1,11 +1,14 @@
 <!--pages/find/find.wxml-->
 <view class="view-box">
+<navigator url="scenic/s1/s1">
   <view class="view">
     <view class="img">
-      <text class="title"></text>
       <image src="https://s2.ax1x.com/2019/12/07/QteoKP.png"></image>
     </view>
+    <view class="text">趵突泉</view> 
   </view>
+</navigator>
+
   <view class="view">
     <view class="img">
       <text class="title"></text>
