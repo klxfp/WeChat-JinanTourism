@@ -1,0 +1,6 @@
+<!--pages/introduction/baotuquan/baotuquan.wxml-->
+
+
+<text>趵突泉（Baotu Spring），位于山东省济南市历下区，东临泉城广场，北望五龙潭，面积达158亩，位居济南七十二名泉之冠。乾隆皇帝南巡时因趵突泉水泡茶味醇甘美，曾册封趵突泉为“天下第一泉”。  也是最早见于古代文献的济南名泉。</text>
+
+<video style="height:240px;width:320px;" src="{{mapUrl}}"> </video>
