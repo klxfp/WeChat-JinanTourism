@@ -8,15 +8,16 @@
   <!-- 标题内容 -->
   <view class="title">{{dataList.name}}</view>
 
-  <view class="article-content">中文名称：{{dataList.name}}</view>
-  <view class="article-content">英文名称：{{dataList.name_en}}</view>
-  <view class="article-content">地理位置：{{dataList.addr}}</view>
-  <view class="article-content">气候类型：{{dataList.qihou}}</view>
-  <view class="article-content">占地面积：{{dataList.orea}}</view>
-  <view class="article-content">开放时间：{{dataList.open_time}}</view>
-  <view class="article-content">景点级别：{{dataList.level}}</view>
-  <view class="article-content">门票价格：{{dataList.price}}</view>
-  <view class="article-content">景区简介：{{dataList.intro}}</view>
+  <view class="article-content" bindtap="setContent" bindtap="wordYun" data-text="{{dataList.name}}">中文名称：{{dataList.name}}</view>
+  <view class="article-content" bindtap="setContent"  data-text="{{dataList.name}}">中文名称：{{dataList.name}}</view>
+  <view class="article-content" data-text="{{dataList.name_en}}">英文名称：{{dataList.name_en}}</view>
+  <view class="article-content" data-text="{{dataList.addr}}">地理位置：{{dataList.addr}}</view>
+  <view class="article-content" data-text="{{dataList.qihou}}">气候类型：{{dataList.qihou}}</view>
+  <view class="article-content" data-text="{{dataList.orea}}">占地面积：{{dataList.orea}}</view>
+  <view class="article-content" data-text="{{dataList.open_time}}">开放时间：{{dataList.open_time}}</view>
+  <view class="article-content" data-text="{{dataList.level}}">景点级别：{{dataList.level}}</view>
+  <view class="article-content" data-text="{{dataList.price}}">门票价格：{{dataList.price}}</view>
+  <view class="article-content" data-text="{{dataList.intro}}">景区简介：{{dataList.intro}}</view>
 
 
 </view>
@@ -27,7 +28,7 @@
 <view class="read" catchtouchmove="viewMove" catchtouchstart="viewStart" catchtouchend="viewEnd" style="top:{{viewTop}}px;left:{{viewLeft}}px;" >
   <view class="view">
     <image class="img" src="https://s2.ax1x.com/2019/12/07/QteoKP.png"></image>
-    <text class="txt">你奶奶个锤锤锤锤锤锤我日你滴吗耶</text>
+    <text class="txt">去死吧微信小程序</text>
     <image src="{{imgurl}}" class="icon"></image>
 
 

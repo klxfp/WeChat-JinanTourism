@@ -1,5 +1,6 @@
 {
   "pages": [
+      "pages/audio/scenic/s1/s1",
     "pages/start/start",
     "pages/index/index",
     "pages/audio/audio",
@@ -29,7 +30,7 @@
     "pages/database/about/page1",
     "pages/database/about/database",
     "pages/search/search",
-    "pages/audio/scenic/s1/s1",
+  
     "pages/audio/scenic/s2/s2",
     "pages/audio/scenic/s3/s3",
     "pages/audio/scenic/s4/s4",
