@@ -9,86 +9,135 @@
   </view>
 </navigator>
 
+<navigator url="scenic/s2/s2">
   <view class="view">
     <view class="img">
       <text class="title"></text>
       <image src="https://s2.ax1x.com/2019/12/07/QteTDf.png"></image>
     </view>
+    <view class="text">五龙潭</view> 
   </view>
+</navigator>
 
+<navigator url="scenic/s3/s3">
   <view class="view">
     <view class="img">
       <text class="title"></text>
       <image src="https://s2.ax1x.com/2019/12/07/QteqUg.png"></image>
     </view>
+    <view class="text">环城公园</view>
   </view>
+  </navigator>
 
+<navigator url="scenic/s4/s4">
   <view class="view">
     <view class="img">
       <text class="title"></text>
       <image src="https://s2.ax1x.com/2019/12/07/QteL5Q.png"></image>
     </view>
+    <view class="text">大明湖</view>
+  </view>
+</navigator>
+
+
+<navigator url="scenic/s5/s5">
     <view class="view">
       <view class="img">
         <text class="title"></text>
         <image src="https://s2.ax1x.com/2019/12/07/QteXCj.png"></image>
       </view>
+       <view class="text">黑虎泉</view>
     </view>
+</navigator>
+    
+<navigator url="scenic/s6/s6">
     <view class="view">
       <view class="img">
         <text class="title"></text>
         <image src="https://s2.ax1x.com/2019/12/07/Qtej8s.png"></image>
       </view>
+      <view class="text">济南国际园博园</view>
     </view>
+</navigator>
+
+<navigator url="scenic/s7/s7">
     <view class="view">
       <view class="img">
         <text class="title"></text>
         <image src="https://s2.ax1x.com/2019/12/07/Qtev2n.png"></image>
       </view>
+      <view class="text">泉城欧乐堡梦幻世界</view>
     </view>
+</navigator>
+
+<navigator url="scenic/s8/s8">
     <view class="view">
       <view class="img">
         <text class="title"></text>
         <image src="https://s2.ax1x.com/2019/12/07/Qtexvq.png"></image>
       </view>
+      <view class="text">泉城海洋极地世界</view>
     </view>
+</navigator>
+
+<navigator url="scenic/s9/s9">
     <view class="view">
       <view class="img">
         <text class="title"></text>
         <image src="https://s2.ax1x.com/2019/12/07/QtmprV.png"></image>
       </view>
+       <view class="text">金象山乐园</view>
     </view>
+</navigator>
+
+<navigator url="scenic/s10/s10">
     <view class="view">
       <view class="img">
         <text class="title"></text>
         <image src="https://s2.ax1x.com/2019/12/07/Qtm9bT.png"></image>
       </view>
+       <view class="text">红叶谷生态文化旅游区</view>
     </view>
+</navigator>
+
+<navigator url="scenic/s11/s11">
     <view class="view">
       <view class="img">
         <text class="title"></text>
         <image src="https://s2.ax1x.com/2019/12/07/QtmPVU.png"></image>
       </view>
+       <view class="text">跑马岭</view>
     </view>
+</navigator>
+
+<navigator url="scenic/s12/s12">
     <view class="view">
       <view class="img">
         <text class="title"></text>
         <image src="https://s2.ax1x.com/2019/12/07/QtmiaF.png"></image>
       </view>
+       <view class="text">九顶塔中华民俗欢乐园</view>
     </view>
+  </navigator>
 
+<navigator url="scenic/s13/s13">
     <view class="view">
       <view class="img">
         <text class="title"></text>
         <image src="https://s2.ax1x.com/2019/12/07/QtmZx1.png"></image>
       </view>
+       <view class="text">灵岩寺旅游区</view>
     </view>
+</navigator>
 
+<navigator url="scenic/s14/s14">
     <view class="view">
       <view class="img">
         <text class="title"></text>
         <image src="https://s2.ax1x.com/2019/12/07/QtmuqK.png"></image>
       </view>
+       <view class="text">水帘峡风景区</view>
     </view>
-  </view>
+</navigator>
+
 </view>
