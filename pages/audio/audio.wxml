@@ -21,8 +21,14 @@
         <image class="icon" src="../../images/map_a.png"></image>
         <view class="txt">济南市历下区明湖路27..</view>
       </view>
+      <!-- 分割线 -->
+      <view class="divLine"></view>
     </view>
   </navigator>
+
+
+
+
 
   <navigator url="scenic/s2/s2">
     <view class="view">
@@ -46,8 +52,11 @@
         <image class="icon" src="../../images/map_a.png"></image>
         <view class="txt">历下区趵突泉北路筐市..</view>
       </view>
+      <!-- 分割线 -->
+      <view class="divLine"></view>
     </view>
   </navigator>
+
 
   <navigator url="scenic/s3/s3">
     <view class="view">
@@ -71,6 +80,8 @@
         <image class="icon" src="../../images/map_a.png"></image>
         <view class="txt">南门大街2-1号(近护城..</view>
       </view>
+      <!-- 分割线 -->
+      <view class="divLine"></view>
     </view>
   </navigator>
 
@@ -96,6 +107,8 @@
         <image class="icon" src="../../images/map_a.png"></image>
         <view class="txt">济南市历下区明湖路27..</view>
       </view>
+      <!-- 分割线 -->
+      <view class="divLine"></view>
     </view>
   </navigator>
 
@@ -122,6 +135,8 @@
         <image class="icon" src="../../images/map_a.png"></image>
         <view class="txt">解放阁南护城河南岸</view>
       </view>
+      <!-- 分割线 -->
+      <view class="divLine"></view>
     </view>
   </navigator>
 
@@ -147,6 +162,8 @@
         <image class="icon" src="../../images/map_a.png"></image>
         <view class="txt">长清大学科技园核心区域</view>
       </view>
+      <!-- 分割线 -->
+      <view class="divLine"></view>
     </view>
   </navigator>
 
@@ -172,6 +189,8 @@
         <image class="icon" src="../../images/map_a.png"></image>
         <view class="txt">山东省齐河县黄河国际..</view>
       </view>
+      <!-- 分割线 -->
+      <view class="divLine"></view>
     </view>
   </navigator>
 
@@ -197,6 +216,8 @@
         <image class="icon" src="../../images/map_a.png"></image>
         <view class="txt">山东省德州市齐河县</view>
       </view>
+      <!-- 分割线 -->
+      <view class="divLine"></view>
     </view>
   </navigator>
 
@@ -222,6 +243,8 @@
         <image class="icon" src="../../images/map_a.png"></image>
         <view class="txt">济南市历城区仲宫镇（..</view>
       </view>
+      <!-- 分割线 -->
+      <view class="divLine"></view>
     </view>
   </navigator>
 
@@ -247,6 +270,8 @@
         <image class="icon" src="../../images/map_a.png"></image>
         <view class="txt">济南历城区锦绣川乡锦</view>
       </view>
+      <!-- 分割线 -->
+      <view class="divLine"></view>
     </view>
   </navigator>
 
@@ -272,6 +297,8 @@
         <image class="icon" src="../../images/map_a.png"></image>
         <view class="txt">济南市历城区东南部的..</view>
       </view>
+      <!-- 分割线 -->
+      <view class="divLine"></view>
     </view>
   </navigator>
 
@@ -297,6 +324,8 @@
         <image class="icon" src="../../images/map_a.png"></image>
         <view class="txt">山东省济南市长清区万..</view>
       </view>
+      <!-- 分割线 -->
+      <view class="divLine"></view>
     </view>
   </navigator>
 
@@ -322,6 +351,8 @@
         <image class="icon" src="../../images/map_a.png"></image>
         <view class="txt">山东省济南市历城区跑..</view>
       </view>
+      <!-- 分割线 -->
+      <view class="divLine"></view>
     </view>
   </navigator>
 
@@ -347,6 +378,7 @@
         <image class="icon" src="../../images/map_a.png"></image>
         <view class="txt">济南南部山区柳埠镇簸..</view>
       </view>
+
     </view>
   </navigator>
 
