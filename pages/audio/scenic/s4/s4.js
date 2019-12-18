@@ -366,5 +366,8 @@ Page({
       color8: "#666",
       color9: "#1287FF"
     })
+  },
+  onUnload: function () {
+    this.innerAudioContext.stop()
   }
 })
