@@ -47,7 +47,7 @@
 
 
 
-<view class="read" catchtouchmove="viewMove" catchtouchstart="viewStart" catchtouchend="viewEnd" style="top:{{viewTop}}px;left:{{viewLeft}}px;">
+<view class="read" catchtouchmove="viewMove" catchtouchstart="viewStart" catchtouchend="viewEnd" style="top:{{viewTop}}px;left:{{viewLeft}}px; background: {{viewrgba}};">
   <view class="view">
     <image class="img" src="https://s2.ax1x.com/2019/12/07/QteoKP.png"></image>
     <view class="view2">

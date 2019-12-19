@@ -18,6 +18,7 @@ Page({
     windowHeight: '',
     windowWidth: '',
     imgurl: "../../../../images/icon_play.png",
+    viewrgba:"rgb(102, 102, 102);",
     isShow: true,
     isMove: false,
     isChange: false,
@@ -145,6 +146,7 @@ Page({
     if (this.data.isMove == true) {
       console.log("动了")
       this.setData({
+        viewrgba: "rgb(102, 102, 102);",
         isMove: false
       })
     } else {
@@ -152,6 +154,7 @@ Page({
       if (this.data.isChange == false) {
         this.setData({
           isChange: true,
+          viewrgba: "rgb(102,102, 102);",
           imgurl: "../../../../images/icon_stop.png",
         })
         // 播放事件在此写
