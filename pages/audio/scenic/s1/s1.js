@@ -138,6 +138,7 @@ Page({
     this.setData({
       viewTop: viewTop,
       viewLeft: viewLeft,
+      viewrgba: "rgb(90,90, 90);",
       isMove: true
     })
   },
