@@ -83,7 +83,7 @@
   },
   "permission": {
     "scope.userLocation": {
-      "desc": "小程序请求调用您的位置信息来暗杀李依谦。"
+      "desc": "小程序请求调用您的位置信息。"
     }
   },
     "plugins": {
