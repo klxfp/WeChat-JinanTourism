@@ -42,7 +42,11 @@
     "pages/audio/scenic/s11/s11",
     "pages/audio/scenic/s12/s12",
     "pages/audio/scenic/s13/s13",
-    "pages/audio/scenic/s14/s14"
+    "pages/audio/scenic/s14/s14",
+    "pages/home/home",
+    "pages/homeDetail/homeDetail",
+    "pages/publish/publish",
+    "pages/replay/replay"
   ],
   "window": {
     "navigationBarTextStyle": "white",
