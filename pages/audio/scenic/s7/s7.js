@@ -7,7 +7,7 @@ var startPoint;
 var jsonData = require('../json.js');
 //欧乐堡
 console.log(jsonData.dataList[6]);
-console.log(jsonData.dataList[6].name);
+// console.log(jsonData.dataList[6].name);
 
 
 
