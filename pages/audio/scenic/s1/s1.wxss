@@ -4,44 +4,32 @@
   border-radius: 8px;
   position: fixed;
   background: rgb(102, 102, 102);
-
 }
 .read .view{
   display: flex;
   flex-direction: row;
-  /* align-items: center; */
-  /* justify-content: center; */
+  position: relative;
 }
-
-.read .view .img {
+.read .view .view1{
+  width: 50px;
+}
+.read .view .view1 .img {
   height: 40px;
   width: 40px;
   margin: 5px;
 }
-
-.read .view .icon {
-  height: 40px;
-  width: 40px;
-  margin: 5px;
-
-
-}
-.read .view2{
-  width: 70%;
+.read .view .view2{
+  width: 80%;
   display: flex;
   flex-direction:column;
-  /* align-items: center; */
-  /* justify-content: center; */
-
 }
-
-.read .view .txt {
+.read .view .view2 .txt {
   /* line-height: 50px; */
   width: 150px;
   font-size: 14pt;
   color: #fff;
 }
-.read .view .txt2 {
+.read .view .view2  .txt2 {
   /* line-height: 50px; */
   width: 150px;
   font-size: 10pt;
@@ -51,13 +39,29 @@
   white-space: nowrap;
    /* 文字出格边.... */
 }
-.btn1 {
-  height: 50px;
-  width: 50px;
-  /* background: url('https://s2.ax1x.com/2019/12/18/QHoVo9.png'); */
-  border-radius: 5rpx;
-
+.read .view .view3{
+  width:10%;
+  margin-top: 15px;
+  align-items: center; 
+ justify-content: right;
 }
+.read .view .time{
+  width: 50px;
+  font-size: 10pt;
+  color: rgb(226, 226, 226);
+  float: right;
+}
+
+.read  .view .icon{
+  right: 0;
+  height: 40px;
+  width: 40px;
+  margin: 5px;
+    float: right;
+}
+
+
+
 
 
 swiper{
