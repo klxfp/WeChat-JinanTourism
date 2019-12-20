@@ -34,7 +34,9 @@
     <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" duration="{{duration}}" interval='{{interval}}' bindchange="bindchange" circular="{{circular}}" style="height:{{imgheights[current]}}rpx;">
       <block wx:for='{{imgList}}' wx:key="{{index}}">
         <swiper-item>
+        <navigator url="{{item.pag}}">
           <image src="{{item.src}}" data-id='{{index}}' class="image" mode="widthFix" bindload="imageLoad" />
+          </navigator>
           <view class="txt">{{item.text}}</view>
         </swiper-item>
       </block>

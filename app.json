@@ -46,7 +46,8 @@
     "pages/home/home",
     "pages/homeDetail/homeDetail",
     "pages/publish/publish",
-    "pages/replay/replay"
+    "pages/replay/replay",
+    "pages/introduction/daminghu/daminghu"
   ],
   "window": {
     "navigationBarTextStyle": "white",
@@ -89,11 +90,11 @@
       "desc": "小程序请求调用您的位置信息。"
     }
   },
-    "plugins": {
-      "WechatSI": {
-        "version": "0.3.3",
-        "provider": "wx069ba97219f66d99"
-      }
-    },
+  "plugins": {
+    "WechatSI": {
+      "version": "0.3.3",
+      "provider": "wx069ba97219f66d99"
+    }
+  },
   "sitemapLocation": "sitemap.json"
 }
