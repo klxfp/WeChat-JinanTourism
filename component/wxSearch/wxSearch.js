@@ -32,7 +32,7 @@ module.exports = {
     this._setData(that, {
       inputVal: ''
     })
-    this.goSchool(inputVal)
+    this.goMap(inputVal)
   },
   bindDelLog(e, that) {
     let val = e.currentTarget.dataset.item;
@@ -92,6 +92,26 @@ module.exports = {
     setStorage('searchList', list)
     this._setData(that, {
       searchList: list
+    })
+  },
+  goMap(val) {
+    wx.showModal({
+      title: '调往搜索页面',
+      content: `你搜索的是${val}，带上它去景区导航搜索附近吧`,
+      success(res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+          wx.navigateTo({
+            url: '../../pages/map/inputtip/inputtip',
+            //url: '../../pages/map/index/index',
+          })
+        }
+        else if(res.cancel){
+          wx.navigateTo({
+            url: '/component/wxSearch/wxSearch',
+          })
+        } 
+      }
     })
   },
   goScene(val) {
