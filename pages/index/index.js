@@ -17,8 +17,8 @@ Page({
     cityName: '',
     hotList: null,
     navList: [{
-      name: "名店特产",
-      icon: "icon_4.png",
+      name: "留言板",
+      icon: "like-on.png",
       page: "../home/home"
     },
     {
