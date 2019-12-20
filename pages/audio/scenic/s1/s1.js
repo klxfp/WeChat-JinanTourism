@@ -32,7 +32,8 @@ Page({
     color6: "#666",
     color7: "#666", 
     color8: "#666",
-    color9: "#666"
+    color9: "#666",
+    time:"00:00"
 
   },
   onReady(e) {
@@ -95,14 +96,24 @@ Page({
       success: function (res) {
         console.log(res);
         console.log("succ tts", res.filename);
+
         that.setData({
           src: res.filename
         })
         // that.yuyinPlay();
-
+        
       },
       fail: function (res) {
         console.log("fail tts", res)
+        wx.showToast({
+          title: "请先等待一分钟后再点击文字！",
+          image: "../../../../images/fail.png",//自定义图标的本地路径，image 的优先级高于 icon
+          duration: 2000,//提示的延迟时间，单位毫秒，默认：1500 
+          mask: false,//是否显示透明蒙层，防止触摸穿透，默认：false 
+          success: function () { },
+          fail: function () { },
+          complete: function () { }
+        })
       }
     })
   },
@@ -184,17 +195,26 @@ Page({
           setTimeout(() => {
             this.innerAudioContext.currentTime
             this.innerAudioContext.onTimeUpdate(() => {
-              console.log(this.innerAudioContext.duration)   //总时长
-              console.log(this.innerAudioContext.currentTime)   //当前播放进度
-              if (this.innerAudioContext.currentTime >= this.innerAudioContext.duration * 0.85){
+              var sumtime = this.innerAudioContext.duration
+              var thistime = this.innerAudioContext.currentTime
+              console.log(sumtime)   //总时长
+              console.log(thistime)   //当前播放进度
+              if (this.innerAudioContext.currentTime >= this.innerAudioContext.duration * 0.95){
                 this.setData({
                   isChange: false,
                   imgurl: "../../../../images/icon_play.png",
                   color0: "#666", 
+                  time: "00:00"
                 })
               }
+              else{
+                this.setData({
+                  time: "00:"+((sumtime - thistime).toFixed())
+                })
+              }
+
             })
-          }, 500)
+          }, 300)
         }
       }
       else {
