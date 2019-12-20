@@ -7,7 +7,6 @@ var startPoint;
 var jsonData = require('../json.js');
 
 console.log(jsonData.dataList[0]);
-console.log(jsonData.dataList[0].name);
 
 
 
