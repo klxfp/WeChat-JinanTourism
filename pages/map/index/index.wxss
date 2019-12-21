@@ -27,7 +27,7 @@
   margin:0 0 0 90rpx;
 }
 .map_container{ 
-    height: 600px; 
+    height: 400px; 
     border-radius: 10px;
     margin-left: 10rpx;
     margin-right: 10rpx;
@@ -38,7 +38,7 @@
   height: 100%;
 }
 .map_text{
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   bottom: 0px;
