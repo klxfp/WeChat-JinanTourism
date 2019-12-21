@@ -44,6 +44,6 @@
 </view>
 
 <view class="page2" bindtap="Topublish">
-<image src="/images/tab/xie.png" style="width:30px;height:30px;"></image>
+<image src="/images/ic_jwc.png" style="width:30px;height:30px;"></image>
 <view>我要留言</view>
 </view>

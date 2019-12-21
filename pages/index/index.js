@@ -18,7 +18,7 @@ Page({
     hotList: null,
     navList: [{
       name: "留言板",
-      icon: "like-on.png",
+      icon: "icon/tick2.png",
       page: "../home/home"
     },
     {
