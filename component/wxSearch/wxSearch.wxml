@@ -4,23 +4,26 @@
     <icon class="icon_search" type='search' size="15" bindtap="bindGoSearch"></icon>
   </view>
 
- <view class="result_search" hidden="{{searchIsHidden}}" bindtap='bindSearchHidden'>
+  <view class="result_search" hidden="{{searchIsHidden}}" bindtap='bindSearchHidden'>
     <view class='list_search'>
       <view class='li_list_search' wx:for="{{searchList}}" wx:key="{{index}}" wx:if="{{index<3 || searchAllShow}}" catchtap="bindGoSchool" data-item="{{item}}">
         <view class="icon-waiting">
-      
+        <image src="/images/icon-waiting.png" style="width: 40rpx; height: 40rpx; "></image>
         </view>
-        <text class="pl30 colGray">{{item}}</text>
+        <view class="pl30">{{item}}</view>
         <view class='li_list_search text' catchtap="bindDelLog" data-item="{{item}}">
-          <text>删除</text>
+      <view class='icon-cancel'>
+        <image src="/images/icon-cancel.png" style="width: 20rpx; height: 20rpx; ;"></image>
+      </view>
         </view>
       </view>
     </view>
     <view class="li_list_search" catchtap="bindSearchAllShow" wx:if="{{searchList.length>3 && !searchAllShow}}">
-      <view class="icon-waiting"></view>
-      <text class="pl30 colGray">全部搜索记录</text>
-      <view class='icon-down rightFlex'>
-        <image src="/images/icon-down.png"></image>
+      <view class="icon-waiting">
+        <image src="/images/icon-down.png" style="width: 20rpx; height: 20rpx; "></image>
+      </view>
+      <view class="pl30">
+        全部搜索记录
       </view>
     </view>
     <view class='li_list_search' catchtap="bindClearSearch" wx:if="{{searchList.length>0 && searchAllShow}}">
@@ -29,7 +32,7 @@
     <view class='hots_search' wx:if="{{!searchAllShow || searchList.length==0}}">
       <view class='title_hotsSearch colGray'>热门搜索</view>
       <view class="list_hotsSearch">
-        <text wx:for="{{hotsSearch}}" wx:key="{{index}}" catchtap="bindGoScene" data-item="{{item}}">{{item.name}}</text>        
+        <text wx:for="{{hotsSearch}}" wx:key="{{index}}" catchtap="bindGoScene" data-item="{{item}}">{{item.name}}</text>
       </view>
     </view>
   </view>

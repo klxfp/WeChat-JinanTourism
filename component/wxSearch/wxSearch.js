@@ -101,16 +101,58 @@ module.exports = {
       success(res) {
         if (res.confirm) {
           console.log('用户点击确定')
-          wx.navigateTo({
-            url: '../../pages/map/inputtip/inputtip',
-            //url: '../../pages/map/index/index',
-          })
+          console.log(val)
+          if (val == "趵突泉") {
+            wx.navigateTo({
+              url: '../../pages/audio/scenic/s1/s1',
+            })
+          }
+          else if (val == "五龙潭") {
+            wx.navigateTo({
+              url: '../../pages/audio/scenic/s2/s2',
+            })
+          }
+          else if (val == "环城公园") {
+            wx.navigateTo({
+              url: '../../pages/audio/scenic/s3/s3',
+            })
+          }
+          else if (val == "大明湖") {
+            wx.navigateTo({
+              url: '../../pages/audio/scenic/s4/s4',
+            })
+          }
+          else if (val == "黑虎泉") {
+            wx.navigateTo({
+              url: '../../pages/audio/scenic/s5/s5',
+            })
+          }
+          else if (val == "济南国际园博园") {
+            wx.navigateTo({
+              url: '../../pages/audio/scenic/s6/s6',
+            })
+          }
+          else if (val == "泉城欧乐堡梦幻世界") {
+            wx.navigateTo({
+              url: '../../pages/audio/scenic/s7/s7',
+            })
+          }
+          else if (val == "海洋极地世界") {
+            wx.navigateTo({
+              url: '../../pages/audio/scenic/s8/s8',
+            })
+          }
+          else if (val == "金象山乐园") {
+            wx.navigateTo({
+              url: '../../pages/audio/scenic/s9/s9',
+            })
+          }
         }
-        else if(res.cancel){
+        else if (res.cancel) {
           wx.navigateTo({
             url: '/component/wxSearch/wxSearch',
           })
-        } 
+        }
       }
     })
   },
