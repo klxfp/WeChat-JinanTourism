@@ -8,7 +8,11 @@ Page({
     index:0,
     array: ['全部', '酒店', '机票', '火车票','汽车票','门票','用车','度假','民宿','优品','向导','活动']
     },
-
+  liaojie: function (event) {
+    wx.navigateTo({
+      url: '/pages/audio/audio'
+    })
+  },
   bindPickerChange:function(e){
     this.setData({
       index: e.detail.value

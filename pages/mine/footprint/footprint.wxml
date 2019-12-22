@@ -3,5 +3,5 @@
 
   <image class="tixing" src="/pages/mine/images/liuhan.png"></image>
   <text class="zhanshi">您还没有旅行足迹哦！</text>
-
+  <button bindtap="chufa"class="but">即刻出发</button> 
 </view>

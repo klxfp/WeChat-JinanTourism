@@ -10,5 +10,6 @@
   <image class="tixing" src="/pages/mine/images/gantanhao.png"></image>
   <text class="zhanshi">暂时没有相关内容</text>
   <text class="gengduo">更多订单请至小导导官网或客户端查询</text>
+  <button bindtap="liaojie"class="but">浏览附近景点</button> 
 
 </view>

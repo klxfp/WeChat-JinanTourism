@@ -18,4 +18,8 @@
    font-size:35rpx;
    padding-top: 30rpx;
    font-family: "幼圆";
+   padding-bottom: 30rpx;
+}
+.but{
+  background-color: #3688ff;
 }
