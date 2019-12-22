@@ -9,13 +9,13 @@
     </navigator>
 
     <view class="search_btn">
-    <navigator url="../search/search">
-      <image class="seach_img" src="../../images/icon_search.png"/>
-     </navigator>
+      <navigator url="../search/search">
+        <image class="seach_img" src="../../images/icon_search.png" />
+      </navigator>
 
-      <input class="search-input" placeholder="搜索景点" bindtap="bindFocus" auto-focus >
-                <icon type="search" size="20" color="purple" class="search-icon inside"/>
-            </input>
+      <input class="search-input" placeholder="搜索景点" bindtap="bindFocus" auto-focus>
+
+      </input>
     </view>
 
     <view class="msg_btn">
@@ -34,8 +34,8 @@
     <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" duration="{{duration}}" interval='{{interval}}' bindchange="bindchange" circular="{{circular}}" style="height:{{imgheights[current]}}rpx;">
       <block wx:for='{{imgList}}' wx:key="{{index}}">
         <swiper-item>
-        <navigator url="{{item.pag}}">
-          <image src="{{item.src}}" data-id='{{index}}' class="image" mode="widthFix" bindload="imageLoad" />
+          <navigator url="{{item.pag}}">
+            <image src="{{item.src}}" data-id='{{index}}' class="image" mode="widthFix" bindload="imageLoad" />
           </navigator>
           <view class="txt">{{item.text}}</view>
         </swiper-item>

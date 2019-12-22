@@ -32,7 +32,7 @@
 
 .page_title .search{
   display: inline-block;
-  
+    
 }
 .page_title .search_btn {
   background: #9eccf5;
@@ -48,10 +48,16 @@
 }
 
 .page_title .search_btn .seach_img {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 20px;
   height: 20px;
   margin-left: 10px;
   margin-right: 10px;
+  border: 5px;
+  display: flex;
   
 
 }
