@@ -10,13 +10,13 @@ Page({
     appointmentTime: '2019年12月16日  11:42',
     orderTime: '2019年12月16日  11:42',
     hasData: true,
-    navTab: ["全部", "待处理", "待接待", "已完成", "客户处理"],
+    navTab: ["全部", "待付款", "待出行", "已完成", "订单收藏"],
     moneyInfo: [, , , , , , ,],
-    nickName: '恋人心',
+    nickName: '测试',
     phoneNum: '18202801506',
     statusImage: ['../images/daijiedai.png'],
     currentNavtab: 1,
-    statusText: ['待接待未付款'],
+    statusText: ['未付款待出行'],
     startPoint: [0, 0]
   },
 

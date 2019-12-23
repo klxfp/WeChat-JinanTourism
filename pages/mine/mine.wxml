@@ -18,40 +18,46 @@
         <view class="detail">
           <view class="bar">
   
-            <navigator class="box"  bindtap="orders">
+            <button class="box"  bindtap="orders">
               <image class='dingima' src="/pages/mine/images/order.png"></image>
               <text>全部订单</text>
-            </navigator>
+            </button>
 
-            <navigator class="box"  bindtap="payment">
+            <button class="box"  bindtap="payment">
               <image class='dingima' src="/pages/mine/images/renew.png"></image>
-              <text>待付款</text>
-            </navigator>
+              <text>订单管理</text>
+            </button>
 
-            <navigator class="box"  bindtap="totravel">
+            <!-- <button class="box"  bindtap="totravel">
               <image class='dingima' src="/pages/mine/images/unread.png"></image>
-              <text>未出行</text>
-            </navigator>
+              <text>联系景区</text>
+            </button> -->
 
           </view>
         
 
           <view class="bar">
 
-            <navigator class="box"  bindtap="Coupon">
+            <!-- <navigator class="box"  bindtap="Coupon">
               <image class='dingima' src="/pages/mine/images/balance.png"></image>
               <text>优惠券</text>
-            </navigator>
-
-            <navigator class="box"  bindtap="footprint">
+            </navigator> -->
+            <!-- <button class="box"  bindtap="Coupon">
+              <image class='dingima' src="/pages/mine/images/balance.png"></image>
+              <text>优惠券</text>
+            </button> -->
+            <button class="box"  bindtap="footprint">
               <image class='dingima' src="/pages/mine/images/international.png"></image>
               <text>旅行足迹</text>
-            </navigator>
-
-            <navigator class="box"  bindtap="Collection">
+            </button>
+            <button class="box"  bindtap="totravel">
+              <image class='dingima' src="/pages/mine/images/unread.png"></image>
+              <text>联系景区</text>
+            </button>
+            <!-- <button class="box"  bindtap="Collection">
               <image class='dingima' src="/pages/mine/images/start.png"></image>
               <text>我的收藏</text>
-            </navigator>
+            </button> -->
 
           </view>
         

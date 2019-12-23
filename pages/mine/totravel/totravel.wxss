@@ -1,5 +1,5 @@
 .order{
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,8 +19,8 @@
    padding-top: 30rpx;
    font-family: "幼圆";
 }
-.gengduo{
-   font-size:30rpx;
-   padding-top: 10rpx;
+.jingqu{
+   font-size:45rpx;
+   padding-top: 12rpx;
    font-family: "幼圆";
 }
