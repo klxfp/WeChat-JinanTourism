@@ -14,9 +14,9 @@ Page({
     moneyInfo: [, , , , , , ,],
     nickName: '测试',
     phoneNum: '18202801506',
-    statusImage: ['../images/daijiedai.png'],
+    // statusImage: ['../images/daijiedai.png'],
     currentNavtab: 1,
-    statusText: ['未付款待出行'],
+    // statusText: ['未付款待出行'],
     startPoint: [0, 0]
   },
 

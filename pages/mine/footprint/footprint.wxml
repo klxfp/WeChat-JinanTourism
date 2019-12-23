@@ -1,7 +1,34 @@
 <!--pages/mine/Coupon/Coupon.wxml-->
 <view class="order">
+  <view class="btm">
+    <image class="tixing" src="https://p0.ssl.qhimgs4.com/t016328df595f92369e.jpg"></image>
+    <text class="zhanshi">元旦期间，千佛山举办一年一度的“千佛山登山祈福”活动，元旦来这里拈香祈福，祈求新的一年步步登高、平安吉祥。</text>
+    <button bindtap="chufa"class="but">即刻出发</button>
+  </view>
+  <view class="btm">
+    <image class="tixing" src="https://p0.ssl.qhimgs4.com/t01dcb032e354391a82.jpg"></image>
+    <text class="zhanshi">寒冬来临，大雪初飘，九如山银装素裹，分外醒目，世人称此为“冰雪九如山”。松柏全都凝霜挂雪，深山层峦已被白色覆盖，冰瀑、冰挂、雾凇与雪相伴相生，随处可见，构织出冬季独有的自然奇观。</text>
+    <button bindtap="chufa"class="but">即刻出发</button>
+  </view>
+  <view class="btm">
+    <image class="tixing" src="http://5b0988e595225.cdn.sohucs.com/images/20171226/fb9cbeccf233469081c279d580f6b40a.jpeg"></image>
+    <text class="zhanshi">  元旦期间济南动物园将举办“爱心之旅动物丰容DIY”活动，选取部分动物馆舍，组织市民为动物开展丰容活动，模拟其野外生活环境，延长取食时间，展现动物更多自然行为，满足市民游客与动物亲近的愿望。</text>
+    <button bindtap="chufa"class="but">即刻出发</button>
+  </view>
+  <view class="btm">
+    <image class="tixing" src="https://pic.vjshi.com/2019-03-12/2f57ba4e5595c1202a59d2b5a8341ab0/00001.jpg?x-oss-process=style/watermark"></image>
+    <text class="zhanshi">  森林公园推出“欢歌笑语迎新年文艺演出”，演出形式以合唱、舞蹈、乐器演奏为主，丰富游园内容，活跃游园氛围。</text>
+    <button bindtap="chufa"class="but">即刻出发</button>
+  </view>
+  <view class="btm">
+    <image class="tixing" src="https://dimg04.c-ctrip.com/images/100a0x000000l5vjb7B9A_R_1600_10000_Mtg_7.jpg"></image>
+    <text class="zhanshi">  中山公园将推出“丹青迎春六人国画展”，展出韩书保等六位山东老年画家60余幅山水花鸟画。</text>
+    <button bindtap="chufa"class="but">即刻出发</button>
+  </view>
+  <view class="btm">
+    <image class="tixing" src="https://f11.baidu.com/it/u=2452389019,1806203517&fm=173&s=B18B2BF0D2454AEEA09028F4030080B2&w=640&h=446&img.JPEG&access=215967316"></image>
+    <text class="zhanshi">  兴济园林花卉水族市场将举办“花卉水族展销”，为市民提供高、中、低档时令花卉及各类水族，品种齐全，供游客观赏购买。另外，免费发放花卉水族养植知识手册，为市民游客提供养植知识咨询。</text>
+    <button bindtap="chufa"class="but">即刻出发</button>
+  </view>
 
-  <image class="tixing" src="/pages/mine/images/liuhan.png"></image>
-  <text class="zhanshi">您还没有旅行足迹哦！</text>
-  <button bindtap="chufa"class="but">即刻出发</button> 
 </view>

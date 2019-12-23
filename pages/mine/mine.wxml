@@ -48,7 +48,7 @@
             </button> -->
             <button class="box"  bindtap="footprint">
               <image class='dingima' src="/pages/mine/images/international.png"></image>
-              <text>旅行足迹</text>
+              <text>特色活动</text>
             </button>
             <button class="box"  bindtap="totravel">
               <image class='dingima' src="/pages/mine/images/unread.png"></image>

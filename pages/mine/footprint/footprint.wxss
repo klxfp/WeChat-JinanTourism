@@ -9,17 +9,25 @@
 }
 
 .tixing{
-    width: 300rpx;
-    height: 300rpx; 
+    width: 100%;
+    height: 500rpx; 
     align-items: center;
-    padding-top: 150rpx;
+    /* padding-top: 10rpx; */
+}
+.btm{
+  padding-bottom: 10rpx;
 }
 .zhanshi{
-   font-size:35rpx;
+   font-size:40rpx;
    padding-top: 30rpx;
    font-family: "幼圆";
    padding-bottom: 30rpx;
 }
 .but{
   background-color: #3688ff;
+  /* padding-top: 10rpx; */
+  font-size:40rpx;
+  /* height: 75rpx;  */
+  /* align-items: center; */
+  /* justify-content: space-around;  */
 }

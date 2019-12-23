@@ -1,7 +1,7 @@
 <!--pages/mine/totravel/totravel.wxml-->
 <view class="order">
 
-    <view wx:for="{{name}}"wx:key="text{{index}}">
+    <view wx:for="{{name}}"wx:key="text{{index}}"class="vicl">
        <text class="jingqu">{{name[index]}}：</text>
        <text class="jingqu">{{tel[index]}}</text>
     </view>
