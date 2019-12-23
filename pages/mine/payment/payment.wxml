@@ -23,21 +23,17 @@
                 </view>
                 <view class="flexItem columnStyle tableViewCell" catchtap="goDeatailEvent">
                     <view class="flexItem rowStyle marginBottom10 cellStyle">
-                        <label class="color54 fontSize12">预约时间</label>
+                        <label class="color54 fontSize12">出行时间</label>
                         <label class="fontSize14">{{ appointmentTime }}</label>
                     </view>
                     <view class="flexItem rowStyle marginBottom10 cellStyle">
-                        <label class="color54 fontSize12">预约人数</label>
-                        <label class="color54 fontSize12">{{ appointmentNum }} 人</label>
+                        <label class="color54 fontSize12">门票数量</label>
+                        <label class="color54 fontSize12">{{ appointmentNum }} 张</label>
                     </view>
                     <view class="flexItem rowStyle marginBottom10 cellStyle">
                         <label class="color54 fontSize12">下单时间</label>
                         <label class="color54 fontSize12">{{ orderTime }}</label>
                     </view>
-                </view>
-                <view class="flexItem rowStyle centers orderStatus" catchtap="goDeatailEvent">
-                    <image class="statusImage" src="{{ statusImage[0] }}"></image>
-                    <label class="statusText fontSize14">{{ statusText[0] }}</label>
                 </view>
             </scroll-view>
         </view>
@@ -60,22 +56,22 @@
         </view>
         <view class="flexItem columnStyle tableViewCell" catchtap="goDeatailEvent">
             <view class="flexItem rowStyle marginBottom10 cellStyle">
-                <label class="color54 fontSize12">预约时间</label>
+                <label class="color54 fontSize12">出行时间</label>
                 <label class="fontSize14">{{ appointmentTime }}</label>
             </view>
             <view class="flexItem rowStyle marginBottom10 cellStyle">
-                <label class="color54 fontSize12">预约人数</label>
-                <label class="color54 fontSize12">{{ appointmentNum }} 人</label>
+                <label class="color54 fontSize12">门票数量</label>
+                <label class="color54 fontSize12">{{ appointmentNum }} 张</label>
             </view>
             <view class="flexItem rowStyle marginBottom10 cellStyle">
                 <label class="color54 fontSize12">下单时间</label>
                 <label class="color54 fontSize12">{{ orderTime }}</label>
             </view>
         </view>
-        <view class="flexItem rowStyle centers orderStatus" catchtap="goDeatailEvent">
+        <!-- <view class="flexItem rowStyle centers orderStatus" catchtap="goDeatailEvent">
             <image class="statusImage" src="{{ statusImage[0] }}"></image>
             <label class="statusText fontSize14">{{ statusText[0] }}</label>
-        </view>
+        </view> -->
     </scroll-view>
         </view>
 
@@ -101,18 +97,18 @@
                 <label class="fontSize14">{{ appointmentTime }}</label>
             </view>
             <view class="flexItem rowStyle marginBottom10 cellStyle">
-                <label class="color54 fontSize12">预约人数</label>
-                <label class="color54 fontSize12">{{ appointmentNum }} 人</label>
+                <label class="color54 fontSize12">门票数量</label>
+                <label class="color54 fontSize12">{{ appointmentNum }} 张</label>
             </view>
             <view class="flexItem rowStyle marginBottom10 cellStyle">
                 <label class="color54 fontSize12">下单时间</label>
                 <label class="color54 fontSize12">{{ orderTime }}</label>
             </view>
         </view>
-        <view class="flexItem rowStyle centers orderStatus" catchtap="goDeatailEvent">
+        <!-- <view class="flexItem rowStyle centers orderStatus" catchtap="goDeatailEvent">
             <image class="statusImage" src="{{ statusImage[0] }}"></image>
             <label class="statusText fontSize14">{{ statusText[0] }}</label>
-        </view>
+        </view> -->
     </scroll-view>
         </view>
 
@@ -127,10 +123,10 @@
                 <image class="userHeader" src="{{ url }}"></image>
                 <label class="color54 fontSize12">{{ nickName }}</label>
             </view>
-            <view class="flexItem rowStyle marginRight12 centers" catchtap="callEvent">
+            <!-- <view class="flexItem rowStyle marginRight12 centers" catchtap="callEvent">
                 <image class="call" src="../images/call.png"></image>
                 <label class="color54 fontSize12">{{ phoneNum }}</label>
-            </view>
+            </view> -->
         </view>
         <view class="flexItem columnStyle tableViewCell" catchtap="goDeatailEvent">
             <view class="flexItem rowStyle marginBottom10 cellStyle">
@@ -138,18 +134,18 @@
                 <label class="fontSize14">{{ appointmentTime }}</label>
             </view>
             <view class="flexItem rowStyle marginBottom10 cellStyle">
-                <label class="color54 fontSize12">预约人数</label>
-                <label class="color54 fontSize12">{{ appointmentNum }} 人</label>
+                <label class="color54 fontSize12">门票数量</label>
+                <label class="color54 fontSize12">{{ appointmentNum }} 张</label>
             </view>
             <view class="flexItem rowStyle marginBottom10 cellStyle">
                 <label class="color54 fontSize12">下单时间</label>
                 <label class="color54 fontSize12">{{ orderTime }}</label>
             </view>
         </view>
-        <view class="flexItem rowStyle centers orderStatus" catchtap="goDeatailEvent">
+        <!-- <view class="flexItem rowStyle centers orderStatus" catchtap="goDeatailEvent">
             <image class="statusImage" src="{{ statusImage[0] }}"></image>
             <label class="statusText fontSize14">{{ statusText[0] }}</label>
-        </view>
+        </view> -->
     </scroll-view>
         </view>
 
@@ -164,10 +160,10 @@
                 <image class="userHeader" src="{{ url }}"></image>
                 <label class="color54 fontSize12">{{ nickName }}</label>
             </view>
-            <view class="flexItem rowStyle marginRight12 centers" catchtap="callEvent">
+            <!-- <view class="flexItem rowStyle marginRight12 centers" catchtap="callEvent">
                 <image class="call" src="../images/call.png"></image>
                 <label class="color54 fontSize12">{{ phoneNum }}</label>
-            </view>
+            </view> -->
         </view>
         <view class="flexItem columnStyle tableViewCell" catchtap="goDeatailEvent">
             <view class="flexItem rowStyle marginBottom10 cellStyle">
@@ -175,18 +171,18 @@
                 <label class="fontSize14">{{ appointmentTime }}</label>
             </view>
             <view class="flexItem rowStyle marginBottom10 cellStyle">
-                <label class="color54 fontSize12">预约人数</label>
-                <label class="color54 fontSize12">{{ appointmentNum }} 人</label>
+                <label class="color54 fontSize12">门票数量</label>
+                <label class="color54 fontSize12">{{ appointmentNum }} 张</label>
             </view>
             <view class="flexItem rowStyle marginBottom10 cellStyle">
                 <label class="color54 fontSize12">下单时间</label>
                 <label class="color54 fontSize12">{{ orderTime }}</label>
             </view>
         </view>
-        <view class="flexItem rowStyle centers orderStatus" catchtap="goDeatailEvent">
+        <!-- <view class="flexItem rowStyle centers orderStatus" catchtap="goDeatailEvent">
             <image class="statusImage" src="{{ statusImage[0] }}"></image>
             <label class="statusText fontSize14">{{ statusText[0] }}</label>
-        </view>
+        </view> -->
     </scroll-view>
         </view>
     </view>
