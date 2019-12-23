@@ -5,8 +5,10 @@
 
 
 <view class="head">
-<view class="title">大明湖</view>
-<view class="desc">大明湖，山东省济南市区湖泊、济南三大历史名胜之一。位于济南市历下区旧城区北部，是由济南众多泉水汇流而成，湖水经泺水河注入小清河。湖水面积46公顷，水深平均2~3米。</view>
-<video style="height:240px;width:320px;" src="{{mapUrl}}"> </video>
-<canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" bindtouchstart="touchHandler"></canvas>
+  <view class="title">大明湖</view>
+  <view class="body">
+  <view class="desc">大明湖，山东省济南市区湖泊、济南三大历史名胜之一。位于济南市历下区旧城区北部，是由济南众多泉水汇流而成，湖水经泺水河注入小清河。湖水面积46公顷，水深平均2~3米。</view>
+  <video style="height:240px;width:320px;" src="{{mapUrl}}"> </video>
+  <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" bindtouchstart="touchHandler"></canvas>
+  </view>
 </view>

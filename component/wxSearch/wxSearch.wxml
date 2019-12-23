@@ -6,11 +6,11 @@
 
   <view class="result_search" hidden="{{searchIsHidden}}" bindtap='bindSearchHidden'>
     <view class='list_search'>
-      <view class='li_list_search' wx:for="{{searchList}}" wx:key="{{index}}" wx:if="{{index<3 || searchAllShow}}" catchtap="bindGoSchool" data-item="{{item}}">
+      <view class='li_list_search' wx:for="{{searchList}}" wx:key="{{index}}" wx:if="{{index<3 || searchAllShow}}"  data-item="{{item}}" data-text="{{item}}" catchtap='goMapp' >
         <view class="icon-waiting">
         <image src="/images/icon-waiting.png" style="width: 40rpx; height: 40rpx; "></image>
         </view>
-        <view class="pl30">{{item}}</view>
+        <view class="pl30" >{{item}}</view>
         <view class='li_list_search text' catchtap="bindDelLog" data-item="{{item}}">
       <view class='icon-cancel'>
         <image src="/images/icon-cancel.png" style="width: 20rpx; height: 20rpx; ;"></image>

@@ -34,6 +34,7 @@ module.exports = {
     })
     this.goMap(inputVal)
   },
+
   bindDelLog(e, that) {
     let val = e.currentTarget.dataset.item;
     let searchList_stroage = getStorage('searchList') || [];
@@ -93,6 +94,12 @@ module.exports = {
     this._setData(that, {
       searchList: list
     })
+  },
+  goMapp: function (e) {
+    var inputVal = e.currentTarget.dataset.item;
+    console.log(inputVal);
+    that.goMap(inputVal);
+    console.log(e.currentTarget.dataset.item);
   },
   goMap(val) {
     wx.showModal({
