@@ -1,5 +1,5 @@
 var __dirname = "pages/homepage";
-var __overwrite = require("../../utils/overwrite.js");
+// var __overwrite = require("../../utils/overwrite.js");
 var tabNames = ["recommand", "nearby"];
 (function (require, Page) {
   var api = require("../../utils/api.js")(__dirname),
@@ -510,4 +510,5 @@ var tabNames = ["recommand", "nearby"];
       }
     }
   });
-})(__overwrite.require(require, __dirname), __overwrite.Page);
+})
+// (__overwrite.require(require, __dirname), __overwrite.Page);
