@@ -1,2 +1,136 @@
-<!--pages/test/test.wxml-->
-<text>pages/test/test.wxml</text>
+<!--pages/homepage/homepage.wxml-->
+<scroll-view class="bg2" scroll-y="true" style="height:{{scrollHeight}}px">
+    <!--首页数据 begin-->
+    <!--广告位和搜索-->
+    <view class="banner-component">
+        <view class="banner-box">
+            <view class="city-box" bindtap="onCitySelectClick">
+                <text class="city-name txtoverflow">{{searchCityName}}</text>
+                <image class="bottom-icon" src="https://m.elongstatic.com/static/xcxticket/bottom.png"></image>
+            </view>
+            <view class="search" bindtap="onSearchClick">
+                <image class="searchIcon"/>
+                <text class="searchtip">输入城市/景点/游玩主题</text>
+            </view>
+
+        </view>
+    </view>
+    <!--城市和周边-->
+    <view class="local-around">
+        <view class="local-item" bindtap="gotolocalScenery">
+            <image class="local" src="https://m.elongstatic.com/static/xcxticket/local.png"></image>
+            <text class="t17">本地景点</text>
+        </view>
+        <view class="split"/>
+        <view class="local-item" bindtap="gotoNearbyCityScenery">
+            <image class="local" src="https://m.elongstatic.com/static/xcxticket/around.png"></image>
+            <text class="t17">周边城市</text>
+        </view>
+    </view>
+    <!--主题选择-->
+    <view class="theme-container" wx:if= "{{showTopiclist && showTopiclist.length > 0}}"ref="the-container" >
+        <swiper
+            class="themeswiper"
+            current="{{ themeindex }}"
+            indicator-dots=""
+            autoplay = "{{themeAutoplay}}"
+            bindchange="themeSwiperChange"
+            style="height:{{themcontainerHeight}}rpx"
+            >
+            <block wx:for="{{showTopiclist}}"  wx:key="{{index}}" >
+                <swiper-item>
+                    <view class="itemlist">
+                    <block wx:for="{{item}}" wx:for-item="topic" wx:key="{{index1}}">
+                        <view class="themeItem" bindtap="onTopicItemClick" data-index="{{index}}">
+                            <image style="background-image: url({{topic.topicUrl?'https:'+topic.topicUrl:topicDefaultUrl}})"
+                            class="topicpic {{topic.topicName == '全部景点'?'bgnull':''}}"/>
+                            <text class="t12 c888888">{{topic.topicName}}</text>
+                        </view>
+                    </block>
+                    </view>
+                </swiper-item>
+            </block>
+        </swiper>
+        <view class="dots">
+            <block wx:for="{{showTopiclist}}" wx:key="unique">
+                <view class="dot{{index == themeindex ? ' active' : ''}}"/>
+            </block>
+        </view>
+    </view>
+    <!--必玩和推荐-->
+    <!--必玩和推荐的tab-->
+    <view class="tabContainer bg1" wx:if="{{sceneryList && sceneryList.length>0}}">
+                <text class="df jc aic t15 h42 padding10 {{selectedTabIndicator == 'recommand'?'bb49f wxc':'c333333'}}"
+                    bindtap="onTabClick" data-param="recommand">必玩景点</text>
+                <text class="df jc aic t15 h42 padding10 {{selectedTabIndicator == 'nearby'?'bb49f wxc':'c333333'}}" bindtap="onTabClick" data-param="nearby"
+                wx:if="{{currentCityId == searchCityId && localSceneryList.length > 0}}">附近景点推荐</text>
+    </view>
+    <swiper class="bg1" wx:if="{{sceneryList && sceneryList.length>0}}"
+        current="{{sceneryindex}}" style="height:{{sceneryindex == 0 ? recommandswiperHeight :localswiperHeight }}rpx;"
+        bindchange="changeScenerySwiper"
+        >
+        <block wx:for="{{sceneryList}}" wx:key="homeSceneryList">
+            <swiper-item>
+                <block wx:for="{{item}}" wx:for-item="scenery" wx:key="index1">
+                    <view class="scenery" data-sceneryid="{{scenery.scenicId}}" bindtap="gotoSceneryDetail">            
+                        <view class="pic">
+                            <image src="{{'https:'+scenery.imageUrl}}" class="image"/>
+                        </view>
+                        <view class="info df">
+                            <text class="title t17">{{scenery.scenicTitle}}</text>
+                            <text class="t13 color88 txtoverflow">{{scenery.scenicDesc}}</text>
+                            <view class="city-score df aic">
+                                <text class="city t12">{{scenery.scenicCity}}</text>
+                                <text class="score wxc t12" wx:if="{{scenery.commentCount != 0&&scenery.scenicCommentScore}}">{{scenery.scenicCommentScore}}分</text>
+                                <text class="jibie t12" wx:if="{{scenery.scenicLevel && scenery.scenicLevel != 0}}">{{scenery.scenicLevel}}A级景区</text>
+                            </view>
+                            <view class="distance-origin df">
+                                <text class="juli">{{scenery.distanceDesc}}</text>
+                                <view class="originPrice df t12 aic" wx:if="{{item.originalPrice}}">
+                                    <text>{{"￥"+scenery.originPrice}}</text>
+                                </view>
+                            </view>
+                            <view class="biao-price aic df">
+                                <text class="biao df wxc" wx:if="{{scenery.topicList && scenery.topicList.length}}">{{scenery.topicList[0]}}</text>
+                                <text class="biao2 df wxc" wx:if="{{scenery.tagList && scenery.tagList.length}}">{{scenery.tagList != undefined && scenery.tagList[0]}}</text>
+                                <view class="price df">
+                                    <text class="money t12">￥</text>
+                                    <text class="realprice t20">{{scenery.currentPrice}}</text>
+                                    <text class="qi t12">起</text>
+                                </view>
+                            </view>
+                        </view>
+        </view>
+                </block>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="df bg1 jcc aic h44 lnh0" wx:if="{{sceneryList && sceneryList.length>0}}" bindtap="gotoList">
+        <text class="t12 c4499ff aic">查看更多景点</text>
+        <icon class="trangleright ml6 aic"/>
+    </view>
+    <!--底部-->
+    <view class="footer">
+        <view class="tit">--选择艺龙服务无忧--</view>
+        <view class="foot">
+            <view class="li">
+                <image class="footimg" src="https://m.elongstatic.com/static/xcxticket/discount.png"></image>
+                <text class="t11 colorb2">价格优惠</text>
+                <text class="t11 colorb2">随走随订</text>
+            </view>
+            <view class="li">
+                <image class="footimg" src="https://m.elongstatic.com/static/xcxticket/ticket.png"></image>
+                <text class="t11 colorb2">全国门票</text>
+                <text class="t11 colorb2">预订便捷</text>
+            </view>
+            <view class="li">
+                <image class="footimg" src="https://m.elongstatic.com/static/xcxticket/fast.png"></image>
+                <text class="t11 colorb2">快速入园</text>
+                <text class="t11 colorb2">退订随心</text>
+            </view>
+        </view>
+    </view>
+    <!--首页数据 end-->
+    <!--订单按钮入口-->
+    <image class="orderpic" src="https://m.elongstatic.com/static/xcxticket/gotoorder.png" bindtap="gotoOrder"/>
+</scroll-view>
