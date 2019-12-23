@@ -46,6 +46,9 @@ Page({
   bindClearSearch: function () {
     wxSearch.updataLog(this, [])
   },
+ goMap2: function () {
+   wxSearch.goMap2(this, [])
+  },
   bindGoScene(e) {
     let val = e.currentTarget.dataset.item;
     wxSearch.goScene(val)
