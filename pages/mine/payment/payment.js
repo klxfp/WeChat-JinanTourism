@@ -78,7 +78,14 @@ Page({
       url: '../orderManage/orderDeatail/orderDeatail'
     })
   },
-
+  getMyInfo: function (e) {
+    console.log(e.detail.userInfo)
+    let info = e.detail.userInfo;
+    this.setData({
+      nickName: info.nickName,//更新名称
+      src: info.avatarUrl//更新图片来源
+    })
+  },
   // 加载
   onLoad: function () {
     wx.setNavigationBarTitle({
@@ -86,7 +93,5 @@ Page({
     })
     var that = this
     //更新数据
-    that.setData({
-    })
   }
 })

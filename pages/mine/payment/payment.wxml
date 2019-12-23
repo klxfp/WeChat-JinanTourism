@@ -8,7 +8,7 @@
         <view class="view1 width20"  bindtouchstart="catchtouchstart" bindtouchend="catchtouchend">
             <scroll-view class="tableView" scroll-y="true" wx:if="{{hasData}}"  wx:for="{{ moneyInfo }}" wx:for-item="info">
                 <view class="flexItem rowStyle tableViewCellHeader marginTop10" catchtap="goDeatailEvent">
-                    <image class="orderImage marginLeft12" src="../images/dingdan.png"></image>
+                    <image class="orderImage marginLeft12" ></image>
                     <label class="color54 fontSize12">订单编号: {{ orderNum }}-1</label>
                 </view>
                 <view class="flexItem rowStyle  personInfo" catchtap="goDeatailEvent">
@@ -17,7 +17,7 @@
                         <label class="color54 fontSize12">{{ nickName }}</label>
                     </view>
                     <view class="flexItem rowStyle marginRight12 centers" catchtap="callEvent">
-                        <image class="call" src="../images/call.png"></image>
+                        <image class="call" ></image>
                         <label class="color54 fontSize12">{{ phoneNum }}</label>
                     </view>
                 </view>
@@ -41,7 +41,7 @@
         <view class="view2 width20"  bindtouchstart="catchtouchstart" bindtouchend="catchtouchend">
             <scroll-view class="tableView" scroll-y="true" wx:if="{{hasData}}"  wx:for="{{ moneyInfo }}" wx:for-item="info">
         <view class="flexItem rowStyle tableViewCellHeader marginTop10" catchtap="goDeatailEvent">
-            <image class="orderImage marginLeft12" src="../images/dingdan.png"></image>
+            <image class="orderImage marginLeft12" ></image>
             <label class="color54 fontSize12">订单编号: {{ orderNum }}-2</label>
         </view>
         <view class="flexItem rowStyle  personInfo" catchtap="goDeatailEvent">
@@ -50,7 +50,7 @@
                 <label class="color54 fontSize12">{{ nickName }}</label>
             </view>
             <view class="flexItem rowStyle marginRight12 centers" catchtap="callEvent">
-                <image class="call" src="../images/call.png"></image>
+                <image class="call" ></image>
                 <label class="color54 fontSize12">{{ phoneNum }}</label>
             </view>
         </view>
@@ -78,7 +78,7 @@
         <view class="view3 width20"  bindtouchstart="catchtouchstart" bindtouchend="catchtouchend">
             <scroll-view class="tableView" scroll-y="true" wx:if="{{hasData}}"  wx:for="{{ moneyInfo }}" wx:for-item="info">
         <view class="flexItem rowStyle tableViewCellHeader marginTop10" catchtap="goDeatailEvent">
-            <image class="orderImage marginLeft12" src="../images/dingdan.png"></image>
+            <image class="orderImage marginLeft12" ></image>
             <label class="color54 fontSize12">订单编号: {{ orderNum }}-3</label>
         </view>
         <view class="flexItem rowStyle  personInfo" catchtap="goDeatailEvent">
@@ -87,7 +87,7 @@
                 <label class="color54 fontSize12">{{ nickName }}</label>
             </view>
             <view class="flexItem rowStyle marginRight12 centers" catchtap="callEvent">
-                <image class="call" src="../images/call.png"></image>
+                <image class="call" ></image>
                 <label class="color54 fontSize12">{{ phoneNum }}</label>
             </view>
         </view>
@@ -115,7 +115,7 @@
         <view class="view4 width20"  bindtouchstart="catchtouchstart" bindtouchend="catchtouchend">
             <scroll-view class="tableView" scroll-y="true" wx:if="{{hasData}}"  wx:for="{{ moneyInfo }}" wx:for-item="info">
         <view class="flexItem rowStyle tableViewCellHeader marginTop10" catchtap="goDeatailEvent">
-            <image class="orderImage marginLeft12" src="../images/dingdan.png"></image>
+            <image class="orderImage marginLeft12" ></image>
             <label class="color54 fontSize12">订单编号: {{ orderNum }}-4</label>
         </view>
         <view class="flexItem rowStyle  personInfo" catchtap="goDeatailEvent">
@@ -152,7 +152,7 @@
         <view class="view5 width20"  bindtouchstart="catchtouchstart" bindtouchend="catchtouchend">
             <scroll-view class="tableView" scroll-y="true" wx:if="{{hasData}}"  wx:for="{{ moneyInfo }}" wx:for-item="info">
         <view class="flexItem rowStyle tableViewCellHeader marginTop10" catchtap="goDeatailEvent">
-            <image class="orderImage marginLeft12" src="../images/dingdan.png"></image>
+            <image class="orderImage marginLeft12" ></image>
             <label class="color54 fontSize12">订单编号: {{ orderNum }}-5</label>
         </view>
         <view class="flexItem rowStyle  personInfo" catchtap="goDeatailEvent">
