@@ -95,10 +95,10 @@ module.exports = {
       searchList: list
     })
   },
-  goMapp: function (e) {
+  goMap2(e){
     var inputVal = e.currentTarget.dataset.item;
     console.log(inputVal);
-    that.goMap(inputVal);
+    // this.goMap(inputVal);
     console.log(e.currentTarget.dataset.item);
   },
   goMap(val) {
@@ -109,7 +109,7 @@ module.exports = {
         if (res.confirm) {
           console.log('用户点击确定')
           console.log(val)
-          if (val == "趵突泉") {
+          if (val == "趵突泉" || val == "突泉") {
             wx.navigateTo({
               url: '../../pages/audio/scenic/s1/s1',
             })
