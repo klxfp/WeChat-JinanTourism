@@ -1,0 +1,27 @@
+<template name="commentItem">
+    <view class="df aic pb12 bbee"> 
+        <view class="df flex1 dc width100 ofxh">
+            <view class="df top jcb">
+                <view class="df aic flex3"> 
+                    <span class="circle">{{item.score}}</span>
+                    <span class="df ml10 t15">{{item.userName}}</span>
+                </view>
+                <span class="df mr12 t12 colorb2 je flex1 ">{{item.commentTime}}</span>
+            </view>
+            <p class="{{item.showArrow && !item.isOpened?'contentBreak':'contentFull'}}" ref="content">{{item.content}}</p>
+            <view class="h15 df jc aic" wx:if="{{item.showArrow}}" bindtap="arrowClick" ref="arrow">
+                <span class="arrowUp_Down downImg"></span>
+            </view>
+            <view class="df color85 t12 mr12 ml12">
+                {{item.productType && item.productType.length>0?'['+item.productType+']':''}}{{item.productName && item.productName.length>0?
+                item.productName:''}}
+            </view>
+            <view class="images" wx:if="{{item.imageUrlList && item.imageUrlList.length>0}}">
+                <view wx:for="{{item.imageUrlList}}" wx:for-item="imageurl" class="{{index==3?'lastItem':'imageItem'}}" bindtap="onCommentItemImgClick" data-url="{{imageurl}}" data-imageurllist="{{item.originImageUrlList}}">
+                    <image src="{{imageurl}}" class="hw82" />
+                    <text class="total df tc t10 jc aic" wx:if="{{index==3 && item.originImageUrlList && item.originImageUrlList.length>4}}">共{{item.originImageUrlList.length}}张</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

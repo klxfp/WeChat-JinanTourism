@@ -1,0 +1,35 @@
+<!--pages/fillinorder/fillinorder.wxml-->
+<import src="common/ticketItemView.wxml"/>
+<import src="common/contactView.wxml"/>
+<import src="common/feedetail.wxml"/>
+<import src="common/buyrules.wxml"/>
+
+<view class="df dc bg2 pl">
+    <!--资源模块(listview),购买其他门票(暂时不做),联系人模块(listview)-->
+    <scroll-view class="df dc mb62" scroll-y="true" style="height:{{scrollHeight-62}}px">
+        <!--门票资源-->
+        <template is="ticketItemView" data="{{item:resourceFillInInfos[0],isOrderFillInVerify:isOrderFillInVerify,isPassengersEmpty:isPassengersEmpty}}"/>
+        <!--联系人-->
+        <template is="contactView" data="{{newItemList:contactNewItemList,isOrderFillInVerify:isOrderFillInVerify,isPassengersEmpty:isPassengersEmpty}}"/>
+    </scroll-view>
+    <!--提交订单模块-->
+    <view class="df width100 jc aic pa b0 colorwhite">
+        <view class="df flex1 h47 ml12 aic">
+            <span class="t15 aic">总额</span>
+            <span class="t17 cff555 aic">￥{{showTotalPrice||''}}</span>
+        </view>
+        <view class="df aic">
+            <view class="df h47 dc mr12 aic jc" bindtap="setBookingDetailShowState" data-show="1">
+                <i class="detailimg"/>
+                <span class="t11 h11 mt5">明细</span>
+            </view>
+            <span class="df width120 h35 t16 cf aic jcc mr12 br2 bgff55" bindtap="submitOrder">提交订单</span>
+        </view>
+    </view>
+    <view class="df pa top0 height100 zindex100" wx:if="{{showFeeDetail}}">
+        <template is="feedetail" data="{{title:resourceFillInInfos[0].title,showPayPrice:resourceFillInInfos[0].showPayPrice,count:resourceFillInInfos[0].ticketNum,totalShowPayMoney:showTotalPrice}}"/>
+    </view>
+    <view class="df pa top0 height100 bgrgba zindex100" wx:if="{{showBuyRules}}">
+        <template is="buyrules" data="{{title:resourceFillInInfos[0].title,purchaseRules:resourceFillInInfos[0].purchaseRules,showPay:false, rulePopHeight:rulePopHeight}}"/>
+    </view>
+</view>

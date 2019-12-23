@@ -1,0 +1,26 @@
+<template name="buyrules">
+    <view class="df colorwhite dc mt40 bdrd12 ml24 mr24 width100 pl" style="height:{{rulePopHeight}}px">
+        <view class="df dc">            
+            <view class="df pt18 pb18 pl16 pr16 bbeb">
+                <text class="t16 flex1 mr12">{{title||'购买须知'}}</text>
+                <icon class="closeimg" bindtap="setBuyRulesShowState" data-show="0"/>
+            </view>
+            <scroll-view class="ticket_info_scroll" scroll-y="true" style="height:{{showPay?rulePopHeight-145:rulePopHeight-59}}px">
+                <view class="df dc mt18 mb18 ml12 mr12" wx:for="{{purchaseRules}}">
+                    <text class="t14 mb12">{{item.title}}</text>
+                    <text class="t12 color85">{{item.content}}</text>
+                </view>
+            </scroll-view>
+        </view>
+        <view wx:if="{{showPay}}" class="df pa btm0 width100 orderrule">
+            <view class="df flex1 jcc aic" bindtap="payOnline">
+                <text class="t12">在线支付</text>
+                <text class="t12 cff555">￥</text>
+                <text class="currentPrice">{{price}}</text>
+            </view>
+            <view class="flex1 tctc t17 cf bgff55 df aic jcc bdbrr10" bindtap="booking">
+                立即预订
+            </view>
+        </view>
+    </view>
+</template>

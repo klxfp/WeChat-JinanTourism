@@ -1,0 +1,27 @@
+<template name="refundLog">
+    <view class="df flex1 height100  width100 dc op-9 bgc45464c pl">
+        <view class="df dc">
+            <text class="df t16 cf pt44 pb16 pl16 pr16">退款日志</text>
+            <scroll-view class="df dc bteb" scroll-y="true" style="height:{{refundLogScrollHeight}}px">
+                <view wx:for="{{orderRefundLogs}}" class="df jcc aic">
+                    <view wx:if="{{item.refundDate && item.refundDate.length>0}}"class="df jcc alitmfs ml12">
+							<text class="t13 cf" wx:if="{{item.refundDate_yymmdd && item.refundDate_yymmdd.length>0}}">{{item.refundDate_yymmdd}}</text>
+							<text class="t13 cf" wx:if="{{item.refundDate_hhmmss && item.refundDate_hhmmss.length>0}}">{{item.refundDate_hhmmss}}</text>
+                    </view>
+                    <view class="df flex1 dc jcc aic">
+                        <view class="log_circle bg1"/>
+                        <view class="line"/>
+                        <view class="log_circle bg49f" wx:if="{{index == orderRefundLogs.length-1}}"/>
+                    </view>
+                    <view class="df dc flex5 mr12 pt5">
+                        <text wx:if="{{item.refundTitle && item.refundTitle.length>0}}" class="t13 cf">{{item.refundTitle}}</text>
+                        <text wx:if="{{item.refundDesc && item.refundDesc.length>0}}"class="t13 cf">{{'('+item.refundDesc+')'}}</text>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+        <view class="df width100 h138 aic jcc pa btm0" bindtap="setRefundLogPopShowState" data-show="0">
+            <icon class="closeimg jcc"/>
+        </view>
+    </view>
+</template>

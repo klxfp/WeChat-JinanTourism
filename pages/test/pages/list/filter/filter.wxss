@@ -1,0 +1,40 @@
+.ftr_mn { left: 0; right: 0; bottom: 0; overflow: hidden; line-height: 1.5; }
+.ftr_mn .bg { left: 0; right: 0; top: 0; background-color: rgba(0, 0, 0, .7); bottom: 0; opacity: 1; z-index: 99; }
+.ftr_mn .ftr_mnc { height: 628rpx; left: 0; right: 0; top: 0; bottom: 0; transform: translateY(-100%); overflow: hidden; z-index: 100; }
+.ftr_mn .ftr_wp { position: relative; height: 100%; padding-bottom: 44px; overflow: hidden; }
+.ftr_mn .item1 { width: 200rpx; position: absolute; top: 0; bottom: 0; height: 100%; padding-bottom: 44px; overflow: hidden; }
+.ftr_wpr { margin-left: 200rpx; position: relative; bottom: 0; right: 0; left: 0; height: 100%; overflow: hidden; }
+.ftr_mn .item2 { width: 100%; float: left; height: 548rpx; z-index: 100; position: relative; left: 1;}
+.ftr_mn .item { color: #555555;height:80rpx;line-height:80rpx;padding-left:24rpx;}
+.ftr_mn .item_none { display: none; }
+.ftr_mn  .item2 .item { border: none; }
+.ftr_mn .ftr_im { position: relative; border-bottom:2rpx solid #f2f2f2;}
+.ftr_imc{}
+.ftr_mn .ftr_im .on { background-color: #fff; }
+.ftr_mn  .item2 .on { color: #49f; }
+.ftr_mn .item2 .on .or { width: 32rpx; height: 16rpx; top: 30rpx; right: 32rpx; border: 2rpx solid #49f; border-width: 0 0 2rpx 2rpx; transform: rotate(-45deg); position: absolute; }
+.ftr_mn .item2 .ck { border: 2rpx solid #e9e9e9; border-radius: 50%; display: inline-block; height: 30rpx; position: absolute; vertical-align: middle; width: 30rpx; top: 28rpx; right: 32rpx; }
+.ftr_mn .item2 .on .ck { display: inline-block;background:#49f url(https://m.elongstatic.com/static/xcxticket/check_box_selected.png) center center no-repeat;background-size:32rpx 28rpx;}
+.bt_btn {
+    bottom: 0;
+    width: 100%;
+    background: #F8F8F8;
+    z-index: 10010;
+    display: flex;
+    flex-direction: row;
+    height: 80rpx;
+}
+.bt_btn button{
+	margin: 12rpx 24rpx 12rpx 0;
+    height:56rpx;
+    line-height:56rpx;
+    flex:3;
+    font-size:24rpx;
+    background:#49f;
+}
+.bt_btn button.rsd{
+  margin: 12rpx 16rpx 12rpx 24rpx;
+  flex:1;
+  color:#858585;
+}
+.bt_btn button.bg1{background-color: #fff;}

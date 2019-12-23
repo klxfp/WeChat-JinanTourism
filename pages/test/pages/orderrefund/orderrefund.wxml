@@ -1,0 +1,94 @@
+<!--pages/orderrefund/orderrefund.wxml-->
+<import src="../fillinorder/common/buyrules.wxml"/>
+<view class="df flex1 dc pl">
+    <scroll-view class="flex1 bg2" scroll-y="true" style="height:{{scrollHeight}}px">
+      <text class="df t11 pl12 pt12 pb12 pr12 bgfcde">经核实如未使用且符合退改规则，退款将于2~15个工作日退至您的支付账户。实际退款金额依退改规则而定。</text>
+      <!-- ticketList begin -->
+      <view class="df dc mb10">
+        <text class="df bg1 t15 pl12 h44 bbeb">申请退款明细</text>
+        <view class="df dc">
+            <view class="df jcb pl12 pr12 pt12 pb12 bbdd" wx:for="{{orderRefundItemList}}">
+                <view class="df dc flex6 mr20">
+                    <view class="t14 mb8">
+                        {{item.resourceTypeName?("【"+item.resourceTypeName+"】"):""}}{{item.resourceName}}
+                    </view>
+                    <view class="df t10 wxc width60 aic " bindtap="goToRefundRulesPage" data-item="{{item}}">
+                        退改规则
+                        <icon class="ar mr0_l5"/>
+                    </view>
+                </view>
+                <view class="df aic je flex3">
+                    <view wx:if="{{item.cancelType !=4 && item.cancelType !=-1}}" class="df dc jcc ae flex1">
+                            <view class="df jcb alsfsch">
+                                <text class="t14">
+                                    ×{{item.totalCount}}
+                                </text>
+                                <text class="df t14 je">¥{{item.unitPrice}}/张</text>
+                            </view>
+                            <text wx:if="{{item.cutAmount >0}}" class="df b49f borderradius2 t9 wxc h17 lnh0 aic mt8">
+                            -¥{{item.cutAmount}}手续费
+                            </text>
+                            <view wx:if="{{item.cancelType!=3}}" class="df h44 mt8 t12 je aic c888888">申请退
+                                <view class="t12 cff555 je mt1 aic ml6">
+                                    ¥{{item.refundAmount}}
+                                </view>  
+                            </view>
+                            <text wx:if="{{item.cancelType==3}}" class="df mt8 t19 cff555 je">可退金额待确认</text>
+                    </view>
+                    <icon wx:if="{{item.cancelType == 4||item.cancelType == -1}}"class="imagestate {{item.cancelType == 4?'imageRefunded':'imageRefuse'}}"/>
+                </view>
+            </view>
+        </view>
+        <!-- ticketList end -->
+        <view class="df dc je bg1 pl12 pr12 pt16 pb16">
+          <text class="t14 c888888 je tar">订单实付：¥{{totalAmount}}</text>
+          <text wx:if="{{totalCutAmount>0}}" class="df mt5 t14 c888888 tar je">手续费：-¥{{totalCutAmount}}</text>
+          <view class="df mt5 t14 tar je aic">退款金额：
+            <text class="df t14 cff555 tar je aic mt2">{{isWithoutMoney?"待确认":("¥"+canRefundMoney)}}</text>   
+          </view>
+        </view>
+      </view>
+      <!-- ticketBackView end -->
+      <!-- refundReasonBackView begin -->
+      <view class="df bg1 dc">
+        <text class="df bg1 t15 pl12 h44 bbeb">退款原因</text>
+        <view class="df dc">
+            <view class="df dc" wx:for="{{reasonItemList}}">
+                <view class="df ml12 aic h44" bindtap="reasonSelected" data-index="{{index}}">
+                    <icon class="checkimg mr12 aic {{item.isSelected?'checked':'unchecked'}}"/>
+                    <text class="t14 mt8">{{item.title}}</text>
+                </view>
+                <view class="df dc ml40 pl">
+                    <textarea wx:if="{{item.reasonId == 7 && item.isSelected}}"
+                        class="df mt15 mb52 h180 bdd2d2 pt12 pr12 pl12 pb20 rsnone tal"
+                        style="width:{{screenWidth-92}}px"
+                        value="{{item.content}}"
+                        placeholder = "请输入备注信息"
+                        placeholder-class="placeholder tal width100"
+                        bindinput="onReasonInput"
+                        data-index="{{index}}"
+                        type="text"/>
+                    <text wx:if="{{item.reasonId == 7 && item.isSelected}}" class="df pa btip rtip t10 c888888">
+                        您还可输入{{100 - item.content.length}}字
+                    </text>
+                </view>
+            </view>
+        </view>
+      </view>
+      <!-- refundReasonBackView end -->
+      <!-- 底部bottom begin -->
+      <view class="df bg1 bordertop h48 jcb aic pr12 pl12">
+        <view class="df flex1 aic">
+          <text class="df t14 c888888">申请退款</text>
+          <text class="df t17 ml10 cff555">{{isWithoutMoney?"":("¥"+canRefundMoney)}}</text>
+        </view>
+        <text class="df h36 w120 t15 cf aic jcc {{comfirmEnabled?'bgff55':'bgddd'}}" bindtap="orderRefundComfirm">申请退款</text>
+      </view>
+      <!-- 底部bottom end -->
+    </scroll-view >
+    <!-- scrollview end -->
+    <!--退改规则-->
+    <view class="df pa top0 height100 op-9 bgc45464c zindex100" wx:if="{{showRefundRules}}">
+        <template is="buyrules" data="{{title:rulePageData.title,purchaseRules:rulePageData.refundRules,showPay:false, rulePopHeight:rulePopHeight}}"/>
+    </view>
+</view>

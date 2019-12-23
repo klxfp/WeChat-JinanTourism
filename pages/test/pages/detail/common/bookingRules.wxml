@@ -1,0 +1,6 @@
+<template name="bookingRules">
+    <view class="df dc colorwhite top12 mb12"  wx:for="{{bookingRules}}">
+        <view class="t14 ml12">{{item.title}}</view>
+        <view class="df t12 color85 ml12 mr9">{{item.content}}</view>
+    </view>
+</template>

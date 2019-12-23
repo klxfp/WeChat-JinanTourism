@@ -1,0 +1,8 @@
+<template name="sort">
+    <view class="st_mn pf" wx:if="{{isOpen}}" style="top:{{style.top}}">
+        <view class="bg pa" data-bgclose="true" bindtap="{{close}}" animation="{{bgAnimation}}"></view>
+        <view class="st_mnc pa bg1 pd12" animation="{{contentAnimation}}">
+            <view class="item bb1 t12 pl {{item.filterId == selectedId ? 'cur' : ''}}" wx:for="{{items}}" bindtap="{{select}}" data-id="{{item.filterId}}" data-name="{{item.filterDesc}}">{{item.filterDesc}}<i class="im_arr pa"></i></view>
+        </view>
+    </view>
+</template>

@@ -1,0 +1,28 @@
+/* pages/sceneryspecial/sceneryspecial.wxss */
+.title{
+    border-top: 2rpx solid #ebebeb;
+    border-bottom:  2rpx solid #ebebeb;
+    height: 88rpx;
+    line-height: 88rpx;
+    padding-left:18rpx;
+    align-items: center;
+}
+.item-list{
+    margin-bottom: 20rpx;
+}
+.desc-img{
+    height:392rpx;
+    width: 700rpx;
+	background-size: cover;
+	background: transparent url(https://m.elongstatic.com/static/xcxticket/big_default.png) center center no-repeat;
+}
+.icon{
+    display: inline-block;
+    width:20rpx;
+    height:20rpx;
+    margin-right:16rpx;
+    margin-top:6rpx;
+}
+.ml0{
+    margin-left: 0
+}

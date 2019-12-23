@@ -1,0 +1,252 @@
+.headBackView{
+	height: 210rpx;
+}
+.headIcon{
+	height: 210rpx;
+}
+.headView{
+	height: 210rpx;
+}
+.head-title{
+	margin-top: 36rpx;
+}
+.head-date{
+	margin-bottom: 36rpx;
+}
+.headStatus{
+	background-color: #e1f0fa;
+}
+.headStatus-whiteBack{
+	margin:20rpx 16rpx 20rpx 16rpx;
+	border-radius: 8rpx;
+  	justify-content:space-around;
+  	flex-grow:1; 
+}
+.headStatus-status{
+	height:40rpx;
+	margin-left: 20rpx;
+	background-color: #ff724c;
+	padding-right: 12rpx;
+	padding-left: 12rpx;
+	margin-top: 20rpx;
+	align-self:flex-start;
+}
+.price1{
+	line-height: 30rpx;
+}
+.price2{
+	margin-left: 6rpx;
+}
+.refundLogBtn{
+    width:150rpx;
+}
+.confirmBtn{
+	border-radius: 8rpx;
+	flex-grow:1;
+	margin-bottom: 20rpx;
+	background-color: #4499ff;
+}
+.cancelBtn{
+	border-radius: 8rpx;
+	flex-grow:1;
+	margin-bottom: 20rpx;
+	border: solid 2rpx #bbbbbb;
+}
+.threeButton-bottomButtonBackView{
+	flex-grow:1;
+}
+
+.threeButton-extraBtn,.threeButton-cancelBtn{
+	border-radius: 8rpx;
+	margin-bottom: 20rpx;
+	border: solid 2rpx #bbbbbb;
+}
+
+.threeButton-extraBtn{
+	margin-right: 10rpx;
+}
+.threeButton-cancelBtn{
+	margin-left: 10rpx;
+}
+
+/*景点信息*/
+.location-title{
+	width: 120rpx;
+}
+.sceneryInfo-businessHour{
+	margin-bottom: 28rpx;
+	align-items:baseline;
+}
+.businessHour-title{
+	margin-top: 28rpx;
+	width:120rpx;
+}
+.ticketInfo-backView{
+	background-color: #e1f0fa;
+}
+.ticketInfo-orderId{
+	padding-left: 20rpx;
+}
+.ticketInfo-ticketView{
+	margin: 0rpx 16rpx 20rpx;
+}
+.space{
+	height: 20rpx;
+}
+.otherMessage{
+	margin: 0rpx 20rpx 20rpx;
+	border-radius: 8rpx;
+}
+.left1{
+	width: 190rpx;
+	margin-left: 20rpx;
+}
+.left2{
+	margin-left: 20rpx;
+}
+
+ /*ticketInfo :*/
+
+.ticketInfo-container{
+    background-color: #e1f0fa;
+}
+.ticket{
+    margin-top: 20rpx;
+}
+.ticketTitleView{
+    border-bottom: dashed 2rpx #ebebeb;
+    border-radius: 8rpx;
+}
+.ticketTitleView-top{
+    margin-top: 32rpx;
+    margin-right: 20rpx;
+    margin-left: 20rpx;
+}
+.ticketTitleView-bottom{
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+}
+.ticketTitleView-refundLeft{
+    justify-content:flex-start;
+    margin-left: 20rpx;
+    margin-right: 10rpx;
+}
+.refundType{
+    border: solid 2rpx #4499ff;
+    border-radius: 4rpx;
+    height: 34rpx;
+    padding-left: 4rpx;
+    padding-right: 4rpx;
+}
+.ticketTitleView-refundRules{
+    width:120rpx;
+    margin-right: 20rpx;
+}
+.basicInfosView{
+    margin-top: 32rpx;
+}
+.ticketInfo{
+    border-radius: 8rpx;
+}
+.useDate,.buyCount,.admissionCertificate,.infos,.exchangeWay{
+    display: flex;
+    margin-right: 20rpx;
+    margin-left: 20rpx;
+    justify-content:flex-start;
+}
+.title{
+    display: flex;
+    width: 160rpx;
+    justify-content:flex-start;
+    font-size: 26rpx;
+    color: #888888;
+}
+.content{
+    display: flex;
+    font-size: 26rpx;
+    color: #333333;
+    text-align: left;
+}
+.exchangeDescContent{
+    text-align: left;
+}
+.qrCodeImage{
+    margin-top: 48rpx;
+    width: 336rpx;
+    height: 336rpx;
+}
+.arrow-down,.arrow-up{
+    display: flex;
+    justify-content:center;
+    height: 30rpx;
+    align-items:center;
+}
+
+.test1{
+	display: none;
+}
+.test2{
+	display: flex;
+	width: 100%;
+	height: 50rpx;
+	background-color: red;
+}
+.mb10{
+	margin-bottom: 20rpx
+}
+.mt10{
+	margin-top: 20rpx
+}
+.h334{
+	height: 668rpx
+}
+.btm0{
+	bottom: 0
+}
+.pt44{
+	padding-top: 88rpx
+}
+.pb16{
+	padding-bottom: 32rpx
+}
+.pl16{
+	padding-left: 32rpx
+}
+.pr16{
+	padding-right: 32rpx
+}
+.mt18{
+	margin-top: 36rpx
+}
+.with60{
+	width: 120rpx
+}
+.mr18{
+	margin-right: 36rpx
+}
+.mt18{
+	margin-top: 36rpx
+}
+.pt5{
+	padding-top: 10rpx
+}
+.mt50{
+	margin-top: 100rpx
+}
+.pb5{
+	padding-bottom: 10rpx
+}
+
+.line{
+	width:2rpx;
+	background-color: #fff;
+	height:180rpx;
+}
+.flex5{
+	flex: 5
+}
+.log_circle{
+	width:26rpx;
+	height:26rpx;
+	border-radius: 50%;
+}

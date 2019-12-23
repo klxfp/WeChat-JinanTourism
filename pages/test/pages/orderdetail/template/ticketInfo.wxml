@@ -1,0 +1,65 @@
+<template name="ticketInfo">
+    <view class="df dc flex1 ticketInfo-container" wx:for="{{data}}">
+        <view class="df dc ticket">
+              <!-- ticketTitle -->
+              <view class="df dc bg1 ticketTitleView">
+                <view class="df c333333 t14 ticketTitleView-top">{{item.ticketTypeNameDesc}}{{item.productName}}</view>
+                    <view class="df jcb ticketTitleView-bottom">
+                        <view class="df ticketTitleView-refundLeft">
+                            <view wx:if="{{item.refundType}}" class="df c4499ff t9 aic refundType">
+                            {{item.refundType}}
+                            </view>
+                            <view class="df t10 c888888 ml12">
+                            {{item.refundNumber}}
+                            </view>
+                        </view>
+                    <view wx:if="{{item.refundRules && item.refundRules.length > 0}}" class="df c4499ff t10 je aic  ticketTitleView-refundRules" bindtap="setBuyRulesShowState" data-show="1" data-refundrules="{{item.refundRules}}">
+                    退改规则 <icon class="ar mr0_l5"/>
+                  </view>
+                </view>
+              </view>
+
+              <!-- ticketInfo -->
+              <view class="df dc pb12 bg1 ticketInfo" bindtap="arrowClick"  data-item="{{item}}" data-index="{{index}}">
+               <view class="basicInfosView">
+                  <view wx:if="{{item.useDate && item.useDate.length>0}}" class="useDate">
+                    <text class="title">使用日期</text> 
+                    <text class="content">{{item.useDate}}</text>
+                  </view>
+                  <view wx:if="{{item.bugcountStr}}" class="buyCount">
+                    <text class="title">购买份数</text> 
+                    <text class="content">{{item.bugcountStr}}</text>
+                  </view>
+                  <view wx:if="{{item.exchangeDesc}}" class="exchangeWay">
+                     <text class="title">兑换方式</text>
+                     <view wx:if="{{item.exchangeDesc && item.exchangeDescList && item.exchangeDescList}}" class="df dc flex1">
+                          <text wx:for="{{item.exchangeDescList}}" wx:for-item="str" class="df t13 c333333 exchangeDescContent">{{str}}</text>
+                      </view>
+                  </view>
+                  <view wx:if="{{item.admissionCertificate}}" class="admissionCertificate">
+                     <text class="title">数字验证码</text>
+                     <text class="acContent">{{item.admissionCertificate}}</text>
+                  </view>
+                  <view wx:if="{{item.qrCodeUrl}}" class="df jcc">
+                    <image class="qrCodeImage" src="{{item.qrCodeUrl}}" mode="aspectFill" />
+                  </view>
+                  <text wx:if="{{item.qrCode}}" class="df t12 jcc mt12 c333333">
+                    入园辅助码：{{item.qrCode}}
+                  </text>
+                </view>
+                
+                <view wx:if="{{item.displayExtraList && item.displayExtraList.length && item.displayExtraList}}" class="df dc">
+                        <view wx:for="{{item.displayExtraList}}" wx:for-item="model" class="infos">
+                            <text class="title">{{model.title}}</text>
+                            <text class="content">{{model.content}}</text>
+                        </view>
+                </view>
+
+                <view wx:if="{{item.extraList && item.extraList.length}}" class="{{item.displayExtraList.length>0?'arrow-up':'arrow-down'}}">
+                    <icon class="arrowUp_Down {{item.displayExtraList.length>0?'upImg':'downImg'}}"/>
+                </view>
+
+              </view>
+             </view>
+    </view>
+</template>

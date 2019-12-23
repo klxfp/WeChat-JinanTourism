@@ -1,0 +1,4 @@
+.th_mnc{margin-right:-16rpx;padding-top:16rpx;padding-left:20rpx;padding-right:20rpx;width:100%}
+.th_mn .th_mnc .item{height: 56rpx;margin-right:16rpx;margin-bottom:16rpx;line-height:56rpx;border-radius:8rpx;display:inline-block;justify-content: center;width:226rpx;box-sizing: border-box;color: #555;
+    border: solid 2rpx #ebebeb;text-align:center;}
+.th_mn .th_mnc .cur{color: #49f;border:2rpx solid #49f;}

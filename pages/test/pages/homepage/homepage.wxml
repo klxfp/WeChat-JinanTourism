@@ -111,7 +111,7 @@
     </view>
     <!--底部-->
     <view class="footer">
-        <view class="tit">--选择艺龙服务无忧--</view>
+        <view class="tit">--EP团队为您提供技术支持</view>
         <view class="foot">
             <view class="li">
                 <image class="footimg" src="https://m.elongstatic.com/static/xcxticket/discount.png"></image>

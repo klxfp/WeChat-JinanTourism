@@ -1,0 +1,76 @@
+<import src="expandInfoView.wxml" />
+<import src="passengerInfoView.wxml" />
+<template name="ticketItemView">
+    <!--门票资源-->
+    <view class="df dc ofyh bg1 pr12 pl12 mb12">
+        <!--资源名字-->
+        <view class="df aic">
+            <span class="t18 mt12 flex1">{{item.title}}</span>
+            <!--多资源不做, 没有删除功能-->
+        </view>
+        <!--价格,标签,购票须知 begin-->
+        <view class="df jcb mt5 mb5">
+            <view class="df aic">
+                <span class="t17 cff555">￥</span>
+                <span class="t17 cff555 fwb">{{item.showPayPrice||''}}</span>
+                <span wx:if="{{item.tag1}}" class="df t10 wxc h16 ml6 p1 aic jcc b49f">{{item.tag1}}</span>
+                <span wx:if="{{item.tag2}}" class="df t10 wxc h16 ml6 p1 aic jcc b49f">{{item.tag2}}</span>
+            </view>
+            <view class="df aic" bindtap="setBuyRulesShowState" data-show="1">
+                <span class="t12 mr8 wxc">购票须知</span>
+                <icon class="ar mlr0" />
+            </view>
+        </view>
+        <!--价格,标签,购票须知 end-->
+        <view wx:if="{{!item.purchaseNotice || ''==item.purchaseNotice}}" class="divider1"/>
+        <!-- 提醒 begin-->
+        <view wx:if="{{item.purchaseNotice && item.purchaseNotice.length>0}}"class="df pt12 pb12 pl12 ml_12 mr_12 dc bg2">
+            <span class="t12 mr12">温馨提示</span>
+            <view class="df mt5">
+                <icon class="warning_img" />
+                <span class="t12 mr12">{{item.purchaseNotice}}</span>
+            </view>
+        </view>
+        <!-- 提醒 end-->
+        <!-- 游玩日期 begin-->
+        <view class="df h44 aic jcb" bindtap="onTravelDateClick" data-item="{{item}}">
+            <span class="t12 tctc c888888">游玩日期</span>
+            <span class="df jc aic flex1 t13 tctc {{(!item.travelDate || item.travelDate == '')&&!isOrderFillInVerify?'colorb2':((!item.travelDate || item.travelDate == '')&& isOrderFillInVerify?'cff555':'')}}">{{item.showTravelDate||"请选择游玩日期"}}</span>
+            <view class="df aic">
+                <icon class="ar mlr0"/>
+            </view>
+        </view>
+        <!-- 游玩日期 end-->
+        <!-- 购买数量 begin-->
+        <view class="df h52 jcb aic bb1 bt1">
+            <view class="df">
+                <span class="t12 c888888">购买数量</span>
+                <span wx:if="{{item.maxPurchase>0}}" class="df t11 ml8 aic tctc colorb2">{{"(最多购买"+item.maxPurchase+"份)"}}</span>
+            </view>
+            <!--数量控制控件-->
+            <view class="df h32 aic r12">
+                <span class="df h32 w32 t12 jc tctc {{!item.ticketNum || item.ticketNum<=item.minPurchase?'minusDisable':'minusEnable'}}"
+                    bindtap="setResourceTicketNumber"
+                    data-item="{{item}}"
+                    data-type="minus">-
+                </span>
+                <input ref="resource_purchase_number" type="number" class="df h32 w32 aic jc t12 tctc bb2b2 number_input"
+                min="1"
+                max="{{item.maxPurchase||'65535'}}"
+                value="{{item.ticketNum}}"
+                bindblur="onNumberEditBlur"/>
+                <span class="df h32 w32 t12 jc tctc {{item.ticketNum>=item.maxPurchase?'plusDisable':'plusEnable'}}"
+                    bindtap="setResourceTicketNumber"
+                    data-item="{{item}}"
+                    data-type="plus">+</span>
+            </view>
+        </view>
+        <!-- 购买数量 end-->
+        <!-- 附加信息 begin-->
+        <template is="expandInfoView" data="{{expandInfos:item.expandInfos, isPassengersEmpty:isPassengersEmpty,isOrderFillInVerify:isOrderFillInVerify}}"/>
+        <!-- 附加信息 end -->
+        <!-- 出行人 begin -->
+        <template is="passengerInfoView" data="{{passengerList:item._passengerList,isOrderFillInVerify:isOrderFillInVerify,isResourceSetToContact:item.isSetToContact,isPassengersEmpty:isPassengersEmpty}}"/>
+        <!-- 出行人 end -->
+    </view>
+</template>

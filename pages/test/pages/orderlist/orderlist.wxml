@@ -1,0 +1,51 @@
+<!--pages/orderlist/orderlist.wxml-->
+<view class="dc flex1 df oh pl">
+ <scroll-view hidden="{{!orderList || orderList.length == 0}}" class="lst_mn pf scroll_view" scroll-y="true" 
+bindscrolltolower="upMore" style="height: {{scrollViewHeight}}px" scroll-into-view="{{toView}}" bindscroll="onScroll">
+    <view id="top"/>
+    <view wx:for="{{orderList}}" class="dc flex1" bindtap="onOrderListItemClick" data-item="{{item}}" data-index="{{index}}">
+        <view class="df h40 aic pl12 pr12 bbeb jcb">
+          <icon class="df h20 t12 cf pr3 pl3 jcc aic brs3 {{(item.status == 3 || item.status==8)?'gray':((item.status==4||item.status==6||item.status==7)?'green':(item.status==5?'blue':'yellow'))}}">
+            {{item.orderStatusDesc}}
+          </icon>
+          <view class="t14 c333333">{{item.priceStr}}</view>
+        </view>
+
+        <view class="df flex1 top18 mb18">
+          <image src ="https://m.elongstatic.com/static/xcxticket/order_scenery.png" class="df aicc ml12 scenery-tag-img" />
+          <view class="df dc flex1 mr12 ml12">
+            <span class="t15 c333333 txtoverflow">{{item.sceneryName}}</span>
+            <view class="top16">
+              <span class="t13 color85">游玩日期</span>
+              <span class="t13 mr12 ml12 c333333">{{item.playDate}}</span>
+            </view>
+            <view class="top16">
+            <span class="t13 color85">门票数量</span>
+            <span class="ml12 t13 c333333">{{item.ticketCounts+"张"}}</span>
+            </view>
+          </view>
+        </view>
+        <view wx:if="{{item.showBtn1 || item.showBtn2 || item.showBtn3}}" class="width100 df bg-eb splitline"></view>
+        <view class="df je top8 mb8">
+            <view wx:if="{{item.showBtn1 && item.btn1Txt && item.btn1Txt!=''}}" class="df mr12 brs3 jcc aic t12 btn1" catchtap="onBtnClick" data-item="{{item}}" data-title="{{item.btn1Txt}}">
+                {{item.btn1Txt}}
+            </view>
+            <view wx:if="{{item.showBtn2 && item.btn2Txt && item.btn2Txt!=''}}" class="df mr12 brs3 jcc aic t12 btn2" catchtap="onBtnClick" data-item="{{item}}" data-title="{{item.btn2Txt}}">
+                {{item.btn2Txt}}
+            </view>
+            <view wx:if="{{item.showBtn3 && item.btn3Txt && item.btn3Txt!=''}}" class="df mr12 brs3 jcc aic t12 {{item.btn3Txt=='去支付'?'btn-red':'btn3'}}" catchtap="onBtnClick" data-item="{{item}}" data-title="{{item.btn3Txt}}">
+                {{item.btn3Txt}}
+            </view>
+        </view>
+        <view class="width100 df bg-eb splitline"></view>
+      </view>
+
+      <view hidden="{{!isMoreLoading}}" class="df jcc aic t14 c888888 load-more-tip">稍等一小会，小艺正在努力加载中...</view>
+      <view hidden="{{!showAll}}" class="df jcc aic t14 c888888 no-more-tip">没有更多订单了哦~</view>
+  </scroll-view>
+  <view hidden="{{orderList && orderList.length}}" class="df width100 jcc aic dc" style="height: {{scrollViewHeight}}px">
+    <image class="emptyView-image" mode="aspectFill" src="https://m.elongstatic.com/static/xcxticket/noMore.png"/>
+    <view class="t15 h15 emptyView-tips">您没有门票订单</view>
+  </view>
+  <image class="toTop" wx:if="{{scrollTop>=scrollViewHeight}}" bindtap="scrollToTop"/>
+</view>

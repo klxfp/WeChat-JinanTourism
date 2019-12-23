@@ -1,0 +1,5 @@
+<!--pages/elongtravelnotes/elongtravelnotes.wxml-->
+<scroll-view scroll-y="true" style="height:{{scrollHeight}}px">
+    <image src="{{item}}" class="notesimage" style="height:{{scrollHeight}}px; width:{{scrollWidth}}px" 
+        wx:for="{{travelNoteImages}}" mode="aspectFill"/>
+</scroll-view>

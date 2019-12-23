@@ -1,0 +1,20 @@
+<!--pages/sceneryspecial/sceneryspecial.wxml-->
+<scroll-view scroll-y="true" style="height: {{scrollViewHeight}}px" class="mb60">
+    <block wx:for="{{descriptionlist}}" wx:key="unique">
+    <view class="df dc">
+        <view class="df title">
+            <view class="groupIcon ml0 bg49f"/>
+            <text class="t14 color44">{{item.title}}</text>
+        </view>
+        <block wx:for="{{item.scenicItemInfoList}}" wx:for-item="desc" wx:for-index="index2" wx:key="unique">
+            <view class="pt12 pl12 pr12 df dc">
+                <view class="item-list">                   
+                    <image class="icon" wx:if="{{item.title == '景点特色'}}" src="https://m.elongstatic.com/static/xcxticket/star.png"/>
+                    <text class="t12 color44 lh20">{{desc.itemText}}</text>
+                    </view>
+                    <image class="desc-img" src="{{desc.imgePath}}" mode="aspectFill" wx:if="{{desc.type != 0}}"/>
+            </view>
+        </block>
+    </view>
+    </block>
+</scroll-view>

@@ -1,0 +1,236 @@
+/* pages/detail/detail.wxss */
+.cover-container{
+	position: relative;
+    display: flex;
+    width: 100%;
+    height: 352rpx;
+	background-size: cover;
+	background: transparent url(https://m.elongstatic.com/static/xcxticket/big_default.png) center center no-repeat;
+}
+.cover-container .cover-info-container{
+	display: flex;
+	height: 50px;
+	width: 100%;
+	justify-content: space-between;
+	background: transparent url(https://m.elongstatic.com/static/xcxticket/bg.png);
+	background-size: 100% 50px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.cover-info-container .info{
+	display: flex;
+	font-size: 28rpx;
+	color: white;
+	align-items: center;
+	flex: 3;
+    padding-left: 24rpx;
+}
+
+.pic-num{
+	display: flex;
+	flex: 1;
+	font-size: 24rpx;
+	color: white;
+	justify-content: flex-end;
+	align-items: center;
+    padding-right: 24rpx;
+}
+.pic-num:before{
+	content: "";
+	display: block;
+	width: 26rpx;
+	height: 20rpx;
+	background-size: 26rpx 20rpx;
+	margin-right: 16rpx;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url(https://m.elongstatic.com/static/xcxticket/camera.png);
+}
+.commonHeader{
+    display: flex;
+    padding-left: 12px;
+    background: white;
+    flex-direction: row;
+}
+.leftHeader{
+    display: flex;
+    flex: 3;
+    flex-direction: row;
+}
+.rightHeader{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+.img {
+    display:block;
+    width: 30rpx;
+    height: 30rpx;
+	margin-right: 18rpx;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.commentImg{
+    background-image: url(https://m.elongstatic.com/static/xcxticket/pingfen.png);
+}
+.mapImg{
+    height: 34rpx;
+    background-image: url(https://m.elongstatic.com/static/xcxticket/icon_map.png);
+}
+.specialImg{
+    background-image: url(https://m.elongstatic.com/static/xcxticket/icon_scenic_feature.png);
+}
+.headerLine{
+	height: 3rpx;
+	width: 100%;
+	margin-left: 54rpx;
+	background-color: #ebebeb;
+}
+.df{
+	display: flex
+}
+.m5{
+	margin-left: 10rpx;
+	margin-right: 10rpx;
+}
+.h48{
+	height: 96rpx;
+}
+.m10{
+	margin-left: 24rpx;
+	margin-right: 20rpx;
+}
+.p16{
+	padding-left: 32rpx;
+	padding-right: 32rpx;
+}
+.h28{
+	height: 56rpx;
+}
+.normalFilter{
+	border: 2rpx solid #e0e0e0;
+	color: #333;
+}
+.groupIcon{
+	display: block;
+    width: 6rpx;
+    height: 26rpx;
+    margin-left: 24rpx;
+    margin-right: 16rpx;
+}
+.hotIcon{
+	width: 36rpx;
+    height: 36rpx;
+    margin-left: 24rpx;
+    margin-right: 16rpx;
+    background: transparent url(https://m.elongstatic.com/static/xcxticket/hot_search_icon.png) center center no-repeat;
+    background-size: cover;
+}
+.width70{
+	width: 70%
+}
+.height18{
+	height: 36rpx;
+	line-height: 36rpx;
+}
+.h15{
+	height: 30rpx
+}
+.height30{
+	height: 60rpx;
+}
+.pd12{
+	padding-left: 24rpx;
+	padding-right: 24rpx;
+	padding-bottom: 24rpx;
+	padding-top: 24rpx;
+}
+
+.h78{
+  height: 156rpx;
+}
+.biao,.biao2{
+  display: flex;
+  min-width: 80rpx;
+  font-size:20rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  margin-left: 10rpx;
+  padding-left: 2rpx;
+  padding-right: 2rpx;
+}
+.biao2{
+  margin-right:0;
+}
+.h91{
+    height: 182rpx
+}
+.pic-container{
+  background: transparent url(https://m.elongstatic.com/static/xcxticket/default.png) center center no-repeat;
+  background-size:cover;
+}
+.info-container{
+  height: 40rpx;
+  line-height: 40rpx;
+  background: transparent url(https://m.elongstatic.com/static/xcxticket/bg.png);
+  background-size: 100% 40rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.ml4{
+    margin-left: 8rpx
+}
+.mr4{
+    margin-right: 8rpx
+}
+.mt6{
+    margin-top: 12rpx
+}
+.ml8{
+    margin-left: 16rpx
+}
+.pr6{
+    padding-right: 12rpx
+}
+.h18{
+    height: 36rpx
+}
+.lh16{
+    line-height: 32rpx
+}
+.w50{
+    width: 50%
+}
+.w170{
+    width: 340rpx
+}
+.wmaptxt{
+    width: 592rpx
+}
+.dateview{
+    /*bottom:384rpx;*/
+    margin-top:900rpx;
+}
+.mask{
+    height:900rpx;
+}
+.priceviewtitle{
+    align-items: center;
+    padding: 24rpx;
+}
+.bookingbtn{
+    border: 2rpx solid #bbbbbb;
+    border-radius: 6rpx;
+    justify-content: center;
+    align-items: center;
+    min-height: 36px;
+    margin-left: 24rpx;
+}
+.warning-icon{
+    width:24rpx;
+    height:24rpx;
+    min-height: 24rpx;
+    min-width: 24rpx;
+}

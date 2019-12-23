@@ -1,0 +1,16 @@
+<import src="tabText.wxml"/>
+<template name="tabMenu">
+    <view class="df dc width100">
+        <view class="df">
+            <template is="tabText" data="{{isSelected:tabIndex==0,txt:'预订门票', enable:tabMenusEnableState[0]}}"/>
+            <template is="tabText" data="{{isSelected:tabIndex==1,txt:'查看评价', enable:tabMenusEnableState[1]}}"/>
+            <template is="tabText" data="{{isSelected:tabIndex==2,txt:'购买须知', enable:tabMenusEnableState[2]}}"/>
+        </view>
+        <!--筛选菜单-->
+        <scroll-view scroll-x="true"  wx:if="{{ticketTagItemList && ticketTagItemList.length>0}}" class="df h48 width100 bordertop">
+            <view class="ac df h48">
+                <view wx:for="{{ticketTagItemList}}" class="df h28 m10 p16 t11 ac borderradius2 {{item.isSelected?'wxc b49f':'normalFilter'}}" bindtap="filterClick" data-item="{{item}}">{{item.title}}</view>
+            </view>
+        </scroll-view>
+    </view>
+</template>

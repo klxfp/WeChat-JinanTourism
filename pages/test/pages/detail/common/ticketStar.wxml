@@ -1,0 +1,5 @@
+<template name="ticketStar">
+	<view class="ticket-star">
+		<icon wx:for="{{startNumbers}}" class="starImag mr6 {{starValue.value>=(index+1)?'starSelect':(starValue.fixValue && index==starValue.intValue?'starHalf':'starDefault')}}"/>
+	</view>
+</template>

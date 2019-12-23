@@ -34,7 +34,7 @@ Page({
     {
       name: "景点门票",
       icon: "btn_ticket.png",
-      page: "../test/test"
+      page: "../test/pages/homepage/homepage"
     }
     ],
     imgList: [

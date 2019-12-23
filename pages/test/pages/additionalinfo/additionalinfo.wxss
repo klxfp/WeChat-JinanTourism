@@ -1,0 +1,19 @@
+/* pages/additionalinfo/additionalinfo.wxss */
+.p10{
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+}
+.pl16{
+    padding-left: 32rpx;
+}
+.pr16{
+    padding-right: 32rpx;
+}
+.pt16{
+    padding-top: 32rpx;
+}
+.w32{
+    width: 64rpx
+}

@@ -1,0 +1,8 @@
+<import src="surroundingSceneryItem.wxml"/>
+<!--周边景点一排两列-->
+<template name="surroundingSceneryRow">
+    <view class="df pr12 pl12 jcb" wx:for="{{surroundingScenery}}">
+        <template is="surroundingSceneryItem" data="{{item:item[0]}}"/>
+        <template is="surroundingSceneryItem" data="{{item:item[1]}}"/>
+    </view>
+</template>

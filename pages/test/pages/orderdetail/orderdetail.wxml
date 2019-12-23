@@ -1,0 +1,123 @@
+<!--<import type="component" name="TicketInfo" path="./ticketInfo/index" />-->
+<import src="template/ticketInfo.wxml"/>
+<import src="template/choosepop.wxml"/>
+<import src="template/otherOrderInfo.wxml"/>
+<import src="template/refundLog.wxml"/>
+<import src="../fillinorder/common/buyrules.wxml"/>
+
+<view class="dc flex1 df oh">
+  <!-- main begin-->
+  <scroll-view class="lst_mn pf scroll_view" scroll-y="true" style="height:{{scrollViewHeight}}px" >
+    <!-- headIcon begin -->
+    <!--<view class="headIcon">-->
+    <view class="pl headBackView">
+      <image src="https://m.elongstatic.com/static/xcxticket/orderDetail_headerIcon.png" class="width100 pa headIcon" mode="aspectFill" />
+      <view class="pa width100 dc ac headView">
+          <text class="df t16 width100 jcc cf head-title">{{sceneryInfo.sceneryName}}</text> 
+          <text class="df width100 cf jcc t11 op-8">{{ticketTypeName}} 共{{ticketCounts}}张</text>
+          <text class="df width100 cf jcc t11 op-8 head-date">游玩日期 {{playDate}}</text>
+      </view> 
+    </view>
+    <!--</view>-->
+    <!-- headIcon end -->
+
+    <!-- headStatus begin -->
+    <view class="df headStatus">
+      <view class="df bg1 dc oh headStatus-whiteBack">
+        <text class="df cf t13 jcc headStatus-status">{{statusModel.statusDesc}}</text>
+        <view wx:if="{{statusModel.priceViewShow}}" class="df jcb m10m10m16 lh17">
+          <view wx:if="{{statusModel.priceViewShow}}" class="df lh17">
+            <text class="df t15 c333333 price1">{{statusModel.priceDesc1}}</text>
+            <text class="df t17 cff555 price2">{{statusModel.priceDesc2}}</text>
+          </view>
+          <view wx:if="{{statusModel.refundLogBtnShow}}" class="df c4499ff je aic t10 refundLogBtn" bindtap="setRefundLogPopShowState" data-show="1">
+            退款日志 <icon class="ar mr0_l5"/>
+          </view>
+        </view>
+        
+        <view wx:if="{{statusModel.tipsShow}}" class="df t12 colorb2 txtoverflow m10m10m16">
+          {{statusModel.tipsDesc}}
+        </view>
+        
+        <view wx:if="{{statusModel.buttonCount==1||statusModel.buttonCount==2}}" class="df dc m10m10m16">
+          <text wx:if="{{statusModel.confirmBtnDesc}}" class="df cf jcc t17 h40 lnh0 aic confirmBtn" bindtap="btnClick" data-params="{{statusModel.confirmBtnDesc}}">
+              {{statusModel.confirmBtnDesc}}
+          </text>
+          <text wx:if="{{statusModel.cancelBtnDesc}}" class="bg1 jcc df t14 h40 lnh0 aic c333333 cancelBtn" bindtap="btnClick" data-params="{{statusModel.cancelBtnDesc}}">
+            {{statusModel.cancelBtnDesc}}
+          </text>
+        </view>
+      
+          <view wx:if="{{statusModel.buttonCount==3}}" class="df dc m10m10m16">
+            <text wx:if="{{statusModel.confirmBtnDesc}}" class="df cf jcc t17 h40  lnh0 aic confirmBtn" bindtap="btnClick" data-params="{{statusModel.confirmBtnDesc}}">
+                {{statusModel.confirmBtnDesc}}
+            </text>
+            <view class="df jcb threeButton-bottomButtonBackView">
+              
+              <text class="bg1 flex1 df h40 lnh0 aic jcc t14 c333333 threeButton-extraBtn" bindtap="btnClick" data-params="{{statusModel.extraBtnDesc}}">
+                {{statusModel.extraBtnDesc}}
+              </text>
+
+              <text class="bg1 flex1 df h40 lnh0 aic jcc t14 c333333 threeButton-cancelBtn" bindtap="btnClick" data-params="{{statusModel.cancelBtnDesc}}">
+                {{statusModel.cancelBtnDesc}}
+              </text>
+          </view>
+        </view>
+
+      </view>
+    </view>
+    <!-- headStatus end -->
+
+    <!-- sceneryInfo begin-->
+    <view class="bg1 df dc">
+      <view class="bg1 df jcb h44 aic ml12 bbeb" bindtap="goToProductDetailPage">
+        <view class="df oh h44">
+          <text class="df h44 txtoverflow c333333 t15">{{sceneryInfo.sceneryName}}</text>
+          <text class="df h44 t12 c888888 ml12">{{sceneryInfo.sceneryLevel}}</text>
+        </view>
+        <icon class="ar"/>
+      </view>
+      <view class="bg1 df jcb h44 aic ml12 bbeb" bindtap="goToMapPage">
+        <text class="c888888 t13 location-title">景点地址</text>
+        <text class="c333333 t13 flex1 txtoverflow pr12">{{sceneryInfo.address.addressDesc}}</text>
+        <icon class="ar"/>
+      </view>
+      <view class="df t13 c333333 ml12 jcb oh sceneryInfo-businessHour">
+        <text class="df t13 c888888 businessHour-title">营业时间</text>
+        <text class="df t13 c333333 mr12 flex1">{{sceneryInfo.openTimeDesc}}</text>
+      </view>
+    </view>
+    <!-- sceneryInfo end -->
+    <view class="df bg2 space"></view>
+    <!-- ticketInfo begin -->
+      <view class="df dc ticketInfo-backView">
+        <text class="df t15 c333333 h44  lnh0 aic bg1 ticketInfo-orderId">
+        订单详情(编号：{{orderId}})
+        </text>
+        <view class="df ticketInfo-ticketView">
+          <template is="ticketInfo" data="{{data:itemList}}" />
+        </view>
+
+        <view class="df jcb h44 bg1 bbeb aic otherMessage">
+          <view class="df oh h44" bindtap="otherMessageClick">
+            <text class="df c333333 t14 aic left1">其他预订信息</text>
+            <text class="c888888 t12 txtoverflow h44 left2">(联系人姓名、手机号、订单信息等)</text>
+          </view>
+          <icon class="ar"/>
+        </view>
+
+      </view>
+    <!-- ticketInfo end -->
+  </scroll-view>
+  <!--取消订单弹框-->
+  <template is="choosepop" wx:if="{{showCancelPop}}" data="{{title:'取消原因',cancelReasonArr:cancelReasonArr}}"/>
+  <!--退改规则-->
+  <view class="df pa top0 height100 bgrgba zindex100" wx:if="{{showRefundRulePop}}">
+      <template is="buyrules" data="{{title:'退改规则',purchaseRules:showRefundRules,showPay:false, rulePopHeight:rulePopHeight}}"/>
+  </view>
+  <!--其他预定信息-->
+  <template is="otherOrderInfo" wx:if="{{showOtherOrderInfoPop}}" data="{{otherOrderInfos:otherOrderInfos,otherInfoScrollHeight:otherInfoScrollHeight}}"/>
+  <!--退款日志-->
+  <template is="refundLog" wx:if="{{showRefundLogPop}}" data="{{orderRefundLogs:orderRefundLogs,refundLogScrollHeight:otherInfoScrollHeight}}"/>
+<!-- main end-->
+</view>

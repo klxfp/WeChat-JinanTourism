@@ -1,0 +1,194 @@
+/* pages/fillinorder/fillinorder.wxss */
+.mb62{
+    margin-bottom: 124rpx
+}
+.h47{
+    height: 94rpx;
+    line-height: 94rpx
+}
+.b0{
+    bottom: 0
+}
+.detailimg{
+    display: block;
+    width: 30rpx;
+    height: 30rpx;
+    background-size: 30rpx 30rpx;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(https://m.elongstatic.com/static/xcxticket/ticket_order_fillin_detail_up.png)
+}
+.mt5{
+    margin-top: 10rpx
+}
+.mb5{
+    margin-bottom: 10rpx
+}
+.width120{
+    width: 240rpx
+}
+.h35{
+    height: 70rpx
+}
+.h11{
+    height: 22rpx;
+    line-height: 22rpx
+}
+.br2{
+    border-radius: 4rpx
+}
+.width113{
+    width: 226rpx
+}
+.pr6{
+    padding-right: 12rpx
+}
+.pr5{
+    padding-right: 10rpx
+}
+.mr5{
+    margin-right: 10rpx
+}
+.pt8{
+    padding-top: 16rpx
+}
+.pb8{
+    padding-bottom: 16rpx
+}
+.contactIcon{
+  display: block;
+  height: 40rpx;
+  width: 40rpx;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.mobileUrl{
+    background-image: url(https://m.elongstatic.com/static/xcxticket/ticket_order_fillin_customer.png)
+}
+.h20{
+    height: 40rpx
+}
+.h32{
+    height: 64rpx;
+    line-height: 64rpx
+}
+.w32{
+    width: 64rpx
+}
+.width1{
+    width: 2rpx
+}
+.mr8{
+    margin-right: 16rpx
+}
+.ml8{
+    margin-left: 16rpx
+}
+.p1{
+    padding-left: 2rpx;
+    padding-right: 2rpx
+}
+.h16{
+    height: 32rpx;
+    line-height: 32rpx
+}
+.h52{
+    height: 104rpx
+}
+.warning_img{
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 16rpx;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(https://m.elongstatic.com/static/xcxticket/warning.png)
+}
+.r12{
+    right: 24rpx
+}
+.minusEnable{
+  color: #b2b2b2;
+  border-top:#b2b2b2 2rpx solid;
+  border-bottom:#b2b2b2 2rpx solid;
+  border-left:#b2b2b2 2rpx solid;
+  border-right:transparent;
+  border-bottom-left-radius: 6rpx;
+  border-top-left-radius: 6rpx;
+}
+.minusDisable{
+  color: #dddddd;
+  border-top:#dddddd 2rpx solid;
+  border-bottom:#dddddd 2rpx solid;
+  border-left:#dddddd 2rpx solid;
+  border-right:transparent;
+  border-bottom-left-radius: 6rpx;
+  border-top-left-radius: 6rpx;
+}
+.plusEnable{
+  color: #b2b2b2;
+  border-top:#b2b2b2 2rpx solid;
+  border-bottom:#b2b2b2 2rpx solid;
+  border-left:transparent;
+  border-right:#b2b2b2 2rpx solid;
+  border-bottom-right-radius: 6rpx;
+  border-top-right-radius: 6rpx;
+}
+.plusDisable{
+  color: #dddddd;
+  border-top:#dddddd 2rpx solid;
+  border-bottom:#dddddd 2rpx solid;
+  border-left:transparent;
+  border-right:#dddddd 2rpx solid;
+  border-bottom-right-radius: 6rpx;
+  border-top-right-radius: 6rpx;
+}
+.number_input{
+  border-radius: 0px;
+  -webkit-appearance: none;
+  -webkit-border-radius:0px;
+}
+.ml_12{
+    margin-left: -24rpx
+}
+.mr_12{
+    margin-right: -24rpx
+}
+.bgc45464c{
+  background-color: #45464c;
+}
+.pt44{
+    padding-top: 88rpx;
+}
+.pblr16{
+	padding-bottom: 32rpx;
+	padding-left: 32rpx;
+	padding-right: 32rpx;
+}
+.mb138{
+    margin-bottom: 276rpx
+}
+.mr80{
+    margin-right: 160rpx
+}
+.h138{
+    height: 276rpx
+}
+.l12{
+    left: 24rpx
+}
+.r12{
+    right: 24rpx
+}
+.mt50{
+    margin-top: 100rpx
+}
+.pt5{
+    padding-top: 10rpx
+}
+.pb5{
+    padding-bottom: 10rpx
+}

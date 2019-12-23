@@ -1,0 +1,6 @@
+/* pages/elongtravelnotes/elongtravelnotes.wxss */
+.notesimage{
+    display: flex;
+	background-size: cover;
+	background: transparent center center no-repeat;
+}

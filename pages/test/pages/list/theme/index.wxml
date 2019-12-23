@@ -1,0 +1,8 @@
+<template name="theme">
+    <view class="th_mn pf" wx:if="{{isOpen}}" style="top:{{style.top}}">
+        <view class="bg pa" data-bgclose="true" bindtap="{{close}}" animation="{{bgAnimation}}"></view>
+        <view class="th_mnc pa bg1" animation="{{contentAnimation}}" wx:if="{{items.length !== 0}}">
+            <span class="item bb1 t12 pl {{item.filterId == selectedId ? 'cur' : ''}}" wx:for="{{items}}" bindtap="{{select}}" data-id="{{item.filterId}}" data-name="{{item.filterDesc}}">{{item.filterDesc}}</span>
+        </view>
+    </view>
+</template>

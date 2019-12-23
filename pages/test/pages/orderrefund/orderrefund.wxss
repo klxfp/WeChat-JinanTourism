@@ -1,0 +1,101 @@
+/* pages/orderrefund/orderrefund.wxss */
+.bgfcde{
+    background-color: #fffcde
+}
+.mb10{
+    margin-bottom: 20rpx
+}
+.mr20{
+    margin-right: 40rpx
+}
+.flex6{
+    flex: 6
+}
+.width60{
+    width: 120rpx
+}
+.mt8{
+    margin-top: 16rpx
+}
+.h17{
+    height: 34rpx;
+}
+.mt1{
+    margin-top: 2rpx
+}
+.imagestate{
+	display: flex;
+	background: transparent left center no-repeat;
+    background-size: cover;
+    margin-right: 40rpx;
+    width: 116rpx;
+    height: 116rpx;
+}
+
+.imageRefunded{
+	background-image: url(http://m.elongstatic.com/static/xcxticket/orderRefunded.png);
+}
+
+.imageRefuse{
+	background-image: url(http://m.elongstatic.com/static/xcxticket/orderRefundRefuse.png);
+}
+.pt16{
+    padding-top: 32rpx
+}
+.pb16{
+    padding-bottom: 32rpx
+}
+.mt5{
+    margin-top: 10rpx
+}
+.mt2{
+    margin-top: 4rpx
+}
+.pt15{
+    padding-top: 30rpx
+}
+.pb15{
+    padding-bottom: 30rpx
+}
+.mt15{
+    margin-top: 30rpx
+}
+.mr40{
+    margin-right: 80rpx
+}
+.ml40{
+    margin-left: 80rpx
+}
+.mb52{
+    margin-bottom: 104rpx
+}
+.h180{
+    height: 360rpx
+}
+.pb20{
+    padding-bottom: 40rpx
+}
+.r50{
+    right: 100rpx
+}
+.b105{
+    bottom: 210rpx
+}
+.h48{
+    height: 96rpx
+}
+.w120{
+    width: 240rpx
+}
+.h36{
+    height: 72rpx
+}
+.btip{
+    bottom: 118rpx
+}
+.rtip{
+    right: 104rpx
+}
+.w375{
+    width: 750rpx
+}

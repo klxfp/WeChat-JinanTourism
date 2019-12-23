@@ -1,0 +1,29 @@
+<view class="df dc bg2 oh">
+  <scroll-view scroll-y="true" style="height:{{scrollHeight}}px">
+    <!--passenger 信息 begin-->
+    <view class="df flex1 dc pl12 pr12 mb12 bg1" wx:for="{{passengers}}" wx:for-item="passenger" bindtap="onItemClick" data-item="{{passenger}}">
+      <view class="df jcb bb1 h40 t13 aic">
+        <view class="df">
+          <view class="df aic mr5">
+            <icon class="checkimg hw12 mr8 {{passenger.viewModel.isMatch && !passenger.isAlreadySelected?'unchecked':'checked'}}" wx:if="{{passenger.viewModel.isMatch && !passenger.isAlreadySelected || passenger.isCurrSelected}}"></icon>
+            <text class="df t18 aic">{{passenger.viewModel.info1||''}}</text>
+          </view>
+          <text class="t12 aic" wx:if="{{passenger.isAlreadySelected}}">(已选为出行人)</text> 
+        </view>
+        <view class="df aic" wx:if="{{!passenger.isAlreadySelected ||  passenger.isCurrSelected}}" 
+        data-passenger="{{passenger}}" catchtap="onModifyClick">
+          <text class="df h40 aic t12 wxc">修改信息</text>
+          <icon class="ar mr0_l5"/>
+        </view>
+      </view>
+      <view class="h40 {{!passenger.viewModel.info3?'':'pl12 bb1'}}" wx:if="{{passenger.viewModel.info2}}">{{passenger.viewModel.info2||''}}</view>
+      <view class="h40 {{!passenger.viewModel.isMatch ? 'cred':'pl12'}}" wx:if="{{passenger.viewModel.info3}}">{{passenger.viewModel.info3||''}}</view>
+    </view>
+    <!--passenger 信息 end-->
+    <view class="df aic jcc h35 mt30 mb30 flex1">
+      <view class="add-btn df t12 aic jcc wxc" bindtap="onAddClick">
+        <text class="btn-text t14 df aic jcc wxc">新增常旅客</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>

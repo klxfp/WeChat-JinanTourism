@@ -1,0 +1,24 @@
+<!--附加信息-->
+<template name="expandInfoView">
+    <view class="df dc cf ofyh" wx:if="{{expandInfos && expandInfos.length>0}}">
+        <view wx:for="{{expandInfos}}" class="df mh44 cf ofyh aic jcb bb1" wx:for-item="expandInfo" data-item="{{expandInfo}}" data-ispassengersempty="{{isPassengersEmpty}}" data-typeid="{{expandInfo.typeId}}" bindtap="onExpandInfoItemClick">
+            <!-- 1单选框 2复选框 3下拉框 4输入框 5地址, 下拉框不做过滤掉 -->
+            <view class="df flex1 aic">
+                <span class="dib width113 h44 t13 c888888 pr6 txtoverflow">{{expandInfo.typeDesc||''}}</span>
+                <input wx:if="{{expandInfo.inputType == 5 && isPassengersEmpty || expandInfo.inputType == 4}}" class="df flex1 mr5 t13 aic bct"
+                    type="{{expandInfo.view_inputType||'text'}}"
+                    value="{{expandInfo.expandInfoValue||''}}"
+                    placeholder="{{expandInfo.view_inputHint||'请填写'}}"
+                    placeholder-class="width100 placeholder {{isOrderFillInVerify?'cred':''}}"
+                    bindinput="onExpandInfoInput"
+                    data-index="{{index}}"
+                    data-item="{{expandInfo}}"/>
+                <view wx:if="{{(expandInfo.inputType != 5 || !isPassengersEmpty) && expandInfo.inputType != 4}}" class="df dc aic">
+                    <text wx:for="{{expandInfo.selectedItemList}}"
+                    class="df dc aic mr5 t13 lnh0 {{selectedItem == ''?(!isOrderFillInVerify?'colorb2':'cff555'):'pt12 pb12'}}" wx:for-item="selectedItem">{{selectedItem == ""?expandInfo.warningTxt:selectedItem}}</text>
+                </view>
+            </view>
+            <icon class="ar mlr0" wx:if="{{expandInfo.view_showArrowIcon}}"/>
+        </view>
+    </view>
+</template>

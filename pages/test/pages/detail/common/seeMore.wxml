@@ -1,0 +1,6 @@
+<template name="seeMore">
+    <view wx:if="{{showMore}}" class="df h44 jcb aic {{type == 'purchaseRules'?'btee':''}}" bindtap="seeMore" data-type="{{type}}">
+        <text class="t11 ml12">查看更多</text>
+        <icon class="ar"></icon>
+    </view>
+</template>

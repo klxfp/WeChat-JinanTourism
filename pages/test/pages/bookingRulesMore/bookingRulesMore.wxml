@@ -1,0 +1,11 @@
+<!--pages/bookingRulesMore/bookingRulesMore.wxml-->
+<!--<text>购买须知页</text>-->
+<scroll-view scroll-y="true" style="height:{{scrollHeight}}px">
+    <block  wx:for="{{bookingRules}}" wx:key="unique">
+        <view class="book-item">
+            <text class="rulestitle t14 c333333">{{item.title}}</text>
+            <view class="rulecontent t12 color85">{{item.content}}</view>
+        </view>
+    </block>
+    <view class="t12 wxc pl12 mb12" bindtap="seeElongTravelNotes">查看《艺龙旅游注意事项》</view>
+</scroll-view>

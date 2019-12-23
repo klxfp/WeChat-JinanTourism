@@ -1,0 +1,161 @@
+<import src="common/commentItem.wxml"/>
+<import src="common/bookingRules.wxml"/>
+<import src="common/seeMore.wxml"/>
+<import src="common/surroundingSceneryRow.wxml"/>
+<import src="common/headerRight.wxml"/>
+<import src="common/tabText.wxml"/>
+<import src="common/ticketStar.wxml"/>
+<import src="../fillinorder/common/buyrules.wxml"/>
+<import src="common/tabMenu.wxml"/>
+<!--pages/detail/detail.wxml-->
+<view class="pl">
+<scroll-view scroll-y="true" scroll-into-view="{{toView}}" style="height:{{scrollHeight}}px" bindscroll="onScroll">
+    <!--图片-->
+    <view class="cover-container" bindtap="onCoverClick">
+        <image src="{{coverImage}}"  class="cover-container" mode="aspectFill" alt="景点图片" />
+        <view class="cover-info-container">
+            <view class="info">
+                {{title}}
+            </view>
+            <view wx:if="{{imageList && imageList.length>0}}" class= "pic-num">共{{imageList.length}}张</view>
+        </view>
+    </view>
+    <!--评论入口-->
+    <view class="commonHeader" bindtap="goToCommentListPage">
+        <view class="leftHeader ac h44">
+            <icon class="img commentImg"/>
+            <!--评分星星-->
+            <template is="ticketStar" wx:if="{{commentCount>0 && commentScore>0}}" data="{{startNumbers:startNumbers,starValue:commentStarValue}}"/>
+            <text class="t14 h44">{{commentCount>0 && commentScore>0?commentScore+"分":"此景点暂无评论"}}</text>
+        </view>
+        <template is="headerRight" wx:if="{{commentCount>0 && commentScore>0}}" data="{{showTxt:true, commentCount}}" />
+    </view>
+    <view class="headerLine"/>
+    <!--地图入口-->
+    <view class="commonHeader" bindtap="goToMapPage">
+        <view class="leftHeader ac h44">
+            <icon class="img mapImg"/>
+            <text class="h44 wmaptxt t14 txtoverflow">{{address.addressDesc||""}}</text>
+        </view>
+        <template is="headerRight" />
+    </view>
+    <view class="headerLine"/>
+    <!--景点特色入口-->
+    <view class="commonHeader" bindtap="goToScenerySpecialPage">
+        <view class="leftHeader ac h44">
+            <icon class="img specialImg h44"/>
+            <text class="t14 h44">景点特色</text>
+        </view>
+        <template is="headerRight" data="{{txt}}" />
+    </view>
+    <view class="divider12"/>
+    <!--tabs-->
+    <template is="tabMenu" data="{{tabIndex:tabIndex,ticketTagItemList:ticketTagItemList,tabMenusEnableState:tabMenusEnableState}}"/>
+    <view class="divider12"/>
+    <view class="df h78 t12 aic jc color85 bg2 pt12" wx:if="{{!showTicketList||showTicketList.length==0}}">未含有符合所选条件的门票，请您重新选择。</view>
+    <!--资源-->
+    <view id="ticketList" wx:if="{{showTicketList&&showTicketList.length>0}}" wx:for="{{showTicketList}}" wx:for-item="groupItem" class="df dc">
+        <!--资源分组group title-->
+        <view class="df h44 ac bbeb" bindtap="onTicketGroupClick" data-key="{{groupItem.key}}">
+            <view class="df flex1 ac">
+                <icon wx:if="{{groupItem.key=='热卖推荐'}}" class="hotIcon"/>
+                <view class="groupIcon bg49f" wx:if="{{groupItem.key!='热卖推荐'}}"/>
+                <text class="t14 h44">{{groupItem.key}}</text>
+            </view>
+            <icon class="arrowUp_Down {{groupItem.isExpanded?'upImg':'downImg'}}"/>
+        </view>
+        <view wx:for="{{groupItem.key!='热卖推荐'?groupItem.value:groupItem.showValue}}" wx:if="{{groupItem.isExpanded}}" wx:for-item="ticketItem" class="df pd12 bg2 bbeb">
+            <view class="df dc width70" bindtap="openBuyrules" data-item="{{ticketItem}}" data-key="{{groupItem.key}}">
+                <text class="t14">{{ticketItem.title}}</text>
+                <view class="df top7">
+                    <span class="t11 txtoverflow">{{ticketItem.boobkingNotice}}</span>
+                    <span class="biao wxc b49f txtoverflow aic jc" wx:if="{{ticketItem.showTags && ticketItem.showTags.length>0}}">{{ticketItem.showTags[0]}}</span>
+                    <span class="biao2 wxc b49f txtoverflow aic jc" wx:if="{{ticketItem.showTags && ticketItem.showTags.length>=2}}">{{ticketItem.showTags[1]}}</span>
+                </view>
+                <view class="df flex1 top7 ac height18">
+                    <span class="t11 jc wxc">购票须知</span>
+                    <i class="ar"></i>
+                </view>
+            </view>
+            <view class="df flex1 ae dc" bindtap="onRightTicketClick" data-ticketItem="{{ticketItem}}" data-key="{{groupItem.key}}">
+                <view class="df height18 top20 mb8">
+                    <span class="t11 colorb2 txtoverflow txtlinethrough" wx:if="{{ticketItem.originalPrice}}">{{"￥"+ticketItem.showOriginalPrice}}</span>
+                    <span class="currentPrice txtoverflow ml6" wx:if="{{ticketItem.currentPrice}}">{{"￥"+ticketItem.showCurrentPrice}}</span>
+                </view>
+                <i class="bookIcon"></i>
+            </view>
+        </view>
+        <!--门票查看更多 热卖推荐-->
+        <view class="df flex1 h44 jc aic bg2 t11 wxc" wx:if="{{isShowMoreHotTicket && groupItem.key=='热卖推荐' && groupItem.value.length>2 && groupItem.isExpanded}}" catchtap="seeMoreHotTicket">查看其它热门门票</view>
+    </view>
+    <!--点评-->
+    <view class="df dc" wx:if="{{commentCount>0}}">
+        <view class="divider12"/>
+        <view class="df flex1 ac bbee" id="comment">
+                <view class="groupIcon bg49f"/>
+                <text class="t14 h44">点评{{commentCount>0?'('+commentCount+')':''}}</text>
+        </view>
+        <view wx:for="{{commentList}}">
+            <template is="commentItem" data="{{item:item}}"/>
+        </view>
+        <template is="seeMore" data="{{type:'comment', showMore:commentList.length>=2}}"/>
+    </view>
+    <!--购买须知-->
+    <view class="df dc" wx:if="{{bookingRules.length>0}}">
+        <view class="divider12"/>
+        <view class="df flex1 ac bbee" id="bookingRules">
+                <view class="groupIcon bg49f"/>
+                <text class="t14 h44">购买须知</text>
+        </view>
+        <template is="bookingRules" data="{{bookingRules:showBookingRules}}"/>
+        <template is="seeMore" data="{{type:'purchaseRules', showMore:showBookingRules.length>=2}}"/>
+    </view>
+    <!--周边景点推荐-->
+    <view class="df dc" wx:if="{{surroundingScenery && surroundingScenery.length>0}}">
+        <view class="divider12"/>
+        <view class="df flex1 ac bbee mb12">
+                <view class="groupIcon bg49f"/>
+                <text class="t14 h44">周边景点推荐</text>
+        </view>
+        <template is="surroundingSceneryRow" data="{{surroundingScenery:surroundingScenery}}"/>
+    </view>
+    <text class="df t11 color88 flex1 jc aic height30 bg2">已经到底部啦</text>
+</scroll-view>
+<view class="df pa top0 width100 bg1" wx:if="{{scrollTop >= 320}}">
+    <template is="tabMenu" data="{{tabIndex:tabIndex,ticketTagItemList:ticketTagItemList}}"/>
+</view>
+<view class="df pa top0 height100  bgrgba zindex100" wx:if="{{showBuyRules}}">
+        <template is="buyrules" data="{{title:buyrulestitle,purchaseRules:purchaseRules,showPay:true, rulePopHeight:rulePopHeight,price:buyrulesprice}}"/>
+</view>
+<view class="df  pa top0 dc height100 zindex100 bgrgba" wx:if="{{isShowDateChoose && priceViewData && priceViewData.date.length>0}}">
+    <view class="width100 mask" bindtap="onClickDateback"></view>
+    <view class="df bg1 dc width100 pa btm0">
+        <view class="bg2 df priceviewtitle">
+        <text class="c333333 t14 ">{{priceViewTitle}}</text>
+        </view>
+        <view class="df dc bg1 pb18">
+            <text class="mt18 c333333 t12 mb18 ml12">选择游玩日期</text>
+            <view class="df mr12">
+                <block wx:for="{{priceViewData.date}}" wx:key="unique">
+                    <view class="df flex1 bookingbtn dc t14" wx:if="{{item.isBookable}}" bindtap="selectTravelDate"
+                        data-item="{{item}}">
+                        <view class="df jc">
+                            <text>{{time[index]}}</text>
+                            <text class="cff555">￥{{item.showPrice}}</text>
+                        </view>
+                        <text class="c333333">{{item.calendarDate}}</text>
+                    </view>
+                    <view class="df flex1 bookingbtn dc" wx:if="{{!(item.isBookable)}}">    
+                        <text class="t14 cbbbbbb">{{disablebookcontent[index]}}</text>
+                    </view>
+                </block>
+                <text class="bookingbtn flex1 dc t14 df" bindtap="selectTravelDate">其他日期</text>
+            </view>
+            <view class="df ac pt18 ml12 ac">
+                <image class="warning-icon" src="https://m.elongstatic.com/static/xcxticket/warning_img.png"/>
+                <text class="c333333 t11 ml12">{{priceViewTip}}</text>
+            </view>
+        </view>
+    </view>
+</view>
+</view>

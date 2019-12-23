@@ -1,0 +1,14 @@
+<scroll-view scroll-y="true" style="height: {{scrollViewHeight}}px">
+  <view class="title-text df jcc aic">订单支付成功</view>
+  <ul>
+    <li><text class="circle"></text>订单已提交</li>
+    <li><text class="circle"></text>正在向银行发起支付请求</li>
+    <li><text class="circle"></text>银行扣款成功后向景区确认门票资源</li>
+  </ul>
+  <view class="btn-container">
+    <view class="btn" bindtap="gotoOrderDetail">订单详情</view>
+    <view class="btn" bindtap="gotoProductDetail">再次预订</view>
+  </view>
+  <text class="prompt-label">温馨提示</text> 
+  <view class="prompt-content">{{text}}</view>
+</scroll-view>

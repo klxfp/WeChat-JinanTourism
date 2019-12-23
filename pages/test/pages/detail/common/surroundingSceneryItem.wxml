@@ -1,0 +1,32 @@
+<!--周边景点单个item-->
+<template name="surroundingSceneryItem">
+    <view wx:if="{{item}}" class="df dc w170 mb12" data-sceneryid="{{item.scenicId}}" bindtap="onSurroundingSceneryItemClick">
+        <view class="df pl h91 width100">
+            <image class="dib  h91 pic-container" src="{{item.imageUrl}}" mode="aspectFill" alt=""/>
+            <view class="df info-container width100" >
+                <view wx:if="{{item.commentCount > 0}}" class="df t10 cf ml4 mr4 aic">
+                    {{item.commentCount+'条评论'}}
+                </view>
+                <view wx:if="{{item.satisfactionDegree > 0}}" class="df t10 cf ml4 mr4 aic">
+                    {{item.satisfactionDegree + "%满意"}}
+                </view>
+            </view>
+        </view>
+        <view class="df flex1 dc">
+            <span class="t12 txtoverflow mt6 pr6">{{item.scenicTitle}}</span>
+            <span class="t10 tcc2 txtoverflow mt6 pr6">{{item.scenicDesc}}</span>
+            <view style="df">
+                <span class="t10 tcc2 txtoverflow mt6">{{item.scenicCity ? item.scenicCity:""}}</span>
+                <span class="t10 tcc2 txtoverflow mt6 pr6 ml8">{{item.scenicLevel > 0 ?item.scenicLevel+"A级景区":""}}</span>
+            </view>
+            <view class="df aic">
+                <span class="h18 t10 tcc2 txtoverflow mt6 pr6">{{item.distanceDesc ? item.distanceDesc:""}}</span>
+                <view class="df flex1 je h18 mt6">
+                    <i class="t12 cff555">￥</i>
+                    <span class="currentPrice lh16 txtoverflow">{{item.showCurrentPrice}}</span>
+                    <span class="t12 colorb2">起</span>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

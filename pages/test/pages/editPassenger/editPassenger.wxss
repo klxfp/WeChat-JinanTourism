@@ -1,0 +1,16 @@
+page{
+    background: #f4f4f4;
+    height:100vh;
+}
+.flex2{
+	flex: 2
+}
+.bottom-container{
+	height: 72rpx;
+	margin: 32rpx 12rpx;
+}
+.btn{
+    height:68rpx;
+	border-radius: 4rpx;
+	margin: 0px 12rpx;
+}

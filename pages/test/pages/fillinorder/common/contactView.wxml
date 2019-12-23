@@ -1,0 +1,39 @@
+<template name="contactView">
+    <view wx:if="newItemList && newItemList.length>0" class="df pr12 pl12 dc bg1">
+        <!--联系人信息-->
+        <span class="t12 pt8 pb8">联系人信息</span>
+        <view class="df dc bg1 ofyh">
+            <view wx:for="{{newItemList}}" class="df aic mh44 bt1" bindtap="onContactItemClick"
+                data-readOnly="{{item.readOnly}}"
+                data-type="{{item.rightIcon}}">
+                <!--联系人条目begin-->
+                <picker bindchange="onContactSelectListLabelClick" data-pickertype="{{item.pickertype}}"
+                    range="{{item.selectItemList}}" value="{{item.selectIndex}}"
+                    disabled="{{item.selectItemList && item.selectItemList.length>0?false:true}}">
+                    <view class="df aic pr5 mr5 width113">
+                        <span class="t13 c888888 mr5">{{item.title}}</span>
+                        <icon wx:if="{{item.leftIcon && item.leftIcon.length>0}}" class="{{item.leftIcon}} aic vam" />
+                    </view>
+                </picker>
+                <view class="df dc flex1 h44 mr5" wx:if="{{item.readOnly}}">
+                    <span class="df t13 aic tctc {{inputValueItem == ''?(isOrderFillInVerify?'cff555':'colorb2'):''}}" wx:for="{{item.inputValue}}" wx:for-item="inputValueItem">
+                        {{inputValueItem == ""?item.hint:inputValueItem}}
+                    </span>
+                </view>
+                <input ref="contactInput" wx:if="{{!item.readOnly}}" class="df flex1 t13 aic bct h44 {{!item.rightIcon || item.rightIcon.length==0?'width100':''}}"
+                    value="{{item.inputValue[0]}}"
+                    placeholder = "{{isOrderFillInVerify?item.warningTxt:item.hint}}"
+                    placeholder-class="width100 placeholder {{isOrderFillInVerify?'cred':''}}"
+                    type = "{{item.inputType}}"
+                    bindinput="onContactItemInput"
+                    data-item="{{item}}"
+                    data-index="{{index}}"/>
+                <!--右侧图片-->
+                <view wx:if="{{item.rightIcon && item.rightIcon.length>0}}" class="df jc aic">
+                    <i class="dif h20 width1 aic mr12 bge0" wx:if="{{item.rightIcon != 'ar'}}"/>
+                    <icon class="{{item.rightIcon == 'ar'?'mr0_l5':'contactIcon'}} {{item.rightIcon}}"/>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

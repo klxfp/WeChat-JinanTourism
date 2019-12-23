@@ -1,0 +1,32 @@
+.add-btn{
+	width: 300rpx;
+	height: 70rpx;
+	border: 1px solid #4499FF;
+	border-radius: 2px;
+}
+.btn-text:before{
+	content: "";
+	display: block;
+	width: 28rpx;
+	height: 28rpx;
+    background: url( https://m.elongstatic.com/static/xcxticket/icon_add.png) center center no-repeat;
+	background-size: 28rpx 28rpx;	
+	margin-right: 16rpx;
+}
+
+.h35{
+	height: 70rpx
+}
+.mt30{
+	margin-top: 60rpx
+}
+.mb30{
+	margin-bottom: 60rpx
+}
+.hw12{
+	height: 24rpx;
+	width: 24rpx
+}
+.mr8{
+	margin-right: 16rpx
+}

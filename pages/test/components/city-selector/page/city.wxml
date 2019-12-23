@@ -1,0 +1,84 @@
+<template name="subsection">
+    <view class="line pr12" wx:for="{{groups}}" wx:for-item="items">
+        <view class="cityItem" wx:for="{{items}}" wx:if="{{item && item.cityName}}" data-ischina="{{currentIndex==0}}" data-city="{{item}}" bindtap="selectCity">{{item ? item.cityName : ""}}</view>
+    </view>
+</template>
+
+<view class="main pl">
+    <!--搜索-->
+    <view class="searchContainer pf colorwhite zindex100" style="top:0;left:0;right:0;">
+        <view class="searchIconInputContainer">
+            <icon class="searchIcon mlr_search"/>
+            <input  class="searchInput" placeholder="搜索城市" placeholder-class="placeholder"
+            bindinput="inputBind" bindtap="inputTap" value="{{searchKey}}"/>
+        </view>
+        <text class="tvSearch" bindtap="searchTap">搜索</text>
+    </view>
+    <!--城市切换tab-->
+    <view class="tabContainer pf zindex100 colorwhite" style="top:88rpx;left:0;right:0;" wx:if="{{!maskShow && searchKey.length==0}}">
+        <text class="df flex1 jc aic t16 h45 {{currentIndex == 0?'bb49f wxc mb2':'color44'}}" data-param="chinaCity" bindtap="onTabClick">国内城市</text>
+        <text class="df flex1 jc aic t16 h45 {{currentIndex == 1?'bb49f wxc mb2':'color44'}}"  data-param="overseaCity"  bindtap="onTabClick">国外城市</text>
+    </view>
+    <view class="df dc pl">
+        <swiper
+        wx:if="{{!maskShow}}"
+        class="listContainer width100"
+        current="{{ currentIndex }}"
+        bindchange="changeSwiper"
+        style="height:{{scrollViewHeight}}px;"
+        >
+            <block wx:for="{{ pageDataList }}" wx:key="search">
+                <swiper-item class="swiperItemContainer">
+                    <scroll-view class="cityListContainer" scroll-y="true" wx:if="{{!maskShow && searchKey.length==0}}" style="height:{{scrollViewHeight}}px;" scroll-into-view="{{toView}}" bindscroll="scroll">
+                        <!--国内展示定位-->
+                        <view id="location" class="locationContainer pl12 bg2 bbeb" wx:if="{{currentIndex == '0'}}">
+                            <text class="title">当前位置</text>
+                            <view class="locationTipsContainer" bindtap="onRefreshLocation">
+                                <text class="locationTips">{{address||'定位失败'}}</text>
+                                <!--<image src="src"></image>>-->
+                            </view>
+                        </view>
+                        <!--搜索历史-->
+                        <view id="history" class="historyContainer pl12 bg2" wx:if="{{historys[currentIndex].length>0}}">
+                            <view class="historyTitleContainer height37">
+                                <text class="title left">搜索历史</text>
+                                <text class="title right pr24" data-ischina="{{currentIndex==0}}" bindtap="clearHistory">清除历史</text>
+                            </view>
+                            <template is="subsection" data="{{groups: historys[currentIndex], currentIndex}}" />
+                        </view>
+                        <!--热门城市-->
+                        <view id="hot" class="hotCityContainer pl12 bg2" wx:if="{{item.hotCityList.length>0}}">
+                            <view class="historyTitleContainer height37">
+                                <text class="title left">热门城市</text>
+                            </view>
+                            <template is="subsection" data="{{groups: item.hotCityList, currentIndex}}" />
+                        </view>
+
+                        <block wx:for="{{item.cityList}}" wx:for-item="items" wx:for-index="itemsIndex">
+                            <text id="{{items.key}}" class="letter pd12">{{items.key}}</text>
+                            <view class="itemContainer" wx:for="{{items.cityList}}" wx:for-item="cityItem" wx:key="cityList" 
+                            data-city="{{cityItem}}" data-ischina="{{currentIndex==0}}" bindtap="selectCity">
+                                <text class="item-name">{{cityItem.cityName}}</text>
+                            </view>
+                        </block>
+                    </scroll-view>
+                </swiper-item>
+            </block>
+        </swiper>
+        <!--A B C -->
+        <view class="df dc jcc pf width24 top90 r0" style="height:{{scrollViewHeight}}px" wx:if="{{(!maskShow||searchKey.length>0) && (suggestItems.length==0||searchKey.length==0)}}">
+            <view class="df dc jcc">
+                <text class="db t10 wxc tctc fwb lh1_8" wx:for="{{headers[currentIndex]}}" bindtap="onHeaderSelect" data-key="{{item}}">{{item}}</text>
+            </view>
+        </view>
+    </view>
+    <!--suggest view-->
+    <!--关键词空空 展示mask-->
+    <view wx:if="{{maskShow && searchKey.length==0}}" class="mask pa top45 width100 pf" style="height:{{maskHeight}}px" bindtap="onMaskClick"/>
+    <!--关键词不空展示搜索结果'-->
+    <scroll-view class="df dc pa top45 width100 pf" scroll-y="true" wx:if="{{suggestItems.length>0 && searchKey.length>0}}" wx:key="list" style="height:{{maskHeight}}px" >
+        <view class="itemContainer" wx:for="{{suggestItems}}" wx:for-item="suggestItem" data-itemData="{{suggestItem}}" bindtap="onSuggestItemClick">
+            <txt class="item-name">{{suggestItem.cityName}}</txt>
+        </view>
+    </scroll-view>
+</view>

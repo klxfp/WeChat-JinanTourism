@@ -1,0 +1,16 @@
+<template name="otherOrderInfo">
+    <view class="df flex1 height100  width100 dc op-9 bgc45464c pl">
+        <view class="df dc">
+            <text class="df t16 cf pt44 pb16 pl16 pr16">其他预订信息</text>
+            <scroll-view class="df dc ml12 bteb" scroll-y="true" style="height:{{otherInfoScrollHeight}}px">
+                <view wx:for="{{otherOrderInfos}}" class="df ml12 mt18">
+                    <text class="mr18 width60 tar t13 cf ">{{item.title}}</text>
+                    <text class="t13 cf">{{item.content}}</text>
+                </view>
+            </scroll-view>
+        </view>
+        <view class="df width100 h138 aic jcc pa btm0" bindtap="closeOtherOrderInfo">
+            <icon class="closeimg jcc"/>
+        </view>
+    </view>
+</template>

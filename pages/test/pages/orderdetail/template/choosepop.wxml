@@ -1,0 +1,14 @@
+<template name="choosepop">
+    <view class="df height100 pl width100 bgrgba" bindtap="cancelPopClose">        
+        <view class="h334 width100 bg1 pa btm0">
+            <text class="df h44 jcc aic bbeb">{{title}}</text>
+            <ul class="df dc">
+                <view class="df h44 pl12 aic bbeb" wx:for="{{cancelReasonArr}}" catchtap="selectCancelItem" data-index="{{index}}">
+                    <icon class="checkimg mr12 {{item.isSelected?'checked':'unchecked'}}"/>
+                    {{item.title}}
+                </view>
+            </ul>
+            <text class="df cf h44 jcc aic bg49f ml12 mr12 mt10 mb10" bindtap="cancelOrder">确定</text>
+        </view>
+    </view>
+</template>

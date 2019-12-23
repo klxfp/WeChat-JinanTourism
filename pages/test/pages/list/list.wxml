@@ -1,0 +1,82 @@
+<import src="sort/index.wxml" />
+<import src="theme/index.wxml" />
+<import src="filter/filter.wxml" />
+<template name="ticket">
+  <navigator class="contain" url="/pages/detail/detail?sceneryId={{item.scenicId}}" open-type="navigate">
+    <view class="scenery">
+      <view class="pic">
+        <image src="{{'https:'+item.imageUrl}}" class="image">
+        </image>
+      </view>
+      <view class="info df">
+        <text class="title t17">{{item.scenicTitle}}</text>
+        <text class="info-detail t13">{{item.scenicDesc}}</text>
+        <view class="city-score df aic">
+          <text class="city t12">{{item.city}}</text>
+          <text class="score wxc t12" wx:if="{{item.commentCount != 0&&item.scenicCommentScore}}">{{item.scenicCommentScore}}分</text>
+          <text class="jibie t12" wx:if="{{item.scenicLevel && item.level != 0}}">{{item.scenicLevel}}A级景区</text>
+        </view>
+        <view class="distance-origin df">
+          <text class="juli">{{item.distanceDesc}}</text>
+          <view class="originPrice df t12 aic" wx:if="{{item.originalPrice}}">
+            <text>{{"￥"+item.showOriginalPrice}}</text>
+          </view>
+        </view>
+        <view class="biao-price aic df">
+          <text class="biao df wxc" wx:if="{{item.topicList && item.topicList.length}}">{{item.biao}}</text>
+          <text class="biao2 df wxc" wx:if="{{item.tagList && item.tagList.length}}">{{item.tagList != undefined && item.tagList[0]}}</text>
+          <view class="price df">
+            <text class="money t12">￥</text>
+            <text class="realprice t20">{{item.showPrice}}</text>
+            <text class="qi t12">起</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </navigator>
+</template>
+<view class="main">
+  <view class="search pf width100">
+    <view class="searchbar {{keywords.data.title && words?'leftPoi' : ''}}" bindtap="searchClick">
+      <text class="searchIcon"></text>
+      <text class="inputinfo">{{keywords.data.title && words ?keywords.data.title:"输入城市/景点/游玩主题"}}</text>
+    </view>
+    <view class="cha-contain" wx:if="{{keywords.data.title&& words}}"  bindtap="resetParams" data-param="true">
+      <icon class="cha"></icon>
+    </view>
+  </view>
+  <view class="sch_quick pf">
+    <ul class="lst_ft">
+      <li class="tc {{filterTabSt}} {{hasSelectedTab.filterTab}}" data-filter-type="1" bindtap="openFilter">
+        <p class="tit t13 pl">{{filterTabText}}</p>
+        <i></i>
+      </li>
+      <li class="tc bl1 {{sortTabSt}} {{hasSelectedTab.sortTab}}" bindtap="openSort">
+        <p class="tit t13 pl">{{sortTabText}}</p>
+        <i></i>
+      </li>
+      <li class="tc bl1 ft_e {{themeTabSt}} {{hasSelectedTab.themeTab}}" bindtap="openTheme">
+        <p class="tit t13 pl">{{themeTabText}}</p>
+        <i></i>
+      </li>
+    </ul>
+  </view>
+  <view class="order-sale pf width100">
+    <view class="color555 {{wxc1}} order" bindtap="order">可订今日</view>
+    <view class="{{wxc2}} sale {{showSpecialSale?'color555':'colorE0'}}" bindtap="sale">特价</view>
+  </view>
+  <scroll-view class="lst_mn pf scroll_view" scroll-y="true" bindscrolltolower="loadMore" style="height: {{scrollViewHeight}}px" scroll-into-view="{{toView}}" bindscroll="onScroll">
+    <view id="top"></view>
+    <view class="ht_lst" wx:for="{{productList}}" wx:for-index="idx" wx:for-item="tickItem" wx:key="ticket">
+      <template is="ticket" data="{{item:tickItem}}" />
+    </view>
+  </scroll-view>
+  <view class="lst_nr bg2 db tc pf" wx:if="{{!isFirst && productList.length === 0}}" style="height: {{scrollViewHeight}}px">
+    <icon class="nrbg"></icon>
+    <text class="c4 t14">抱歉，未找到符合您条件的门票</text>
+  </view>
+  <image class="toTop" wx:if="{{scrollTop>=scrollViewHeight*2}}" bindtap="backTop"/>
+</view>
+<template is="sort" data="{{...sort1}}" />
+<template is="theme" data="{{...theme1}}" />
+<template is="filter" data="{{...filter1}}" />

@@ -1,0 +1,66 @@
+.title-text{
+	height: 120rpx;
+	border-bottom: 2rpx solid #ebebeb;
+	font-size: 44rpx;
+	color: #333;
+}
+.title-text:before{
+	display: block;
+	content: "";
+	height: 44rpx;
+	width: 44rpx;
+	background-size: 44rpx 44rpx;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url(https://m.elongstatic.com/static/xcxticket/icon_success.png);
+	margin-right: 16rpx;
+}
+.btn-container{
+	display: flex;
+	height: 120rpx;
+	padding: 0rpx 16rpx;
+	align-items: center;
+}
+.btn{
+	display: flex;
+	flex: 1;
+	height: 80rpx;
+	align-items: center;
+	justify-content: center;
+	border: 2rpx solid #ebebeb;
+	border-radius: 4rpx;
+	margin: 0rpx 8rpx;
+}
+ul{
+	display: flex;
+	flex-direction: column;
+	margin-top: 20rpx;
+}
+ul li{
+	display: flex;
+	align-items: center;
+	height: 60rpx;
+	font-size: 26rpx;
+	color: #333;
+	margin-left: 24rpx;
+}
+.circle{
+	width: 10rpx;
+    height: 10rpx;
+    background-color: #5d5d5d;
+    border-radius: 50%;
+    margin-right: 14rpx;
+}
+.prompt-label{
+	display: flex;
+	font-size: 24rpx;
+	color: #ff724c;
+	margin-top: 40rpx;
+	margin: 0rpx 24rpx;
+}
+.prompt-content{
+	display: flex;
+	font-size: 22rpx;
+	color: #333;
+	margin: 20rpx 24rpx;
+}

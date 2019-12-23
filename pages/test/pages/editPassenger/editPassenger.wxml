@@ -1,0 +1,20 @@
+<view class="df flex1 dc">
+  <view class="df dc bg1">
+    <view class="df h44 aic ml12 mr12 bg1 {{isLast?'':'bb1'}}" wx:for="{{itemList}}" wx:for-item="item">
+      <picker class="df flex1" bindchange="onLabelClick" data-type="{{item.type}}" data-can="{{item.canSwitch}}"
+                    range="{{item.selectItemList}}" value="{{item.selectIndex}}"
+                    disabled="{{item.selectItemList && item.selectItemList.length>0?false:true}}">
+        <view class="df aic">
+          <text class="df h44 aic t15 c888888">{{item.name}}</text>
+          <icon class="ad aic vam mr0_l5" wx:if="{{item.canSwitch && item.selectItemList && item.selectItemList.length>0}}"/>
+        </view>
+      </picker>
+      <input class="df flex2 h44 aic t15 width100" value="{{item.value}}" type="text" placeholder="{{item.hint}}"
+          placeholder-class="placeholder" data-type="{{item.type}}" bindinput="onInput" maxlength="24"/>
+    </view>
+  </view>
+  <view class="df aic jcc bottom-container">
+    <text class="df flex1 t14 wxc aic jcc btn b49f" bindtap="onSaveClick">保 存</text>
+    <text class="df flex1 t14 wxc aic jcc btn b49f" wx:if="{{passenger.timeStamp}}" bindtap="onDeleteClick">删 除</text>
+  </view>
+</view>

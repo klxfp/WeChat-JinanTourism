@@ -1,0 +1,62 @@
+<!--pages/search/search.wxml-->
+<view class="main pl">
+    <!--搜索-->
+    <view class="searchContainer">
+        <view class="searchIconInputContainer">
+            <icon class="searchIcon mlr_search"/>
+            <input  class="searchInput" placeholder="输入景点名称名称、城市、关键字" placeholder-class="placeholder"
+            bindinput="inputBind" bindtap="inputTap" value="{{searchKey}}"/>
+        </view>
+        <text class="tvSearch" bindtap="searchTap">搜索</text>
+    </view>
+    <!--搜索附近的景点-->
+    <view class="searchNearbyContainer jcb" wx:if="{{locSuccess||searchKey.length>0||maskShow}}" bindtap="searchNearby">
+        <view class="df">
+            <text class="searchNearbyTv">{{searchKey.length==0?"搜索附近的景点":"查看"}}</text>
+            <text class="tips width246 txtoverflow" wx:if="{{searchKey.length!=0}}">{{searchKey}}</text>
+            <text class="searchNearbyTv" wx:if="{{searchKey.length!=0}}">的全部景点</text>
+        </view>
+        <icon class="ar mlr_search"/>
+    </view>
+    <!--tabs-->
+    <view wx:if="{{searchKey.length==0 && !maskShow}}">
+        <view class="tabContainer">
+            <text wx:if="{{historyList.length>0}}" class="df flex1 jc aic t12 h42 {{currentIndex == 0?'bb49f wxc':'color44'}}" data-param="history"
+                bindtap="onTabClick">搜索历史</text>
+            <text class="df flex1 jc aic t12 h42 pd10 {{currentIndex == 0 && historyList.length==0 || historyList.length>0 && currentIndex == 1?'bb49f wxc':'color44'}}" data-param="scenic" bindtap="onTabClick">热搜景点</text>
+            <text class="df flex1 jc aic t12 h42 pd10 {{currentIndex == 1 && historyList.length==0 || historyList.length>0 && currentIndex == 2?'bb49f wxc':'color44'}}"  data-param="theme"  bindtap="onTabClick">热搜主题</text>
+        </view>
+        <swiper
+        class="listContainer  pf width100"
+        current="{{ currentIndex }}"
+        bindchange="changeSwiper"
+        >
+        <block wx:for="{{tabPages}}">
+            <swiper-item class="listContainer">
+                <scroll-view scroll-y="true" style="height:{{scrollHeight}}px">
+                    <block wx:for="{{tabPages.length==3 ?(currentIndex == 0 ?historyList:hotPageDataList[currentIndex-1]):hotPageDataList[currentIndex]}}"  wx:for-item="items" wx:for-index="itemsIndex">
+                        <view class="itemContainer" data-itemData="{{items}}" bindtap="onItemClick">
+                            <text class="item-name">{{items.hotDataName}}</text>
+                            <text class="item-type-txt">{{dataTypes[items.hotDataType]}}</text>
+                        </view>
+                    </block>
+                    <text class="df jc aic t14 fwb colorb2 mt50_100" wx:if="{{(item == 'scenic' && hotScenicList.length==0) || (item == 'theme'&& hotTopicList.length==0)}}">{{"当前没有热搜"+(item == "scenic" ?"景点":"主题")}}</text>
+                    <view class="clearHistoryContainer" wx:if="{{currentIndex == 0 && historyList.length>0}}">
+                        <text class="clearHistory" bindtap="onClearHistoryClick">清除搜索历史</text>
+                    </view>
+                </scroll-view>
+            </swiper-item>
+        </block>
+        </swiper>
+    </view>
+    <!--suggest view-->
+    <!--关键词空空 展示mask-->
+    <view wx:if="{{maskShow && searchKey.length==0}}" class="mask" bindtap="onMaskClick"/>
+    <!--关键词不空展示搜索结果'-->
+    <scroll-view wx:if="{{suggestDataList.length>0 && searchKey.length>0}}" scroll-y="true"  style="height:{{scrollHeight+43}}px">
+        <view class="itemContainer" wx:for="{{suggestDataList}}" wx:for-item="suggestItem" data-itemData="{{suggestItem}}" bindtap="onSuggestItemClick">
+            <text class="item-name">{{suggestItem.title}}</text>
+            <text class="item-type-txt">{{suggestItem.typeDesc}}</text>
+        </view>
+    </scroll-view>
+</view>

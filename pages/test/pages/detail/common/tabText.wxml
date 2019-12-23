@@ -1,0 +1,5 @@
+<template name="tabText">
+    <view class="df h36 ac m5 jc flex1 {{enable?(isSelected?'wxc bb49f':''):'colorE0'}}" data-tabtxt="{{txt}}" data-enable="{{enable}}" bindtap="onTabClick">
+        <text class="t12">{{txt}}</text>
+    </view>
+</template>

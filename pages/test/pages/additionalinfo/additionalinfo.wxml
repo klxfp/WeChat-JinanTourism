@@ -1,0 +1,16 @@
+<view class="df dc">
+    <view class="df bg1 bbeb pt12 pb12 pl12 pr12">
+        <span>{{typeDesc}}</span>
+    </view>
+    <ul>
+        <li class="df bg1 bbeb aic pt12 pb12 pl12 pr12" wx:for="{{expandInfos.selectItemList}}" wx:if="{{expandInfos && expandInfos.selectItemList && expandInfos.selectItemList.length>0}}"
+            bindtap="selectItem" data-item="{{item}}" data-index="{{index}}">
+            <icon class="checkimg mr12 {{item.isSelected?'checked':'unchecked'}}"/>
+            {{item.itemDesc}}
+        </li>
+    </ul>
+    <view wx:if="{{inputType != 1}}" class="df pl16 pr16 pt16">
+        <view class="bg1 t14 tctc p10 bb2b2 brs3" bindtap="onCancel">取消</view>
+        <view class="flex1 bg49f t14 cf tctc p10 ml12 brs3" bindtap="onConfirm">确认</view>
+    </view>
+</view>

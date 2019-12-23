@@ -1,0 +1,19 @@
+<!--费用明细-->
+<template name="feedetail">
+    <view class="df flex1 dc pl op-8 bgc45464c">
+        <span class="df t15 cf pblr16 pt44">费用明细</span>
+        <view class="df jcb bordertop ml12 mr12 pt12">
+            <span class="t12 cf mr80 mb12">{{title||""}}</span>
+            <span class ="t12 cf mr12 pa r0" wx:if="{{showPayPrice > 0}}">{{"￥" + showPayPrice+" x " + count}}</span>
+        </view>
+        <view class="df flex1 width100 pa h138 pt12 dc bordertop b0">
+            <view class="df jcb pl">
+                <span class="df pa l12 t12 cf ">应付总额</span>
+                <span class="df pa r12 t12 cff555 fwb" wx:if="{{totalShowPayMoney>0}}">{{totalShowPayMoney}}</span>
+            </view>
+            <view class="df width100 mt50 pb5 pt5 aic jcc" bindtap="setBookingDetailShowState" data-show="0">
+                <icon class="closeimg jcc"/>
+            </view>
+        </view>
+    </view>
+</template>

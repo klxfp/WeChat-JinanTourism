@@ -1,0 +1,6 @@
+<template name="headerRight">
+    <view class="rightHeader ac h44 je">
+        <text wx:if="{{showTxt}}" class="t12">{{commentCount>0?commentCount+"个点评":""}}</text>
+        <icon class="ar"></icon>
+    </view>
+</template>

@@ -1,0 +1,190 @@
+.main{
+    display: flex;
+	width: 100%;
+    flex-direction: column;
+    background-color: white;
+}
+.searchContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+	background-color: #fff;
+	height: 88rpx;
+    padding-left: 24rpx;
+    border-bottom: 2rpx #ebebeb solid;
+}
+
+.searchIconInputContainer{
+    display: flex;
+    flex: 1;
+	height: 60rpx;
+    flex-direction: row;
+    background-color: #f4f4f4;
+    align-items: center;
+    padding-left: 24rpx;
+	border-radius: 6rpx;
+}
+
+.searchInput{
+	flex: 1;
+	margin: 14rpx 0;
+	font-size: 28rpx;
+    padding-left: 10rpx;
+}
+
+.tvSearch{
+	width: 56rpx;
+	font-size: 28rpx;
+	color: #888;
+	margin: 0 24rpx;
+	height: 88rpx;
+	line-height: 88rpx;
+
+}
+
+.tabContainer{
+	display: flex;
+	justify-content: space-around;
+	height: 90rpx;
+	align-items: center;
+    padding-left: 24rpx;
+    padding-right: 24rpx;
+	border-bottom: 2rpx #ebebeb solid;
+}
+.h45{
+	height: 90rpx;
+}
+.mb2{
+	margin-bottom: 4rpx
+}
+.listContainer{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+	margin-top:178rpx;
+}
+.locationContainer .historyContainer .hotCityContainer .historyCities .cityListContainer .swiperItemContainer{
+	display: flex;
+	flex-direction: column;
+}
+.cityItem{
+	display: block;
+	width: 218rpx;
+	margin-bottom: 24rpx;
+	margin-right: 24rpx;
+	height: 80rpx;
+	font-size: 28rpx;
+	color: #333;
+	line-height: 80rpx;
+	border-radius: 6rpx;
+	background-color: #fff;
+	text-align: center;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+    overflow: hidden;
+}
+.height37{
+	height: 74rpx;
+}
+.historyTitleContainer{
+	display: flex;
+	flex: 1;
+	flex-direction: row;
+	width: 100%;
+	position: relative;
+}
+.title{
+	font-size: 24rpx;
+	color: #888; 
+	height: 74rpx;
+	line-height: 74rpx;
+}
+.letter{
+	display: flex;
+	width: 100%;
+	height: 44rpx;
+	line-height: 44rpx;
+	font-size: 30rpx;
+	color: #444;
+	background-color: #ecf1f8;
+}
+.line{
+	display: flex;
+}
+.line .cur{
+	color: #09bb07;
+}
+.pdr{visibility: hidden;}
+.left{
+	position: absolute;
+	left: 0;
+}
+.right{
+	position: absolute;
+	right: 0;
+}
+.locationTipsContainer{
+	display: flex;
+	flex-direction: row;
+}
+.locationTips{
+	font-size: 26rpx;
+	color: #333;
+	margin-left: 14rpx;
+	margin-bottom: 12rpx;
+}
+.itemContainer{
+    display: flex;
+	flex: 1;
+    flex-direction: row;
+    height: 88rpx;
+    font-size: 24rpx;
+    color: #333;
+    padding-left: 24rpx;
+    padding-right: 24rpx;
+    align-items: center;
+    border-bottom: 2rpx solid #ebebeb;
+}
+.item-name{
+    display: flex;
+	font-size:26rpx;
+	color: #333333;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.mask{
+    display: flex;
+    flex: 1;
+    height: 100vh;
+    opacity: 0.75;
+	background-color: rgba(0,0,0,.5);
+}
+.mt45{
+	margin-top: 90rpx
+}
+.top45{
+	top: 90rpx
+}
+.top90{
+	top: 180rpx
+}
+.par0{
+	top: 0;
+	bottom: 0;
+	right: 0;
+}
+.width24{
+	width: 48rpx
+}
+.lh1_8{
+	line-height: 1.8
+}
+.pr24{
+	padding-right: 48rpx
+}
+
+.mlr_search{
+	margin-left: 0;
+	margin-right: 0;
+}

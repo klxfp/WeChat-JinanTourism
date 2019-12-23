@@ -1,0 +1,26 @@
+<!--pages/commentlist/commentlist.wxml-->
+<import src="../detail/common/ticketStar.wxml"/>
+<import src="../detail/common/commentItem.wxml"/>
+<scroll-view scroll-y="true" bindscrolltolower="loadMore" style="height: {{scrollViewHeight}}px">
+    <view class="score">
+        <view class="fen-contain">
+            <view class="fenspan">
+                <text class="fen t22 c2">{{score}}</text>
+                <text class="t11 c2">分</text>
+            </view>
+            <text class="nominate t12" wx:if="{{scorenum}}>=1">{{recommand}}</text>
+            <template is="ticketStar" wx:if="{{commentCount>0 && score>0}}" data="{{startNumbers:startNumbers,starValue:commentStarValue}}"/>
+        </view>
+    </view>
+    <view class="filter">
+        <block  wx:for="{{filterItemList}}" wx:key="uniquen">
+            <view class="filteritem {{item.isSelected == 1 ? 'on' :''}}" bindtap="selectFilter" data-filter="{{index}}">
+                <text class="filter-desc c333333 t11 {{item.isSelected == 1?'ontext' : ''}}">{{item.filterDesc}}</text>
+                <text class="color85 t11 {{item.isSelected == 1 ? 'ontext' :''}}">{{item.extraDesc}}</text>
+            </view>
+        </block>
+    </view>
+    <view wx:for="{{commentList}}">
+            <template is="commentItem" data="{{item:item}}"/>
+    </view>
+  </scroll-view>

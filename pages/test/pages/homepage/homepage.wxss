@@ -1,0 +1,310 @@
+/* pages/homepage/homepage.wxss */
+.banner-component{
+	height: 128rpx;
+	background-color:#4499ff;
+}
+.banner-box{
+	position:absolute;
+	top:24rpx;
+	left:24rpx;
+	width:702rpx;
+	height:80rpx;
+	display: flex;
+	align-items: center;
+	border-radius: 8rpx;
+	background-color:#fff;
+	z-index:99;
+}
+.city-box{
+	flex:2;
+	display: flex;
+	padding-right: 16rpx;
+	border-right:2rpx solid #ebebeb;
+	height: 80rpx;
+	align-items: center;
+}
+.city-name{
+	display: block;
+	font-size:26rpx;
+	color:#888888;
+	flex:5;
+	text-align: center;
+	margin-left: 60rpx;
+}
+.bottom-icon{
+	margin-left: 12rpx;
+	width:18rpx;
+	height: 10rpx;
+}
+.search{
+	flex:6;
+	display: flex;
+	height: 80rpx;
+	align-items: center;
+}
+.searchtip{
+	width: 308rpx;
+	font-size:28rpx;
+	color:#B2B2B2;
+	height:40rpx;
+	display: block;
+	flex:6;
+}
+
+.local-around{
+	position:relative;
+    align-items: center;
+    display: flex;
+    height:98rpx;
+    line-height: 98rpx;
+    background-color:#fff;
+    margin-bottom: 24rpx;
+	/*width:100%;*/
+	justify-content: center;
+
+}
+.local-item{
+	display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+	/*margin-left:64rpx;*/
+}
+.split{
+	width:2rpx;
+	height: 64rpx;
+	background: #ebebeb;
+	margin-left:64rpx;
+	margin-right: 64rpx;
+}
+.local{
+	margin-right:24rpx;
+	width:48rpx;
+	height:48rpx;
+	display: block;
+}
+.info{
+	color:#333333;
+	font-size:34rpx;
+}
+.footer .tit{
+	display: flex;
+    color: #888888;
+    font-size: 32rpx;
+    justify-content: center;
+    margin-top: 40rpx;
+    align-items: center;
+}
+.footer .tit i{
+	width: 24rpx;
+    background-color: #888888;
+    height: 2rpx;
+}
+.footimg{
+	width:36rpx;
+	height:36rpx;
+	display: block;
+	margin-bottom: 24rpx;
+}
+.foot{
+	display: flex;
+	margin-top:38rpx;
+	margin-bottom: 200rpx;
+}
+.li{
+	flex:1;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.infom{
+	font-size: 22rpx;
+	color:#b2b2b2;
+}
+/*主题选择wxss*/
+.theme-container{
+	background: #ffffff;
+	padding-top: 20rpx;
+	position:relative;
+}	
+.themeswiper{
+	background-color: white;
+	/*height:350rpx;*/
+	/*height:93px;*/
+}
+/*注意没有主题时，显示全部时的高度*/
+/*.theme-height{
+	display: flex;
+	background-color: white;
+	height:81px;
+	overflow: hidden;
+}*/
+.themeItem{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/*margin-left:46rpx;
+	margin-right:46rpx;*/
+	width:187rpx;
+	height:162rpx;
+}
+.topicpic{
+	width:64rpx;
+	height:62rpx;
+	background: transparent center center no-repeat;
+	background-size:cover;
+	margin-bottom: 10rpx;
+}
+.bgnull{
+	background-image: url()
+}
+.itemlist{
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	padding-top: 24rpx;
+}
+.tabContainer{
+	display: flex;
+	justify-content: space-around;
+	height: 84rpx;
+	align-items: center;
+    border-bottom: 2rpx #ebebeb solid;
+    padding-left: 24rpx;
+    padding-right: 24rpx;
+	margin-top: 20rpx;
+}
+.scenery{
+	display:flex;
+	flex-direction: row;
+	margin-left:24rpx;
+	margin-right: 24rpx;
+	margin-top: 24rpx;
+	padding-bottom: 24rpx;
+	justify-content: flex-start;
+	overflow: hidden;
+	flex: 1;
+	border-bottom: solid 1px #ebebeb;
+}
+.image{
+    width:100%;
+    height:100%;
+    display:block;
+}
+.pic{
+	width:194rpx;
+	height:202rpx;
+	display: inline-block;
+	margin-right: 12px;
+	background: transparent url(https://m.elongstatic.com/static/xcxticket/default.png) center center no-repeat;
+	background-size:cover;
+}
+.info{
+	flex-direction: column;
+	flex: 1;
+	overflow: hidden;
+}
+.title{
+	display: block;
+	color:#333;
+	font-weight:bold;
+}
+.info-detail{
+	color:#888;
+}
+.title,.info-detail{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.city,.jibie{
+	color:#b2b2b2;
+  	margin-right:20rpx;
+}
+.score{
+	margin-right:10px;
+}
+.distance-origin{
+	flex: 1;
+	align-items: center;
+	margin-top:-2px;
+}
+.distance-origin .juli{
+	display: block;
+	font-size:24rpx;
+	color:#b2b2b2;
+}
+.distance-origin .originPrice{
+	flex:1;
+	color:#b2b2b2;
+	text-decoration:line-through;
+	line-height: 24rpx;
+	justify-content: flex-end;
+}
+.biao-price{  
+    flex: 1;
+}
+.biao,.biao2{
+	font-size:20rpx;  
+	border:1px solid #49f;
+	height:28rpx;
+	margin-right: 10rpx;
+	padding-left: 4rpx;
+    padding-right: 4rpx;
+    align-items:center;
+}
+.biao2{
+	margin-right:0;
+}
+.price{
+	flex:1;
+	justify-content: flex-end;
+}
+.money{
+	color:#ff5555;
+}
+.qi{
+	color:#b2b2b2;
+}
+.realprice{
+	color:#ff5555;
+	line-height: 32rpx;
+	font-weight: bold;
+	margin: 0 2rpx;
+}
+
+.order{
+	position:fixed;
+	bottom:40rpx;
+	right:40rpx;
+}
+.orderpic{
+	width:120rpx;
+	height: 120rpx;
+	position:fixed;
+	bottom:40rpx;
+	right:40rpx;
+}
+.dots{  
+  position: absolute;  
+  left: 0;  
+  right: 0;  
+  bottom: 15rpx;  
+  display: flex;  
+  justify-content: center; 
+  height:24rpx;
+  align-items: center; 
+}  
+.dot{  
+  margin: 0 8rpx;  
+  width: 12rpx;  
+  height: 12rpx;  
+  background: #dedede;  
+  border-radius: 8rpx;  
+  transition: all .6s;  
+}  
+.active{  
+  /*width: 24rpx;  */
+  background: #4499ff;  
+}  

@@ -1,0 +1,32 @@
+<!--出行人信息-->
+<template name="passengerInfoView">
+    <view wx:if="passengerList && passengerList.length>0" class="df dc bg1 ofyh">
+        <view class="df dc bg1 ofyh bb1" wx:for="{{passengerList}}">
+            <!--出行人标题-->
+            <view class="df aic tctc h32 jcb">
+                <span class="df t12 h32 tctc">{{"出行人信息"+(index+1)}}</span>
+                <span class="aic t12 wxc {{item.passengerValue.isSetToContact && isResourceSetToContact?'colorb2':''}}"
+                    bindtap="setPassengerItemToContact"
+                    data-empty="{{!item.isValueNotEmpty}}"
+                    data-passenger="{{item.passengerValue.passenger}}"
+                    data-index="{{index}}">
+                    {{item.passengerValue.isSetToContact&& isResourceSetToContact?"已设为联系人":"设为联系人"}}
+                </span>
+            </view>
+            <view class="df mh44 aic btd1"  bindtap="onPassenerItemClick" data-item="{{item}}" data-index="{{index}}">
+                <view class="df flex1 mr5 t13 colorb2 tctc {{isOrderFillInVerify?'cff555':''}}" wx:if="{{!item.isValueNotEmpty}}">
+                    {{"点击添加出行人"+(index+1)}}
+                </view>
+                <view wx:if="{{item.isValueNotEmpty}}" class="df flex1 mr8 aic mt12 mb12">
+                    <view class="df dc width113">
+                        <span class="t13" wx:for="{{item.passengerValue.title}}" wx:for-item="titleItem">{{titleItem}}</span>
+                    </view>
+                    <view class="df dc flex1 mr12">
+                        <span class="t13" wx:for="{{item.passengerValue.content}}" wx:for-item="contentItem">{{contentItem}}</span>
+                    </view>
+                </view>
+                <icon class="ar mlr0"/>
+            </view>
+        </view>
+    </view>
+</template>
