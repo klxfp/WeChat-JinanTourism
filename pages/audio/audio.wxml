@@ -315,7 +315,7 @@
   <view class="view">
     <view class="img">
       <text class="title"></text>
-      <image src="https://s2.ax1x.com/2019/12/07/QtmiaF.png"></image>
+      <image src="https://s2.ax1x.com/2019/12/07/QtmZx1.png"></image>
     </view>
     <view class="name">
       <view class="text">灵岩寺旅游区</view>
@@ -342,10 +342,10 @@
   <view class="view">
     <view class="img">
       <text class="title"></text>
-      <image src="https://s2.ax1x.com/2019/12/07/QtmZx1.png"></image>
+      <image src="https://s2.ax1x.com/2019/12/07/QtmiaF.png"></image>
     </view>
     <view class="name">
-      <view class="text">跑马岭野生动物世界</view>
+      <view class="text">九顶塔中华民俗乐园</view>
       <view class="icons">
         <image class="icon" src="../../images/star_1.png"></image>
         <image class="icon" src="../../images/star_1.png"></image>
