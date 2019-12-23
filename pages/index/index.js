@@ -38,8 +38,8 @@ Page({
     }
     ],
     imgList: [
-      { src: 'https://s2.ax1x.com/2019/12/07/QteL5Q.png', text: "大明湖", pag: "../introduction/daminghu/daminghu"},
-      { src: 'https://s2.ax1x.com/2019/12/07/QteoKP.png', text: "趵突泉"},
+      { src: 'https://s2.ax1x.com/2019/12/07/QteL5Q.png', text: "大明湖", pag: "../introduction/daminghu/daminghu" },
+      { src: 'https://s2.ax1x.com/2019/12/07/QteoKP.png', text: "趵突泉", pag: "../introduction/baotuquan/baotuquan" },
       { src: 'https://s2.ax1x.com/2019/12/07/QteTDf.png', text: "五龙潭" },
       { src: 'https://s2.ax1x.com/2019/12/07/QteqUg.png', text: "环城公园" },
       { src: 'https://s2.ax1x.com/2019/12/07/QteXCj.png', text: "黑虎泉" },
