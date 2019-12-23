@@ -42,7 +42,7 @@ Page({
       .get({
         success: function(res) {
           // res.data 是包含以上定义的两条记录的数组
-          console.log("数据：" + res.data)
+
           if (!res.data.length<=0) {
             that.setData({
               tishi: "暂时没有留言哦~"
@@ -58,6 +58,11 @@ Page({
           //   res.data[i].date = new Date(+new Date(res.data[i].date) + 8 * 3600 * 1000).toISOString().replace(/T/g, ' ').replace(/\.[\d]{3}Z/, '');
           //   console.log(res.data[i].date);
           // }
+
+          for (var i = 0; i < res.data.length; i++) {
+            console.log("内容:"+ res.data[i].content);
+          }
+
           that.setData({
             topics: that.data.topics,
            
