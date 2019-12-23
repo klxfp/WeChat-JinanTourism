@@ -1,26 +1,256 @@
-.order{
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* justify-content: space-around; */
-   background-color:whitesmoke;
-   font-size:35rpx;
+/*commomStyle*/
+page{
+    background-color:#f5f5f5;
 }
 
-.tixing{
-    width: 300rpx;
-    height: 300rpx; 
+.blockItem {
+    display: block;
+}
+
+.flexItem {
+    display: flex;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.floatRight {
+    float: right;
+}
+
+.columnStyle {
+    flex-direction: column;
+}
+
+.rowStyle {
+    flex-direction: row;
+}
+
+.heightAndWidth {
+    height: auto;
+    width: 100%;
+}
+
+.centers {
+    justify-content: center;
     align-items: center;
-    padding-top: 150rpx;
 }
-.zhanshi{
-   font-size:35rpx;
-   padding-top: 30rpx;
-   font-family: "幼圆";
+
+.color54 {
+    color: #545454;
 }
-.gengduo{
-   font-size:30rpx;
-   padding-top: 10rpx;
-   font-family: "幼圆";
+
+.color7321 {
+    color: #ed7321;
 }
+
+.fontSize10 {
+    font-size: 10px;
+}
+
+.fontSize12 {
+    font-size: 12px;
+}
+
+.fontSize14 {
+    font-size: 14px;
+}
+
+.marginTop10 {
+    margin-top: 10px;
+}
+
+.marginLeft12 {
+    margin-left: 12px;
+}
+
+.marginRight12 {
+    margin-right: 12px;
+}
+
+.marginBottom10 {
+    margin-bottom: 10px;
+}
+
+/*diffStyle*/
+.container {
+    padding: 0;
+    height: 100%;
+}
+
+.menu {
+    background-color: white;
+}
+
+.orderMenu {
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.line {
+    width: 36px;
+    height: 2px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    margin-left: 6px;
+    background-color: #ed7321;
+}
+
+.orderImage {
+    width: 10px;
+    height: 11px;
+    margin-right: 5px;
+}
+
+.tableViewCellHeader {
+    height: 35px;
+    align-items: center;
+    border-bottom: solid #ccc 1px;
+    background-color: white;
+}
+
+.tableViewCell {
+    padding-right: 12px;
+    padding-top: 15px;
+    padding-left: 12px;
+    background-color: white;
+    border-bottom: dashed #ccc 1px;
+}
+
+tableViewCellStyle {
+    background-color: white;
+}
+
+.cellStyle {
+    justify-content: space-between;
+    align-items: center;
+    color: #ed7321;
+}
+
+.personInfo {
+    width: 100%;
+    height: 44px;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: dashed #ccc 1px;
+}
+
+.userHeader {
+    width: 26px;
+    height: 26px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.call {
+    width: 14px;
+    height: 14px;
+    border-radius: 14px;
+    margin-right: 5px;
+}
+
+.orderStatus {
+    width: 100%;
+    height: 44px;
+    background-color: white;
+}
+
+.statusImage {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    margin-right: 5px;
+}
+
+.statusText {
+    color: #999;
+}
+
+.tableViewX {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+ .top-tab{
+  width: 750rpx;
+  /*width: 100%;*/
+  height: 100rpx;
+  background: white;
+  color: #545454;
+  font-size: 28rpx;
+  line-height: 100rpx;
+  box-shadow: 0 2px 2px #bebebe;
+  position:fixed;
+  z-index:999;
+  top:0;
+  left: 0;
+  right: 0;
+}
+
+.flex-tab{
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-item{
+  flex-grow: 1;
+  text-align: center;
+}
+
+.toptab{
+  border-bottom: solid 3px transparent;
+  transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s  ease-in-out; /* Firefox 4 */
+  -webkit-transition: all 0.4s ease-in-out; /* Safari 和 Chrome */
+  -o-transition: all 0.4s  ease-in-out; /* Opera */
+}
+
+.toptab.active{
+  font-weight: bold;
+  color: #ed7321;
+  border-bottom: solid 3px #ed7321;
+}
+
+.tab_con{ 
+    height: 100%;
+    background: #f5f5f5;
+    position: relative;
+    width: 500%;
+    left: 0;
+    transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s  ease-in-out; /* Firefox 4 */
+    -webkit-transition: all 0.4s ease-in-out; /* Safari 和 Chrome */
+    -o-transition: all 0.4s  ease-in-out; /* Opera */
+}
+
+.list_active0{
+    margin-left:0;
+}
+
+.list_active1{
+    margin-left:-100%;
+}
+
+.list_active2{
+    margin-left:-200%;
+}
+
+.list_active3{
+    margin-left:-300%;
+}
+
+.list_active4{
+    margin-left:-400%;
+}
+
+.width20 {
+    width: 20%;
+}
+

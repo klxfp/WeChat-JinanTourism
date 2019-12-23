@@ -1,15 +1,40 @@
-<view class="order">
-  <view class="section">
-    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-      <view class="picker">
-        当前选择类型：{{array[index]}}
-      </view>
-    </picker>
-  </view>
-
-  <image class="tixing" src="/pages/mine/images/gantanhao.png"></image>
-  <text class="zhanshi">暂时没有相关内容</text>
-  <text class="gengduo">更多订单请至小导导官网或客户端查询</text>
-  <button bindtap="liaojie"class="but">浏览附近景点</button> 
-
+<view class="columnStyle container" bindscrolltoupper="upper" bindscrolltolower="lower">
+    <view class="heightAndWidth">
+        <view class="flexItem columnStyle heightAndWidth totalIncome centers">
+            <label class="totalIncomeNote color999 fontSize10">实收金额合计</label>
+            <label class="totalIncomeValue marginTop10">￥ {{ totalIncome }}</label>
+        </view>
+        <view class="flexItem rowStyle heightAndWidth composeIncome">
+            <view class="flexItem columnStyle centers marginTop15 marginBottom15">
+                <label class="color999 fontSize10">流水金额合计</label>
+                <label class="color54 fontSize14 marginTop6">￥ {{ runningMoney }}</label>
+            </view>
+            <view class="lineView"></view>
+            <view class="flexItem columnStyle centers marginTop15 marginBottom15">
+                <label class="color999 fontSize10">公益金额合计</label>
+                <label class="color54 fontSize14 marginTop6">￥ {{ publicWelfareMoney }}</label>
+            </view>
+        </view>
+    </view>
+    <scroll-view class="tableView" scroll-y="{{true}}" wx:if="{{hasData}}"  wx:for="{{ moneyInfo }}" wx:for-item="info">
+        <view class="flexItem rowStyle tableViewCellHeader marginTop10" bindtap="goDeatailEvent">
+            <image class="orderImage marginLeft12" src="../images/dingdan.png"></image>
+            <label class="color54 fontSize12">订单编号: {{orderNum}}</label>
+        </view>
+        <view class="flexItem columnStyle tableViewCell" bindtap="goDeatailEvent">
+            <view class="flexItem rowStyle marginBottom10 cellStyle">
+                <label class="color54 fontSize12">付款金额</label>
+                <label class="fontSize14">￥ {{ payAmount }}</label>
+            </view>
+            <view class="flexItem rowStyle marginBottom10 cellStyle">
+                <label class="color54 fontSize12">付款时间</label>
+                <label class="color54 fontSize12">￥ {{ payTime }}</label>
+            </view>
+            <view class="flexItem rowStyle marginBottom10 cellStyle">
+                <label class="color54 fontSize12">付款方式</label>
+                <label class="color54 fontSize12">{{ payType }}</label>
+            </view>
+        </view>
+    </scroll-view>
+    
 </view>

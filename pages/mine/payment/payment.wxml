@@ -1,8 +1,245 @@
-<!--pages/mine/payment/payment.wxml-->
-<view class="order">
+    <view class="top-tab flexItem flex-tab">
+        <view class="toptab flex-item {{currentNavtab==idx ? 'active' : ''}}" wx:for="{{navTab}}" wx:for-index="idx" wx:for-item="itemName"                 data-idx="{{idx}}" bindtap="switchTab">
+            {{itemName}}
+        </view>
+    </view>
 
-  <image class="tixing" src="/pages/mine/images/gantanhao.png"></image>
-  <text class="zhanshi">暂时没有相关内容</text>
-  <text class="gengduo">更多订单请至小导导官网或客户端查询</text>
+    <view class="tab_con flexItem rowStyle {{currentNavtab==0 ? 'list_active0' : ''}} {{currentNavtab==1 ? 'list_active1' : ''}} {{currentNavtab==2 ? 'list_active2' : ''}} {{currentNavtab==3 ? 'list_active3' : ''}} {{currentNavtab==4 ? 'list_active4' : ''}}">
+        <view class="view1 width20"  bindtouchstart="catchtouchstart" bindtouchend="catchtouchend">
+            <scroll-view class="tableView" scroll-y="true" wx:if="{{hasData}}"  wx:for="{{ moneyInfo }}" wx:for-item="info">
+                <view class="flexItem rowStyle tableViewCellHeader marginTop10" catchtap="goDeatailEvent">
+                    <image class="orderImage marginLeft12" src="../images/dingdan.png"></image>
+                    <label class="color54 fontSize12">订单编号: {{ orderNum }}-1</label>
+                </view>
+                <view class="flexItem rowStyle  personInfo" catchtap="goDeatailEvent">
+                    <view class="flexItem rowStyle marginLeft12 centers">
+                        <image class="userHeader" src="{{ url }}"></image>
+                        <label class="color54 fontSize12">{{ nickName }}</label>
+                    </view>
+                    <view class="flexItem rowStyle marginRight12 centers" catchtap="callEvent">
+                        <image class="call" src="../images/call.png"></image>
+                        <label class="color54 fontSize12">{{ phoneNum }}</label>
+                    </view>
+                </view>
+                <view class="flexItem columnStyle tableViewCell" catchtap="goDeatailEvent">
+                    <view class="flexItem rowStyle marginBottom10 cellStyle">
+                        <label class="color54 fontSize12">预约时间</label>
+                        <label class="fontSize14">{{ appointmentTime }}</label>
+                    </view>
+                    <view class="flexItem rowStyle marginBottom10 cellStyle">
+                        <label class="color54 fontSize12">预约人数</label>
+                        <label class="color54 fontSize12">{{ appointmentNum }} 人</label>
+                    </view>
+                    <view class="flexItem rowStyle marginBottom10 cellStyle">
+                        <label class="color54 fontSize12">下单时间</label>
+                        <label class="color54 fontSize12">{{ orderTime }}</label>
+                    </view>
+                </view>
+                <view class="flexItem rowStyle centers orderStatus" catchtap="goDeatailEvent">
+                    <image class="statusImage" src="{{ statusImage[0] }}"></image>
+                    <label class="statusText fontSize14">{{ statusText[0] }}</label>
+                </view>
+            </scroll-view>
+        </view>
 
-</view>
+        <view class="view2 width20"  bindtouchstart="catchtouchstart" bindtouchend="catchtouchend">
+            <scroll-view class="tableView" scroll-y="true" wx:if="{{hasData}}"  wx:for="{{ moneyInfo }}" wx:for-item="info">
+        <view class="flexItem rowStyle tableViewCellHeader marginTop10" catchtap="goDeatailEvent">
+            <image class="orderImage marginLeft12" src="../images/dingdan.png"></image>
+            <label class="color54 fontSize12">订单编号: {{ orderNum }}-2</label>
+        </view>
+        <view class="flexItem rowStyle  personInfo" catchtap="goDeatailEvent">
+            <view class="flexItem rowStyle marginLeft12 centers">
+                <image class="userHeader" src="{{ url }}"></image>
+                <label class="color54 fontSize12">{{ nickName }}</label>
+            </view>
+            <view class="flexItem rowStyle marginRight12 centers" catchtap="callEvent">
+                <image class="call" src="../images/call.png"></image>
+                <label class="color54 fontSize12">{{ phoneNum }}</label>
+            </view>
+        </view>
+        <view class="flexItem columnStyle tableViewCell" catchtap="goDeatailEvent">
+            <view class="flexItem rowStyle marginBottom10 cellStyle">
+                <label class="color54 fontSize12">预约时间</label>
+                <label class="fontSize14">{{ appointmentTime }}</label>
+            </view>
+            <view class="flexItem rowStyle marginBottom10 cellStyle">
+                <label class="color54 fontSize12">预约人数</label>
+                <label class="color54 fontSize12">{{ appointmentNum }} 人</label>
+            </view>
+            <view class="flexItem rowStyle marginBottom10 cellStyle">
+                <label class="color54 fontSize12">下单时间</label>
+                <label class="color54 fontSize12">{{ orderTime }}</label>
+            </view>
+        </view>
+        <view class="flexItem rowStyle centers orderStatus" catchtap="goDeatailEvent">
+            <image class="statusImage" src="{{ statusImage[0] }}"></image>
+            <label class="statusText fontSize14">{{ statusText[0] }}</label>
+        </view>
+    </scroll-view>
+        </view>
+
+        <view class="view3 width20"  bindtouchstart="catchtouchstart" bindtouchend="catchtouchend">
+            <scroll-view class="tableView" scroll-y="true" wx:if="{{hasData}}"  wx:for="{{ moneyInfo }}" wx:for-item="info">
+        <view class="flexItem rowStyle tableViewCellHeader marginTop10" catchtap="goDeatailEvent">
+            <image class="orderImage marginLeft12" src="../images/dingdan.png"></image>
+            <label class="color54 fontSize12">订单编号: {{ orderNum }}-3</label>
+        </view>
+        <view class="flexItem rowStyle  personInfo" catchtap="goDeatailEvent">
+            <view class="flexItem rowStyle marginLeft12 centers">
+                <image class="userHeader" src="{{ url }}"></image>
+                <label class="color54 fontSize12">{{ nickName }}</label>
+            </view>
+            <view class="flexItem rowStyle marginRight12 centers" catchtap="callEvent">
+                <image class="call" src="../images/call.png"></image>
+                <label class="color54 fontSize12">{{ phoneNum }}</label>
+            </view>
+        </view>
+        <view class="flexItem columnStyle tableViewCell" catchtap="goDeatailEvent">
+            <view class="flexItem rowStyle marginBottom10 cellStyle">
+                <label class="color54 fontSize12">预约时间</label>
+                <label class="fontSize14">{{ appointmentTime }}</label>
+            </view>
+            <view class="flexItem rowStyle marginBottom10 cellStyle">
+                <label class="color54 fontSize12">预约人数</label>
+                <label class="color54 fontSize12">{{ appointmentNum }} 人</label>
+            </view>
+            <view class="flexItem rowStyle marginBottom10 cellStyle">
+                <label class="color54 fontSize12">下单时间</label>
+                <label class="color54 fontSize12">{{ orderTime }}</label>
+            </view>
+        </view>
+        <view class="flexItem rowStyle centers orderStatus" catchtap="goDeatailEvent">
+            <image class="statusImage" src="{{ statusImage[0] }}"></image>
+            <label class="statusText fontSize14">{{ statusText[0] }}</label>
+        </view>
+    </scroll-view>
+        </view>
+
+        <view class="view4 width20"  bindtouchstart="catchtouchstart" bindtouchend="catchtouchend">
+            <scroll-view class="tableView" scroll-y="true" wx:if="{{hasData}}"  wx:for="{{ moneyInfo }}" wx:for-item="info">
+        <view class="flexItem rowStyle tableViewCellHeader marginTop10" catchtap="goDeatailEvent">
+            <image class="orderImage marginLeft12" src="../images/dingdan.png"></image>
+            <label class="color54 fontSize12">订单编号: {{ orderNum }}-4</label>
+        </view>
+        <view class="flexItem rowStyle  personInfo" catchtap="goDeatailEvent">
+            <view class="flexItem rowStyle marginLeft12 centers">
+                <image class="userHeader" src="{{ url }}"></image>
+                <label class="color54 fontSize12">{{ nickName }}</label>
+            </view>
+            <view class="flexItem rowStyle marginRight12 centers" catchtap="callEvent">
+                <image class="call" src="../images/call.png"></image>
+                <label class="color54 fontSize12">{{ phoneNum }}</label>
+            </view>
+        </view>
+        <view class="flexItem columnStyle tableViewCell" catchtap="goDeatailEvent">
+            <view class="flexItem rowStyle marginBottom10 cellStyle">
+                <label class="color54 fontSize12">预约时间</label>
+                <label class="fontSize14">{{ appointmentTime }}</label>
+            </view>
+            <view class="flexItem rowStyle marginBottom10 cellStyle">
+                <label class="color54 fontSize12">预约人数</label>
+                <label class="color54 fontSize12">{{ appointmentNum }} 人</label>
+            </view>
+            <view class="flexItem rowStyle marginBottom10 cellStyle">
+                <label class="color54 fontSize12">下单时间</label>
+                <label class="color54 fontSize12">{{ orderTime }}</label>
+            </view>
+        </view>
+        <view class="flexItem rowStyle centers orderStatus" catchtap="goDeatailEvent">
+            <image class="statusImage" src="{{ statusImage[0] }}"></image>
+            <label class="statusText fontSize14">{{ statusText[0] }}</label>
+        </view>
+    </scroll-view>
+        </view>
+
+        <view class="view5 width20"  bindtouchstart="catchtouchstart" bindtouchend="catchtouchend">
+            <scroll-view class="tableView" scroll-y="true" wx:if="{{hasData}}"  wx:for="{{ moneyInfo }}" wx:for-item="info">
+        <view class="flexItem rowStyle tableViewCellHeader marginTop10" catchtap="goDeatailEvent">
+            <image class="orderImage marginLeft12" src="../images/dingdan.png"></image>
+            <label class="color54 fontSize12">订单编号: {{ orderNum }}-5</label>
+        </view>
+        <view class="flexItem rowStyle  personInfo" catchtap="goDeatailEvent">
+            <view class="flexItem rowStyle marginLeft12 centers">
+                <image class="userHeader" src="{{ url }}"></image>
+                <label class="color54 fontSize12">{{ nickName }}</label>
+            </view>
+            <view class="flexItem rowStyle marginRight12 centers" catchtap="callEvent">
+                <image class="call" src="../images/call.png"></image>
+                <label class="color54 fontSize12">{{ phoneNum }}</label>
+            </view>
+        </view>
+        <view class="flexItem columnStyle tableViewCell" catchtap="goDeatailEvent">
+            <view class="flexItem rowStyle marginBottom10 cellStyle">
+                <label class="color54 fontSize12">预约时间</label>
+                <label class="fontSize14">{{ appointmentTime }}</label>
+            </view>
+            <view class="flexItem rowStyle marginBottom10 cellStyle">
+                <label class="color54 fontSize12">预约人数</label>
+                <label class="color54 fontSize12">{{ appointmentNum }} 人</label>
+            </view>
+            <view class="flexItem rowStyle marginBottom10 cellStyle">
+                <label class="color54 fontSize12">下单时间</label>
+                <label class="color54 fontSize12">{{ orderTime }}</label>
+            </view>
+        </view>
+        <view class="flexItem rowStyle centers orderStatus" catchtap="goDeatailEvent">
+            <image class="statusImage" src="{{ statusImage[0] }}"></image>
+            <label class="statusText fontSize14">{{ statusText[0] }}</label>
+        </view>
+    </scroll-view>
+        </view>
+    </view>
+
+
+<!--<view class="container">
+    <view class="flexItem columnStyle heightAndWidth menu">
+        <view class="flexItem rowStyle orderMenu marginLeft12 marginRight12 color54">
+            <label class="fontSize12 color54">全</label>
+            <label class="fontSize12 color54">待处理</label>
+            <label class="fontSize12 color54">待接待</label>
+            <label class="fontSize12 color54">已完成</label>
+            <label class="fontSize12 color54">客户处理</label>
+        </view>
+        <label class="line"></label>
+    </view>
+
+    <scroll-view class="tableView" scroll-y="true" wx:if="{{hasData}}"  wx:for="{{ moneyInfo }}" wx:for-item="info">
+        <view class="flexItem rowStyle tableViewCellHeader marginTop10" bindtap="goDeatailEvent">
+            <image class="orderImage marginLeft12" src="../images/dingdan.png"></image>
+            <label class="color54 fontSize12">订单编号: {{ orderNum }}</label>
+        </view>
+        <view class="flexItem rowStyle  personInfo">
+            <view class="flexItem rowStyle marginLeft12 centers">
+                <image class="userHeader" src="{{ url }}"></image>
+                <label class="color54 fontSize12">{{ nickName }}</label>
+            </view>
+            <view class="flexItem rowStyle marginRight12 centers" bindtap="callEvent">
+                <image class="call" src="../images/call.png"></image>
+                <label class="color54 fontSize12">{{ phoneNum }}</label>
+            </view>
+        </view>
+        <view class="flexItem columnStyle tableViewCell" bindtap="goDeatailEvent">
+            <view class="flexItem rowStyle marginBottom10 cellStyle">
+                <label class="color54 fontSize12">预约时间</label>
+                <label class="fontSize14">{{ appointmentTime }}</label>
+            </view>
+            <view class="flexItem rowStyle marginBottom10 cellStyle">
+                <label class="color54 fontSize12">预约人数</label>
+                <label class="color54 fontSize12">{{ appointmentNum }} 人</label>
+            </view>
+            <view class="flexItem rowStyle marginBottom10 cellStyle">
+                <label class="color54 fontSize12">下单时间</label>
+                <label class="color54 fontSize12">{{ orderTime }}</label>
+            </view>
+        </view>
+        <view class="flexItem rowStyle centers orderStatus" bindtap="goDeatailEvent">
+            <image class="statusImage" src="{{ statusImage[0] }}"></image>
+            <label class="statusText fontSize14">{{ statusText[0] }}</label>
+        </view>
+    </scroll-view>
+   
+</view>-->
+
+
+

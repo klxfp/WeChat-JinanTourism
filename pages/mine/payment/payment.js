@@ -1,66 +1,92 @@
-// pages/mine/payment/payment.js
+//获取应用实例
+var app = getApp()
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    totalIncome: 0.0,
+    runningMoney: 0.0,
+    publicWelfareMoney: 0.0,
+    orderNum: 123456789,
+    appointmentNum: 5,
+    appointmentTime: '2019年12月16日  11:42',
+    orderTime: '2019年12月16日  11:42',
+    hasData: true,
+    navTab: ["全部", "待处理", "待接待", "已完成", "客户处理"],
+    moneyInfo: [, , , , , , ,],
+    nickName: '恋人心',
+    phoneNum: '18202801506',
+    statusImage: ['../images/daijiedai.png'],
+    currentNavtab: 1,
+    statusText: ['待接待未付款'],
+    startPoint: [0, 0]
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  catchtouchstart: function (e) {
+    var that = this;
+    that.setData({
+      startPoint: [e.touches[0].clientX, e.touches[0].clientY]
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+  catchtouchend: function (e) {
+    var that = this;
+    var currentNum = parseInt(this.data.currentNavtab);
 
+    // that.endX = e.changedTouches[0].clientX;
+    // that.endY = e.changedTouches[0].clientY;
+
+    // if(that.endX  - that.startX > 10 && currentNum > 0){
+    //   currentNum -= 1;
+    // }
+
+    // if(that.endX - that.startX < -10 && currentNum< this.data.navTab.length -1){
+    //   currentNum=currentNum + 1;
+    // }
+
+    var endPoint = [e.changedTouches[0].clientX, e.changedTouches[0].clientY];
+    var startPoint = that.data.startPoint
+    if (endPoint[0] <= startPoint[0]) {
+      if (Math.abs(endPoint[0] - startPoint[0]) >= Math.abs(endPoint[1] - startPoint[1]) && currentNum < this.data.navTab.length - 1) {
+        currentNum = currentNum + 1;
+      }
+    } else {
+      if (Math.abs(endPoint[0] - startPoint[0]) >= Math.abs(endPoint[1] - startPoint[1]) && currentNum > 0) {
+        currentNum -= 1;
+      }
+    }
+
+    this.setData({
+      currentNavtab: currentNum
+    });
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  switchTab: function (e) {
+    this.setData({
+      currentNavtab: e.currentTarget.dataset.idx
+    });
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
 
+  callEvent: function (e) {
+    console.log(e)
+    wx.makePhoneCall({
+      phoneNumber: this.data.phoneNum
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  goDeatailEvent: function () {
+    wx.navigateTo({
+      url: '../orderManage/orderDeatail/orderDeatail'
+    })
   },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  // 加载
+  onLoad: function () {
+    wx.setNavigationBarTitle({
+      title: '订单管理'
+    })
+    var that = this
+    //更新数据
+    that.setData({
+    })
   }
 })
