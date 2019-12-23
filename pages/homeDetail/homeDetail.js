@@ -65,10 +65,8 @@ Page({
         success: function(res) {
           // res.data 包含该记录的数据
           console.log(res)
-          console.log(res.data)
           that.setData({
-            replays: res.data,
-
+            replays: res.data
           })
         },
         fail: console.error
@@ -96,27 +94,27 @@ Page({
     })
   },
 
-  // GetCurrentTime: function () {
-  //   var now = new Date();
-  //   var year = now.getFullYear();       //年  
-  //   var month = now.getMonth() + 1;     //月  
-  //   var day = now.getDate();            //日  
-  //   var hh = now.getHours();            //时  
-  //   var mm = now.getMinutes();          //分  
-  //   var ss = now.getSeconds();            //秒  
-  //   dateA = year + "年";
-  //   if (month < 10) dateA += "0";
-  //   dateA += month + "月";
-  //   if (day < 10) dateA += "0";
-  //   dateA += day + "日 ";
-  //   if (hh < 10) dateA += "0";
-  //   dateA += hh + ":";
-  //   if (mm < 10) dateA += '0';
-  //   dateA += mm + ":";
-  //   if (ss < 10) dateA += '0';
-  //   dateA += ss;
-  //   return (dateA);
-  // },
+  GetCurrentTime: function () {
+    var now = new Date();
+    var year = now.getFullYear();       //年  
+    var month = now.getMonth() + 1;     //月  
+    var day = now.getDate();            //日  
+    var hh = now.getHours();            //时  
+    var mm = now.getMinutes();          //分  
+    var ss = now.getSeconds();            //秒  
+    dateA = year + "年";
+    if (month < 10) dateA += "0";
+    dateA += month + "月";
+    if (day < 10) dateA += "0";
+    dateA += day + "日 ";
+    if (hh < 10) dateA += "0";
+    dateA += hh + ":";
+    if (mm < 10) dateA += '0';
+    dateA += mm + ":";
+    if (ss < 10) dateA += '0';
+    dateA += ss;
+    return (dateA);
+  },
   /**
    * 喜欢点击
    */

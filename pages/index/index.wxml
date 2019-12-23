@@ -32,7 +32,7 @@
   <!-- hot list start -->
   <view class='swiper'>
     <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" duration="{{duration}}" interval='{{interval}}' bindchange="bindchange" circular="{{circular}}" style="height:{{imgheights[current]}}rpx;">
-      <block wx:for='{{imgList}}' wx:key="index">
+      <block wx:for='{{imgList}}' wx:key="{{index}}">
         <swiper-item>
           <navigator url="{{item.pag}}">
             <image src="{{item.src}}" data-id='{{index}}' class="image" mode="widthFix" bindload="imageLoad" />
@@ -48,7 +48,7 @@
   <!-- index hot mudule end-->
   <!-- index map end -->
   <view class="sub_nav">
-    <navigator wx:for="{{navList}}" wx:key="index" url="{{item.page}}" class="nav_item">
+    <navigator wx:for="{{navList}}" wx:key="{{index}}" url="{{item.page}}" class="nav_item">
       <image src="../../images/{{item.icon}}" />
       <text>{{item.name}}</text>
     </navigator>
