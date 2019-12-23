@@ -372,7 +372,7 @@
       <image src="https://s2.ax1x.com/2019/12/07/QtmuqK.png"></image>
     </view>
     <view class="name">
-      <view class="text">水帘峡风景区</view>
+      <view class="text">九如山瀑布群风景区</view>
       <view class="icons">
         <image class="icon" src="../../images/star_1.png"></image>
         <image class="icon" src="../../images/star_1.png"></image>
@@ -385,7 +385,7 @@
 
     <view class="addr">
       <image class="icon" src="../../images/map_a.png"></image>
-      <view class="txt">济南南部山区柳埠镇簸..</view>
+      <view class="txt">济南市历城区西营镇葫芦..</view>
     </view>
 
   </view>
