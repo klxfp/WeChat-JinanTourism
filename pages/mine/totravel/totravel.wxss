@@ -21,13 +21,21 @@
 }
 .jingqu{
    font-size:45rpx;
-   padding-top: 12rpx;
+   padding-top: 6rpx;
    font-family: "幼圆";
    
 }
 .vicl{
+  display: flex;
+  flex-direction: column;
   width: 100%;
   border-bottom:1rpx solid rgba(0, 0, 0, 0.356);
   align-items: space-around;
   justify-content: space-around;
+}
+.jingq{
+     font-size:55rpx;
+     font-family: "幼圆";
+     /* align-items: center; */
+     /* justify-content: center; */
 }

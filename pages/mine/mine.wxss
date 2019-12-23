@@ -1,6 +1,7 @@
 .minebu{
   /* width: 414rpx;
   height: 667rpx;  */
+  height: 100%;
   box-sizing: border-box;
   font-family: "幼圆";
   background-color:whitesmoke;
@@ -62,19 +63,21 @@
 .bar{
   display: flex;
   flex-direction: row;
-  margin:20rpx 0;
+  /* margin:20rpx 20rpx; */
+  padding-bottom: 30rpx;
 }
 .box{
   width: 45%;
   text-align: center;
   font-size:35rpx;
-  height: 150rpx;
+  height: 160rpx;
   border-bottom:1rpx solid rgba(0, 0, 0, 0.356);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content:space-around;
-  margin:10rpx 10rpx;
+  /* margin:15rpx 10rpx; */
+
 }
 
 .dingima{
