@@ -5,7 +5,6 @@ const __utils = require('utils/util')
 Bmob.initialize("a22827601758f1d1cd174d8bdccdc0cd", "e3f22b28497e4886709670430bb7d90c");
 App({
 
-
     "cloud": true,
 
       onLaunch: function () {
@@ -21,7 +20,6 @@ App({
         }
 
         this.globalData = {}
-      
 
     var that = this;
     //调用系统API获取设备的信息
