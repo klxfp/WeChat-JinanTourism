@@ -2,28 +2,26 @@
   "pages": [
     "pages/start/start",
     "pages/index/index",
- 
     "pages/authorize/authorize",
     "pages/logs/logs",
-    "pages/map/index/index",
-    "pages/map/routes/routes",
-    "pages/map/info/info",
-    "pages/map/inputtip/inputtip",
-
     "pages/mine/mine",
-    "pages/mine/orders/orders",
-    "pages/mine/payment/payment",
-    "pages/mine/totravel/totravel",
-    "pages/mine/footprint/footprint",
+    "pages/map/index/index",
     "pages/tickets/tickets",
     "pages/search/search",
     "pages/home/home",
     "pages/homeDetail/homeDetail",
     "pages/publish/publish",
     "pages/replay/replay",
+    "pages/test/pages/homepage/homepage",
     "pages/introduction/daminghu/daminghu",
     "pages/introduction/baotuquan/baotuquan",
-    "pages/test/pages/homepage/homepage"
+    "pages/map/routes/routes",
+    "pages/map/info/info",
+    "pages/map/inputtip/inputtip",
+    "pages/mine/orders/orders",
+    "pages/mine/payment/payment",
+    "pages/mine/totravel/totravel",
+    "pages/mine/footprint/footprint"
   ],
   "subPackages": [
     {
@@ -46,8 +44,8 @@
         "pages/audio/scenic/s14/s14"
       ]
     }
-
   ],
+
   "window": {
     "navigationBarTextStyle": "white",
     "navigationBarBackgroundColor": "#118fff",

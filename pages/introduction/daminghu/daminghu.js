@@ -3,6 +3,7 @@ var wxCharts = require('../../../utils/wxcharts.js');
 var lineChart = null;
 Page({
   data: {
+
     business:
       [
         { businesser: 1, time: 6, num: null }, { businesser: 1, time: 7, num: null },
