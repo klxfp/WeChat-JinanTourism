@@ -2,7 +2,27 @@
 <view class="head">
   <view class="title">大明湖</view>
   <view class="body">
-  <view class="desc">大明湖，山东省济南市区湖泊、济南三大历史名胜之一。位于济南市历下区旧城区北部，是由济南众多泉水汇流而成，湖水经泺水河注入小清河。湖水面积46公顷，水深平均2~3米。</view>
+  <view class="desc">开放时间</view>
+  <view class="aaa">1月1日至12月31日 周一至周日 全天 06:30-21:30</view>
+  <view class="desc">门票优待政策</view>
+  <view class="aaa">免费进入</view>
+  <view class="desc">景点简介</view>
+  <view class="aaa">皇上你还记得大名湖畔的夏雨荷吗。</view>
+  <image src="/images/intr/daminghu1.png" style="height:120px;"></image>
+  <view class="aaa">大明湖，山东省济南市区湖泊、济南三大历史名胜之一。位于济南市历下区旧城区北部，是由济南众多泉水汇流而成，湖水经泺水河注入小清河。湖水面积46公顷，水深平均2~3米。</view>
+  <image src="/images/intr/daminghu2.png" style="height:120px;"></image>
+  <view class="aaa">大明湖素有"泉城明珠"之美誉。大明湖集水域风光、古园林景、古道观、古水工、纪念性建筑为一体，具有深厚的文化积淀和高品位的旅游资源。</view>
+  <image src="/images/intr/daminghu3.png" style="height:120px;"></image>
+  <view class="desc">小贴士</view>
+  <view class="aaa">最佳游玩时间：四季皆宜 建议游玩时长：2-3小时</view>
+  <view class="desc">设施包含</view>
+  <view class="aaa">餐厅 商店 停车场 WIFI服务</view>
+  <view class="desc">院内交通</view>
+  <view class="aaa">电瓶车 游船</view>
+  <view class="desc">交通信息</view>
+  <view class="aaa">公交：乘11、41、K54至大明湖站可到南门；乘6、30、33、45到北门；乘14、30 、31、36到东门</view>
+  <view class="desc">停车场</view>
+  <view class="aaa">开元广场停车场（大明湖西南门） 地址：大明湖路273大明湖公园西南门</view>
   <video style="height:240px;width:320px;" src="{{mapUrl}}"> </video>
   <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" bindtouchstart="touchHandler"></canvas>
   </view>
