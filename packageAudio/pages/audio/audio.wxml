@@ -48,17 +48,17 @@
     <view class="name">
       <view class="text">五龙潭</view>
       <view class="icons">
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_0.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_0.png"></image>
       </view>
       <view class="eva">评价4.4分</view>
     </view>
 
     <view class="addr">
-      <image class="icon" src="../../images/map_a.png"></image>
+      <image class="icon" src="../../../images/map_a.png"></image>
       <view class="txt">历下区趵突泉北路筐市..</view>
     </view>
     <!-- 分割线 -->
@@ -76,17 +76,17 @@
     <view class="name">
       <view class="text">环城公园</view>
       <view class="icons">
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_0.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_0.png"></image>
       </view>
       <view class="eva">评价4.1分</view>
     </view>
 
     <view class="addr">
-      <image class="icon" src="../../images/map_a.png"></image>
+      <image class="icon" src="../../../images/map_a.png"></image>
       <view class="txt">南门大街2-1号(近护城..</view>
     </view>
     <!-- 分割线 -->
@@ -103,17 +103,17 @@
     <view class="name">
       <view class="text">大明湖</view>
       <view class="icons">
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_0.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_0.png"></image>
       </view>
       <view class="eva">评价4.0分</view>
     </view>
 
     <view class="addr">
-      <image class="icon" src="../../images/map_a.png"></image>
+      <image class="icon" src="../../../images/map_a.png"></image>
       <view class="txt">济南市历下区明湖路27..</view>
     </view>
     <!-- 分割线 -->
@@ -131,17 +131,17 @@
     <view class="name">
       <view class="text">黑虎泉</view>
       <view class="icons">
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_0.png"></image>
-        <image class="icon" src="../../images/star_0.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_0.png"></image>
+        <image class="icon" src="../../../images/star_0.png"></image>
       </view>
       <view class="eva">评价3.1分</view>
     </view>
 
     <view class="addr">
-      <image class="icon" src="../../images/map_a.png"></image>
+      <image class="icon" src="../../../images/map_a.png"></image>
       <view class="txt">解放阁南护城河南岸</view>
     </view>
     <!-- 分割线 -->
@@ -158,17 +158,17 @@
     <view class="name">
       <view class="text">济南国际园博园</view>
       <view class="icons">
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_0.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_0.png"></image>
       </view>
       <view class="eva">评价4.0分</view>
     </view>
 
     <view class="addr">
-      <image class="icon" src="../../images/map_a.png"></image>
+      <image class="icon" src="../../../images/map_a.png"></image>
       <view class="txt">长清大学科技园核心区域</view>
     </view>
     <!-- 分割线 -->
@@ -185,17 +185,17 @@
     <view class="name">
       <view class="text">泉城欧乐堡梦幻世界</view>
       <view class="icons">
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_0.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_0.png"></image>
       </view>
       <view class="eva">评价4.3分</view>
     </view>
 
     <view class="addr">
-      <image class="icon" src="../../images/map_a.png"></image>
+      <image class="icon" src="../../../images/map_a.png"></image>
       <view class="txt">山东省齐河县黄河国际..</view>
     </view>
     <!-- 分割线 -->
@@ -212,17 +212,17 @@
     <view class="name">
       <view class="text">泉城海洋极地世界</view>
       <view class="icons">
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_0.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_0.png"></image>
       </view>
       <view class="eva">评价4.9分</view>
     </view>
 
     <view class="addr">
-      <image class="icon" src="../../images/map_a.png"></image>
+      <image class="icon" src="../../../images/map_a.png"></image>
       <view class="txt">山东省德州市齐河县</view>
     </view>
     <!-- 分割线 -->
@@ -239,17 +239,17 @@
     <view class="name">
       <view class="text">金象山乐园</view>
       <view class="icons">
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_0.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_0.png"></image>
       </view>
       <view class="eva">评价4.9分</view>
     </view>
 
     <view class="addr">
-      <image class="icon" src="../../images/map_a.png"></image>
+      <image class="icon" src="../../../images/map_a.png"></image>
       <view class="txt">济南市历城区仲宫镇（..</view>
     </view>
     <!-- 分割线 -->
@@ -266,17 +266,17 @@
     <view class="name">
       <view class="text">红叶谷生态文化旅游区</view>
       <view class="icons">
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_0.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_0.png"></image>
       </view>
       <view class="eva">评价4.7分</view>
     </view>
 
     <view class="addr">
-      <image class="icon" src="../../images/map_a.png"></image>
+      <image class="icon" src="../../../images/map_a.png"></image>
       <view class="txt">济南历城区锦绣川乡锦</view>
     </view>
     <!-- 分割线 -->
@@ -293,17 +293,17 @@
     <view class="name">
       <view class="text">跑马岭</view>
       <view class="icons">
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_0.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_0.png"></image>
       </view>
       <view class="eva">评价4.4分</view>
     </view>
 
     <view class="addr">
-      <image class="icon" src="../../images/map_a.png"></image>
+      <image class="icon" src="../../../images/map_a.png"></image>
       <view class="txt">济南市历城区东南部的..</view>
     </view>
     <!-- 分割线 -->
@@ -320,17 +320,17 @@
     <view class="name">
       <view class="text">灵岩寺旅游区</view>
       <view class="icons">
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_0.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_0.png"></image>
       </view>
       <view class="eva">评价4.0分</view>
     </view>
 
     <view class="addr">
-      <image class="icon" src="../../images/map_a.png"></image>
+      <image class="icon" src="../../../images/map_a.png"></image>
       <view class="txt">山东省济南市长清区万..</view>
     </view>
     <!-- 分割线 -->
@@ -347,17 +347,17 @@
     <view class="name">
       <view class="text">九顶塔中华民俗乐园</view>
       <view class="icons">
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_0.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_0.png"></image>
       </view>
       <view class="eva">评价4.4分</view>
     </view>
 
     <view class="addr">
-      <image class="icon" src="../../images/map_a.png"></image>
+      <image class="icon" src="../../../images/map_a.png"></image>
       <view class="txt">山东省济南市历城区跑..</view>
     </view>
     <!-- 分割线 -->
@@ -374,17 +374,17 @@
     <view class="name">
       <view class="text">九如山瀑布群风景区</view>
       <view class="icons">
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_1.png"></image>
-        <image class="icon" src="../../images/star_0.png"></image>
-        <image class="icon" src="../../images/star_0.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_1.png"></image>
+        <image class="icon" src="../../../images/star_0.png"></image>
+        <image class="icon" src="../../../images/star_0.png"></image>
       </view>
       <view class="eva">评价3.6分</view>
     </view>
 
     <view class="addr">
-      <image class="icon" src="../../images/map_a.png"></image>
+      <image class="icon" src="../../../images/map_a.png"></image>
       <view class="txt">济南市历城区西营镇葫芦..</view>
     </view>
 

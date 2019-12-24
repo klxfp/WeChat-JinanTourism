@@ -17,6 +17,7 @@ Page({
     viewLeft: 0,
     windowHeight: '',
     windowWidth: '',
+    viewrgba: "rgb(102, 102, 102);",
     imgurl: "../../../../../images/icon_play.png",
     isShow: true,
     isMove: false,
@@ -32,7 +33,8 @@ Page({
     color6: "#666",
     color7: "#666",
     color8: "#666",
-    color9: "#666"
+    color9: "#666",
+    time:"00:00"
 
   },
   onReady(e) {
@@ -102,7 +104,16 @@ Page({
 
       },
       fail: function (res) {
-        console.log("fail tts", res)
+        console.log("fail tts", res);
+        wx.showToast({
+          title: "请先等待一分钟后再点击文字！",
+          image: "../../../../../images/fail.png",//自定义图标的本地路径，image 的优先级高于 icon
+          duration: 2000,//提示的延迟时间，单位毫秒，默认：1500 
+          mask: false,//是否显示透明蒙层，防止触摸穿透，默认：false 
+          success: function () { },
+          fail: function () { },
+          complete: function () { }
+        })
       }
     })
   },

@@ -2,7 +2,7 @@
 <!--pages/audio/scenic/s1/s1.wxml-->
 <view class="content">
   <view class="author-date">
-    <image src="../../../../images/smart.png" class="author"></image>
+    <image src="../../../../../images/smart.png" class="author"></image>
     <text class="date">景区详细信息</text>
   </view>
 

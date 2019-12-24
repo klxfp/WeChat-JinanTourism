@@ -40,6 +40,9 @@
   width: 150px;
   font-size: 14pt;
   color: #fff;
+      overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .read .view .txt2 {
   /* line-height: 50px; */
