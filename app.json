@@ -46,7 +46,8 @@
     "pages/publish/publish",
     "pages/replay/replay",
     "pages/introduction/daminghu/daminghu",
-    "pages/introduction/baotuquan/baotuquan"
+    "pages/introduction/baotuquan/baotuquan",
+    "pages/test/pages/homepage/homepage"
   ],
   "window": {
     "navigationBarTextStyle": "white",
