@@ -104,7 +104,7 @@ module.exports = {
   goMap(val) {
     wx.showModal({
       title: '调往搜索页面',
-      content: `你搜索的是${val}，带上它去景区导航搜索附近吧`,
+      content: `你搜索的是${val}，将跳转至新页面`,
       success(res) {
         if (res.confirm) {
           console.log('用户点击确定')
@@ -166,7 +166,7 @@ module.exports = {
   goScene(val) {
     wx.showModal({
       title: '调往搜索页面',
-      content: `你搜索的是${val.name}，带上它去新页面`,
+      content: `你搜索的是${val.name}，将跳转至新页面`,
       success(res) {
         if (res.confirm) {
           console.log('用户点击确定')
