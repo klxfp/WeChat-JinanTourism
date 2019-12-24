@@ -80,7 +80,7 @@ var tabNames = ["recommand", "nearby"];
                   success: function(res) {
                       __wxConfig.debug && console.log("homepage qq map reverseGeocoder success res = ",res);
                       //遍历城市解析出城市id
-                      var currentCityName = res.result.address_component.city
+                      var currentCityName = res.result.address_component.city//北京市
                       __wxConfig.debug && console.log("homepage qq map reverseGeocoder success currentCityName = ",currentCityName);
                       _app.getSavedCityData(function(result){
                           __wxConfig.debug && console.log("homepage qq map reverseGeocoder success getSavedCityData  result = ",result);
@@ -262,6 +262,33 @@ var tabNames = ["recommand", "nearby"];
               that.onCitySelectClick();
             }.bind(that)
         })
+      }
+    },
+    // 登录回调
+    loginCallback: function (loginRes, errorCode) {
+      // 失败弹框
+      var _this = this
+      __wxConfig.debug && console.log("homepage loginCallback loginRes = ", loginRes)
+      __wxConfig.debug && console.log("homepage loginCallback errorCode = ", errorCode)
+      if (loginRes === null ||loginRes === undefined) {
+        var content = '登录系统出了点小问题，您可用游客身份下单，或重新尝试登录。'
+        if (errorCode != '') content += '[' + errorCode + ']'
+        api.showModal({
+          title: '登录失败',
+          content: content,
+          confirmText: '重新登录',
+          cancelText: '游客浏览',
+          confirm: function () {
+            token.login(_this.loginCallback.bind(_this))
+            _this.showLocationDailog()
+          }.bind(_this),
+          cancel: function () {
+            _this.showLocationDailog()
+          }.bind(_this)
+        })
+      } else {
+        //登录成功
+
       }
     },
     getCityDataFromServer: function () {
