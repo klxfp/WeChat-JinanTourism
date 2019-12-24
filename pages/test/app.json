@@ -1,0 +1,34 @@
+{
+  "debug": true,
+  "pages": [
+    "pages/homepage/homepage",
+    "pages/list/list",
+    "pages/detail/detail",
+    "pages/fillinorder/fillinorder",
+    "pages/sceneryspecial/sceneryspecial",
+    "pages/bookingRulesMore/bookingRulesMore",
+    "pages/elongtravelnotes/elongtravelnotes",
+    "components/city-selector/page/city",
+    "components/place-search/page/search",
+    "components/calendar/page/index",
+    "pages/orderlist/orderlist",
+    "pages/editPassenger/editPassenger",
+    "pages/passengerList/passengerList",
+    "pages/orderdetail/orderdetail",
+    "pages/commentlist/commentlist",
+    "pages/additionalinfo/additionalinfo",
+    "pages/orderrefund/orderrefund",
+    "pages/paySuccess/paySuccess",
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "networkTimeout": {
+    "request": 12000
+  },
+  "enablePullDownRefresh": true,
+  "sitemapLocation": "sitemap.json"
+}

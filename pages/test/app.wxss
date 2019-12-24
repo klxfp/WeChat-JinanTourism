@@ -1,0 +1,673 @@
+/**app.wxss**/
+body { overflow: hidden; }
+/*p, ul, li, dl, dd, dt, scroll-view { display: block; box-sizing: border-box; }*/
+i { font-style: normal; }
+b { font-weight: 700; }
+image { border: 0; }
+view, ul, li, dl, dd, dt, p, input { color: #333; font-size: 28rpx; font-family: "Helvetica Neue", Helvetica, "Microsoft YaHei", STHeiTi, sans-serif; line-height: 42rpx }
+audio, canvas, progress, video { display: inline-block; vertical-align: baseline }
+ul, li, dl, dd { padding: 0; margin: 0; list-style-type: none; }
+/*view, ul, li, i, p, dl, dd, dt, button { box-sizing: border-box; }*/
+.f_cb:after, .f_cbli li:after { display: block; content: "."; clear: both; visibility: hidden; height: 0; overflow: hidden }
+.page { min-height: 100%; }
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.df{display: flex;}
+.dn{display:none;}
+.aic{align-items: center;}
+.jcc{justify-content: center;}
+.placeholder{color: #ccc;}
+.pa{position: absolute}
+.pf{position: fixed}
+.pd10{padding: 0 20rpx;}
+.pd12{padding: 0 24rpx;}
+.tctc{text-align: center}
+.tar{
+  text-align: right
+}
+.tal{
+  text-align: left
+}
+.bg1{background-color: #fff}
+.bg2{background-color: #f4f4f4}
+.bg-eb{background-color: #ebebeb}
+.bg49f{background-color: #49f}
+.bge0{
+  background-color: #E0E0E0
+}
+.bgddd{
+  background-color: #dddddd
+}
+.c2{color: #f55}
+.cf{color: #fff}
+.bb2b2{border:#b2b2b2 2rpx solid}
+.bdd2d2{border:#d2d2d2 2rpx solid}
+.btd1{border-top:2rpx #e0e0e0 dashed}
+.bt1{border-top: 2rpx solid #E0E0E0}
+.bb1{border-bottom: 2rpx solid #E0E0E0}
+.bbeb{border-bottom: 2rpx solid #ebebeb}
+.bteb{border-top: 2rpx solid #ebebeb}
+.bbdd{border-bottom: 2rpx solid #dddddd}
+.bbee{border-bottom: 2rpx solid #eee}
+.bb49f{border-bottom: 2rpx solid #4499ff}
+.b49f{border: 2rpx solid #4499ff}
+.btee{border-top: 2rpx solid #eee}
+.bl1 { border-left: 2rpx solid #f2f2f2 }
+.oh{overflow: hidden}
+.tc{text-align: center}
+.pl{position: relative}
+.fl{float: left}
+.wxc{color: #49f !important}
+.t9 { font-size: 18rpx }
+.t10 { font-size: 20rpx }
+.t11 { font-size: 22rpx }
+.t12 { font-size: 24rpx }
+.t13 { font-size: 26rpx }
+.t14 { font-size: 28rpx }
+.t16 { font-size: 32rpx }
+.t17 { font-size: 34rpx }
+.t18 { font-size: 36rpx }
+.t20 { font-size: 40rpx }
+.t22 { font-size: 44rpx }
+.mt12{
+  margin-top: 24rpx
+}
+.mb12{margin-bottom: 24rpx}
+.ic1 { width: 12px; height: 12px; margin-top: 10px; background-position: 0 0 }
+.ic2 { display: inline-block; width: 32rpx; height: 32rpx; margin: 0 16rpx 0 0; vertical-align: -6rpx; background-position: -64rpx 0 }
+.ic { display: inline-block; width: 32rpx; height: 32rpx; background: url(https://m.elongstatic.com/static/xcxticket/del.png) no-repeat; background-size: 1024rpx 576rpx; }
+
+.err { padding: 72rpx 24rpx 0; }
+.err image { width: 192rpx; height: 192rpx }
+.width100{
+  width: 100%;
+}
+
+.pr3{
+  padding-right: 6rpx;
+}
+.pl3{
+  padding-left: 6rpx;
+}
+.pt12{
+  padding-top: 24rpx
+}
+.pb12{
+  padding-bottom: 24rpx;
+}
+.pl12{
+	padding-left: 24rpx;
+}
+.pr12{
+	padding-right: 24rpx;
+}
+.top7{
+	margin-top: 14rpx;
+}
+.top8{
+  margin-top:16rpx;
+}
+.top20{
+  margin-top: 40rpx;
+}
+.top12{
+	margin-top: 24rpx;
+}
+.top16{
+	margin-top: 32rpx;
+}
+.top18{
+  margin-top:36rpx;
+}
+.mb8{
+  margin-bottom: 16rpx;
+}
+.mb18{
+  margin-bottom: 36rpx;
+}
+.mb60{
+  margin-bottom: 120rpx;
+}
+.bg1 { background-color: #fff }
+.bg2 { background-color: #f4f4f4 }
+.bg3 { background-color: #f2f2f2 }
+
+.t9 { font-size: 18rpx }
+.t10 { font-size: 20rpx }
+.t11 { font-size: 22rpx }
+.t12 { font-size: 24rpx }
+.t13 { font-size: 26rpx }
+.t14 { font-size: 28rpx }
+.t15 { font-size:30rpx }
+.t16 { font-size: 32rpx }
+.t17 { font-size: 34rpx }
+.t18 { font-size: 36rpx }
+.t20 { font-size: 40rpx }
+
+.top0{
+  left: 0; 
+  right: 0; 
+  top: 0;
+}
+.picker_diy { position: absolute; width: 100%; height: 424rpx; bottom: 0rpx; left: 0rpx; background-color: #fff; transition: bottom 0.2s ease-out; z-index: 220; transform: translate3d(0, 0, 0); }
+.picker_show { transform: translate3d(0, 0, 0); }
+.picker_hide { transform: translate3d(0, 424rpx, 0); }
+.picker_view { position: fixed; width: 100%; height: 100%; top: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.4); z-index: 200; overflow: hidden; }
+.picker_header { height: 82rpx; line-height: 80rpx; background-color: #f8f8f8; }
+.picker_title { top: 0; width: 100%; }
+.picker_right { margin-right: 44rpx; }
+.picker_scroll { height: 100%; -webkit-overflow-scrolling: touch; overflow: auto; padding-bottom: 100rpx; }
+.picker_item { height: 80rpx; line-height: 80rpx; margin: 0 40rpx; border-bottom: 2rpx solid #ebebeb; }
+.check { width: 32rpx; height: 16rpx; top: 26rpx; right: 80rpx; border: 2rpx solid #49f; border-width: 0 0 2rpx 2rpx; }
+
+.height100{
+    height: 100vh;
+}
+
+.zindex100{
+	z-index: 100;
+}
+
+.flex1{
+	flex: 1;
+}
+.flex3{
+  flex: 3
+}
+.colorwhite{
+  background-color: white;
+}
+
+.ac{
+  align-items: center;
+}
+.h15{
+  height: 30rpx;
+  line-height: 30rpx;
+}
+.h20{
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.h40{
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.h44{
+  height: 88rpx;
+  line-height: 88rpx;
+}
+.h36{
+  height: 72rpx;
+  line-height: 72rpx;
+}
+.ar{
+  display: block;
+  width: 10rpx;
+  height: 18rpx;
+  background-image: url(https://m.elongstatic.com/static/xcxticket/arrow_right.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size:cover;
+  margin-right: 24rpx;
+  margin-left: 24rpx;
+}
+.ad{
+  display: block;
+  width: 16rpx;
+  height: 10rpx;
+  background-image: url(https://m.elongstatic.com/static/xcxticket/h5_arrow_down.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size:cover;
+}
+.je{
+  justify-content: flex-end
+}
+.ofxh{
+  overflow-x: hidden
+}
+.ofyh{
+  overflow-y: hidden
+}
+.jc{
+  justify-content: center;
+}
+.jcb{
+  justify-content: space-between
+}
+.divider12{
+  width: 100%;
+  height: 24rpx;
+  background-color: #ebebeb
+}
+.divider1{
+  height: 2rpx;
+  background-color: #ebebeb
+}
+.dc{
+  flex-direction: column
+}
+
+.bordertop{
+  border-top: 2rpx solid #ebebeb
+}
+
+.borderradius2{
+  border-radius: 4rpx;
+}
+.brs3{
+  border-radius:6rpx;
+}
+.c888888{
+  color:#888888;
+}
+.arrowUp_Down{
+  display: block;
+  width: 18rpx;
+  height: 10rpx;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size:cover;
+  margin-right: 24rpx;
+  margin-left: 24rpx;
+}
+.upImg{
+  background-image: url(https://m.elongstatic.com/static/xcxticket/arrow_up.png);
+}
+.downImg{
+  background-image: url(https://m.elongstatic.com/static/xcxticket/arrow_down.png);
+}
+
+.txtoverflow{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.ae{
+  align-items: flex-end
+}
+.colorb2{
+  color: #b2b2b2
+}
+.color88{
+  color: #888888;
+}
+.color85{
+  color: #858585
+}
+.color44{
+  color: #444444
+}
+.currentPrice{
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #ff5555;
+}
+.ml6{
+  margin-left: 12rpx;
+}
+.mb60{
+  margin-bottom: 120rpx;
+}
+
+.bookIcon{
+	display: flex;
+    width: 80rpx;
+    height: 80rpx;
+    justify-content: center;
+    background: transparent url(https://m.elongstatic.com/static/xcxticket/book_online.png) center center no-repeat;
+    background-size: cover;
+}
+.circle{
+    display: flex;
+    background: transparent url(https://m.elongstatic.com/static/xcxticket/circle.png) center center no-repeat;
+    background-size:cover;
+    width: 66rpx;
+    height: 66rpx;
+    margin-left: 24rpx;
+    color: #ff5555;
+    align-items: center;
+    justify-content:center;
+
+}
+.date{
+    width:200rpx;
+}
+.mr12{
+  margin-right: 24rpx
+}
+.ml12{
+  margin-left: 24rpx
+}
+.mr9{
+  margin-right: 18rpx
+}
+.mr0_l5{
+	margin-right: 0rpx;
+	margin-left: 10rpx;
+}
+.dib{
+  display: inline-block
+}
+.dif{
+  display: inline-flex
+}
+.tcc2{
+  color: #c2c2c2
+}
+.cff555{
+  color: #ff5555
+}
+.mr24{
+  margin-right: 48rpx
+}
+.c333333{
+  color: #333333;
+}
+.padding10{
+  padding:20rpx;
+}
+.c4499ff{
+  color:#4499ff;
+}
+.r0{
+  right: 0
+}
+.bgff55{
+  background-color: #ff5555
+}
+.mh44{
+  min-height: 88rpx
+}
+.bct{
+  border-color: transparent
+}
+.vam{
+  vertical-align: middle
+}
+.cred{
+  color: red
+}
+.fwb{
+  font-weight: bold;
+}
+.mlr0{
+    margin-left: 0;
+    margin-right: 0
+}
+/*评分星星 begin*/
+.ticket-star{
+	position: relative;
+	display: inline-block;
+	flex-direction: row;
+	align-items: center;
+	height: 44rpx;
+}
+.starImag{
+	display: inline-block;
+	width:20rpx;
+	height: 20rpx;
+}
+.starSelect{
+	background: url(https://m.elongstatic.com/static/xcxticket/star-2.png) no-repeat center center;
+	background-size: cover;
+}
+
+.starDefault{
+	background: url(https://m.elongstatic.com/static/xcxticket/star-0.png) no-repeat center center;
+	background-size: cover;
+}
+.starHalf{
+	background: url(https://m.elongstatic.com/static/xcxticket/star-1.png) no-repeat center center;
+	background-size: cover;
+}
+.mr6{
+    margin-right: 12rpx
+}
+/*评分星星 end*/
+/*评论item begin*/
+.top{
+    margin-top: 16px;
+    height: 33px;
+    line-height: 33px;
+}
+.ml10{
+	margin-left: 20rpx
+}
+.contentFull,.contentBreak{
+    display: flex;
+    font-size: 14px;
+    color: #333333;
+    margin-left: 12px;
+    margin-right: 9px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.contentFull{
+    height: auto;
+}
+
+.contentBreak{
+    height: 84px;
+}
+.images{
+    display: flex;
+    margin-top: 5px;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 4px;
+}
+
+.imageItem,.lastItem{
+    display: flex;
+    position: relative;
+    margin-right: 8px;
+    /*flex:1;*/
+}
+.hw82{
+    height: 164rpx;
+    width: 164rpx;
+    background-size: cover;
+    background: transparent url(https://m.elongstatic.com/static/xcxticket/default.png) center center no-repeat;
+}
+.total{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 30rpx;
+    width: 80rpx;
+    color: #fff;
+    margin-right:12rpx;
+    margin-bottom: 10rpx;
+    background-color:black;
+}
+/*评论item end*/
+
+.checkimg{
+    width: 36rpx;
+    height: 36rpx;
+    background: transparent left center no-repeat;
+    background-size: cover;
+}
+.checked{
+  background-image: url(https://m.elongstatic.com/static/xcxticket/check_box_selected.png)
+}
+.unchecked{
+  background-image: url(https://m.elongstatic.com/static/xcxticket/check_box_not_selected.png)
+}
+.op-8{
+  opacity: 0.8;
+}
+.op-9{
+  opacity:0.9
+}
+
+.m10m10m16{
+  margin-left: 20rpx;
+	margin-right: 20rpx;
+	margin-top: 32rpx;
+}
+.lh20{
+  line-height: 40rpx;
+}
+.lh17{
+  line-height: 34rpx;
+}
+.mt40{
+  margin-top: 80rpx
+}
+.h550{
+  height: 1100rpx
+}
+.ml24{
+  margin-left: 48rpx
+}
+.mr24{
+  margin-right: 48rpx
+}
+.bdrd12{
+  border-radius: 24rpx
+}
+.pt18{
+  padding-top: 36rpx
+}
+.pb18{
+  padding-bottom: 36rpx
+}
+.pl16{
+  padding-left: 32rpx
+}
+.pr16{
+  padding-right: 32rpx
+}
+
+.closeimg{
+    display: block;
+    width: 44rpx;
+    height: 44rpx;
+    background-size: 44rpx 44rpx;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(https://m.elongstatic.com/static/xcxticket/close.png)
+}
+.bdbrr10{
+  border-bottom-right-radius: 20rpx
+}
+.mt18{
+  margin-top: 36rpx
+}
+.mb18{
+  margin-bottom: 36rpx
+}
+.bgrgba{
+  background-color: rgba(0,0,0,0.5)
+}
+.mb40{
+  margin-bottom: 80rpx
+}
+.cbbbbbb{
+  color:#bbbbbb;
+}
+.groupIcon{
+	display: block;
+  width: 6rpx;
+  height: 26rpx;
+  margin-left: 24rpx;
+  margin-right: 16rpx;
+}
+.alsfsch{
+  align-self: stretch
+}
+.rsnone{
+  resize: none
+}
+.bgc45464c{
+  background-color: #45464c;
+}
+.lnh0{
+  line-height: 0
+}
+
+.h138{
+    height: 276rpx
+}
+
+.alitmfs{
+  align-items: flex-start
+}
+.db{
+  display: block
+}
+.btm0{
+  bottom: 0
+}
+.searchIcon{
+  display: block;
+	width:26rpx;
+	height:26rpx;
+	margin-left: 36rpx;
+	margin-right: 10rpx;
+  background-size: 26rpx 26rpx;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(https://m.elongstatic.com/static/xcxticket/search.png)
+}
+.mr5{
+  margin-right: 10rpx
+}
+
+.toTop{
+  display: block;
+  width: 92rpx;
+  height: 92rpx;
+  background-size: 92rpx 92rpx;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(http://m.elongstatic.com/static/xcxticket/to_top.png);
+  position: fixed;
+  bottom: 24rpx;
+  right: 24rpx;
+}
+.orderrule{
+  height:102rpx;
+}
+.trangleright{
+  display: block;
+  width: 10rpx;
+  height: 10rpx;
+  background-size: 10rpx 10rpx;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(http://m.elongstatic.com/static/xcxticket/triangle.png);
+}
+.colorcc{
+  color: #ccc
+}
+.flxrap{
+  flex-wrap: wrap
+}
+.colorE0{
+  color: #e0e0e0
+}
+.color555{
+  color: #555
+}
+.txtunderline{
+  text-decoration: underline
+}
+.txtlinethrough{
+  text-decoration: line-through
+}
+.txtoverline{
+  text-decoration: overline
+}
+.jcl{
+  justify-content: flex-start
+}
